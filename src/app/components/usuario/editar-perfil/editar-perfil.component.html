@@ -1,0 +1,68 @@
+<app-navbar></app-navbar>
+<main class="container mt-5">
+    <h1 class="titulo-pagina">Actualizar Datos</h1>
+    <br>
+    <br>
+    <form [formGroup]="updateForm" (ngSubmit)="actualizarUsuario()">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="mb-3">
+                    <label for="nombreCompleto" class="form-label">Nombre Completo*:</label>
+                    <input type="text" class="form-control" id="nombreCompleto" aria-describedby="nombreCompletoHelp" formControlName="nombreCompleto">
+                    <div id="nombreCompletoHelp" class="form-text" *ngIf="updateForm.get('nombreCompleto')?.hasError('required')">Este campo es obligatorio</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="mb-3">
+                    <label for="correoUsuario" class="form-label">Correo*:</label>
+                    <input type="email" class="form-control" id="correoUsuario" aria-describedby="emailHelp" formControlName="correoUsuario">
+                    <div id="emailHelp" class="form-text" *ngIf="updateForm.get('correoUsuario')?.hasError('required')">Este campo es obligatorio</div>
+                    <div id="emailHelp" class="form-text" *ngIf="updateForm.get('correoUsuario')?.hasError('email')">El Correo no es valido</div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="mb-3">
+                    <label for="fechaNacimientoUsuario" class="form-label">Fecha de Nacimiento*:</label>
+                    <input type="date" class="form-control" id="fechaNacimientoUsuario"  aria-describedby="fechaHelp"  formControlName="fechaNacimientoUsuario">
+                    <div id="fechaHelp" class="form-text" *ngIf="updateForm.get('fechaNacimientoUsuario')?.hasError('required')">Este campo es obligatorio. Debes ser mayor de 13 años.</div>
+                    <div id="fechaHelp" class="form-text" *ngIf="updateForm.get('fechaNacimientoUsuario')?.hasError('menorDeEdad')">Debes ser mayor de 13 años para registrarte al sitio.</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="mb-3">
+                    <label for="contrasenaUsuario1" class="form-label">Contraseña*:</label>
+                    <input type="password" class="form-control" id="contrasenaUsuario1" aria-describedby="passHelp1" formControlName="contrasenaUsuario1" name="contrasenaUsuario1">
+                    <div id="passHelp1" class="form-text" *ngIf="updateForm.get('contrasenaUsuario1')?.hasError('required')">Este campo es obligatorio</div>
+                    <div id="passHelp1" class="form-text" *ngIf="updateForm.get('contrasenaUsuario1')?.hasError('contrasenaInvalida')">
+                        La contraseña debe contener entre 6 y 18 caracteres, al menos un número y una letra mayúscula.
+                      </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="mb-3">
+                    <label for="contrasenaUsuario2" class="form-label">Validar Contraseña*:</label>
+                    <input type="password" class="form-control" id="contrasenaUsuario2" aria-describedby="passHelp2" formControlName="contrasenaUsuario2" name="contrasenaUsuario2">
+                    <div id="passHelp2" class="form-text" *ngIf="updateForm.get('contrasenaUsuario2')?.hasError('required')">Este campo es obligatorio</div>
+                    <div id="passHelp2" class="form-text" *ngIf="updateForm.hasError('contrasenasNoCoinciden')">
+                        Las contraseñas no coinciden.
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <label for="direccionDespacho" class="form-label">Dirección de despacho:</label>
+            <input type="text" class="form-control" id="direccionDespacho" formControlName="direccionDespacho">
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <button type="submit" class="btn btn-primary">Actualizar</button>
+            </div>
+
+        </div>
+    </form>
+</main>
+<app-footer></app-footer>

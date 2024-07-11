@@ -1,0 +1,62 @@
+:host {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    flex: 1;
+}
+
+.row{
+    margin: 20px;
+}
+
+.titulo-pagina{
+    margin: 20px 20px 0 20px;
+}
+
+
+.card-img-top {
+    width: 300px;
+    height: 300px;
+}
+
+.card-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    overflow: hidden;
+}
+
+.card-img-container img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Animaciones*/
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 1s ease-in forwards;
+}
+
+.edit-form{
+    width: 100%;
+}

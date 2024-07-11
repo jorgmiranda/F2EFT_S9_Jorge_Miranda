@@ -1,0 +1,149 @@
+<app-navbaradmin></app-navbaradmin>
+
+<div *ngIf="seccion === 'cuidado_capilar'">
+    <h1 class="titulo-pagina">Administrar Cuidado Capilar</h1>
+    <br><br>
+    <div class="row card-container">
+        <div class="col-12 col-md-6 mb-4" *ngFor="let product of products; let i = index">
+            <div class="card card-content h-100">
+                <div class="card-img-container">
+                    <img [src]="product.image" class="card-img-top fade-in" [alt]="product.name">
+                </div>
+                <div class="card-body d-flex flex-column align-items-center text-center">
+                    <h5 class="card-title">{{ product.nombre }}</h5>
+                    <p class="card-text precio">Precio: {{ product.precio | currency }}</p>
+                    <b><p class="card-text">Información del producto</p></b>
+                    <p class="card-text">{{ product.descripcion }}</p>
+                    <hr style="width: 100%;">
+                    <h6 class="edit-title" style="font-weight: bold;">Editar Información de producto</h6>
+                    <form [formGroup]="productForms[i]" (ngSubmit)="onSubmit(productForms[i], product)" class="edit-form">
+                        <div class="mb-3">
+                            <label for="edit-name-{{i}}" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="edit-name-{{i}}" formControlName="nombre">
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-price-{{i}}" class="form-label">Precio:</label>
+                            <input type="text" class="form-control" id="edit-price-{{i}}" formControlName="precio">
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-description-{{i}}" class="form-label">Descripción:</label>
+                            <textarea class="form-control" id="edit-description-{{i}}" formControlName="descripcion"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-save">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="seccion === 'cuidado_ropa'">
+    <h1 class="titulo-pagina">Administrar Cuidado de Ropa</h1>
+    <br><br>
+    <div class="row card-container">
+        <div class="col-12 col-md-6 mb-4" *ngFor="let product of products; let i = index">
+            <div class="card card-content h-100">
+                <div class="card-img-container">
+                    <img [src]="product.image" class="card-img-top fade-in" [alt]="product.name">
+                </div>
+                <div class="card-body d-flex flex-column align-items-center text-center">
+                    <h5 class="card-title">{{ product.nombre }}</h5>
+                    <p class="card-text precio">Precio: {{ product.precio | currency }}</p>
+                    <b><p class="card-text">Información del producto</p></b>
+                    <p class="card-text">{{ product.descripcion }}</p>
+                    <hr style="width: 100%;">
+                    <h6 class="edit-title" style="font-weight: bold;">Editar Información de producto</h6>
+                    <form [formGroup]="productForms[i]" (ngSubmit)="onSubmit(productForms[i], product)" class="edit-form">
+                        <div class="mb-3">
+                            <label for="edit-name-{{i}}" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="edit-name-{{i}}" formControlName="nombre">
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-price-{{i}}" class="form-label">Precio:</label>
+                            <input type="text" class="form-control" id="edit-price-{{i}}" formControlName="precio">
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-description-{{i}}" class="form-label">Descripción:</label>
+                            <textarea class="form-control" id="edit-description-{{i}}" formControlName="descripcion"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-save">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="seccion === 'limpieza'">
+    <h1 class="titulo-pagina">Administrar Limpieza</h1>
+    <br><br>
+    <div class="row card-container">
+        <div class="col-12 col-md-6 mb-4" *ngFor="let product of products; let i = index">
+            <div class="card card-content h-100">
+                <div class="card-img-container">
+                    <img [src]="product.image" class="card-img-top fade-in" [alt]="product.name">
+                </div>
+                <div class="card-body d-flex flex-column align-items-center text-center">
+                    <h5 class="card-title">{{ product.nombre }}</h5>
+                    <p class="card-text precio">Precio: {{ product.precio | currency }}</p>
+                    <b><p class="card-text">Información del producto</p></b>
+                    <p class="card-text">{{ product.descripcion }}</p>
+                    <hr style="width: 100%;">
+                    <h6 class="edit-title" style="font-weight: bold;">Editar Información de producto</h6>
+                    <form [formGroup]="productForms[i]" (ngSubmit)="onSubmit(productForms[i], product)" class="edit-form">
+                        <div class="mb-3">
+                            <label for="edit-name-{{i}}" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="edit-name-{{i}}" formControlName="nombre">
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-price-{{i}}" class="form-label">Precio:</label>
+                            <input type="text" class="form-control" id="edit-price-{{i}}" formControlName="precio">
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-description-{{i}}" class="form-label">Descripción:</label>
+                            <textarea class="form-control" id="edit-description-{{i}}" formControlName="descripcion"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-save">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="seccion === 'papel'">
+    <h1 class="titulo-pagina">Administrar Papeles</h1>
+    <br><br>
+    <div class="row card-container">
+        <div class="col-12 col-md-6 mb-4" *ngFor="let product of products; let i = index">
+            <div class="card card-content h-100">
+                <div class="card-img-container">
+                    <img [src]="product.image" class="card-img-top fade-in" [alt]="product.name">
+                </div>
+                <div class="card-body d-flex flex-column align-items-center text-center">
+                    <h5 class="card-title">{{ product.nombre }}</h5>
+                    <p class="card-text precio">Precio: {{ product.precio | currency }}</p>
+                    <b><p class="card-text">Información del producto</p></b>
+                    <p class="card-text">{{ product.descripcion }}</p>
+                    <hr style="width: 100%;">
+                    <h6 class="edit-title" style="font-weight: bold;">Editar Información de producto</h6>
+                    <form [formGroup]="productForms[i]" (ngSubmit)="onSubmit(productForms[i], product)" class="edit-form">
+                        <div class="mb-3">
+                            <label for="edit-name-{{i}}" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="edit-name-{{i}}" formControlName="nombre">
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-price-{{i}}" class="form-label">Precio:</label>
+                            <input type="text" class="form-control" id="edit-price-{{i}}" formControlName="precio">
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-description-{{i}}" class="form-label">Descripción:</label>
+                            <textarea class="form-control" id="edit-description-{{i}}" formControlName="descripcion"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-save">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-footer></app-footer>

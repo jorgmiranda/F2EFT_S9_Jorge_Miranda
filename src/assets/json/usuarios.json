@@ -1,0 +1,36 @@
+[
+	{
+		"id":1,
+		"nombreCompleto": "Jorge Miranda",
+		"nombreUsuario": "jorg.sanchezm",
+		"correoUsuario": "jorge.miranda@gmail.com",
+		"fechaNacimiento": "1997-03-12",
+		"contrasena": "1234.Pass",
+		"direccionDespacho": "Calle 123",
+		"sesionIniciada": false,
+		"rol": "Usuario"
+	},
+	{
+		"id":2,
+		"nombreCompleto": "Segundo Miranda",
+		"nombreUsuario": "Segundo",
+		"correoUsuario": "segundo@gmail.com",
+		"fechaNacimiento": "1968-07-08",
+		"contrasena": "QWER.1234",
+		"direccionDespacho": "Calle 456",
+		"sesionIniciada": false,
+		"rol": "Usuario"
+	},
+	{
+		"id":3,
+		"nombreCompleto": "Administrador",
+		"nombreUsuario": "Administrador",
+		"correoUsuario": "admin@gmail.com",
+		"fechaNacimiento": "1968-07-08",
+		"contrasena": "123.pass",
+		"direccionDespacho": "Calle administración",
+		"sesionIniciada": false,
+		"rol": "Administrador"
+	}
+
+]

@@ -1,0 +1,1240 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>actividad-examen documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">actividad-examen documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  EditarProductosComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/admin/editar-productos/editar-productos.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Componente para editar productos en diferentes secciones. Permite inicializar productos según la sección,
+gestionar formularios de edición y actualizar la información de los productos.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+            <tr>
+                <td class="col-md-3">encapsulation</td>
+                <td class="col-md-9"><code>ViewEncapsulation.None</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-editar-productos</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">standalone</td>
+                <td class="col-md-9"><code>true</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">imports</td>
+                <td class="col-md-9">
+                                <code><a href="../components/NavbaradminComponent.html" target="_self" >NavbaradminComponent</a></code>
+                            <code>CommonModule</code>
+                                <code><a href="../components/FooterComponent.html" target="_self" >FooterComponent</a></code>
+                            <code>ReactiveFormsModule</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./editar-productos.component.html</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrl</td>
+                <td class="col-md-9"><code>./editar-productos.component.scss</code></td>
+            </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#productForms" >productForms</a>
+                            </li>
+                            <li>
+                                <a href="#products" >products</a>
+                            </li>
+                            <li>
+                                <a href="#seccion" >seccion</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#inicializarFormularios" >inicializarFormularios</a>
+                            </li>
+                            <li>
+                                <a href="#inicializarProductos" >inicializarProductos</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#numberWithCommas" >numberWithCommas</a>
+                            </li>
+                            <li>
+                                <a href="#onSubmit" >onSubmit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(route: ActivatedRoute, fb: FormBuilder)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:33</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                    <code>ActivatedRoute</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Servicio de enrutamiento de Angular</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                    <code>FormBuilder</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Servicio de creación de formulario de Angular</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="inicializarFormularios"></a>
+                    <span class="name">
+                        <span ><b>inicializarFormularios</b></span>
+                        <a href="#inicializarFormularios"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>inicializarFormularios()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="175"
+                                    class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:175</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Inicializa los formularios para cada producto con los datos actuales.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="inicializarProductos"></a>
+                    <span class="name">
+                        <span ><b>inicializarProductos</b></span>
+                        <a href="#inicializarProductos"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>inicializarProductos()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="59"
+                                    class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:59</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Inicializa la lista de productos basada en la sección actual.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="46"
+                                    class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:46</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Metodo de inicialización del componente
+Obtiene la sección de la ruta y llama a los métodos para inicializar productos y formularios.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="numberWithCommas"></a>
+                    <span class="name">
+                        <span ><b>numberWithCommas</b></span>
+                        <a href="#numberWithCommas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>numberWithCommas(x: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="209"
+                                    class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:209</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Formatea un numero con el formato de peso chileno</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>x</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSubmit"></a>
+                    <span class="name">
+                        <span ><b>onSubmit</b></span>
+                        <a href="#onSubmit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSubmit(form: FormGroup, product: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="191"
+                                    class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:191</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Maneja el envío de un formulario para actualizar un producto.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>form</td>
+                                            <td>
+                                                        <code>FormGroup</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>El formulario del producto que se está editando.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                                <td>product</td>
+                                            <td>
+                                                            <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>El producto correspondiente al formulario.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="productForms"></a>
+                    <span class="name">
+                        <span ><b>productForms</b></span>
+                        <a href="#productForms"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>FormGroup[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>instancia de form group</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="products"></a>
+                    <span class="name">
+                        <span ><b>products</b></span>
+                        <a href="#products"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:33</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Instancia vacia de arreglo de productos</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="seccion"></a>
+                    <span class="name">
+                        <span ><b>seccion</b></span>
+                        <a href="#seccion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Variable sección que mostrara los productos según corresponda</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, ViewEncapsulation} from &#x27;@angular/core&#x27;;
+import { NavbaradminComponent } from &#x27;../navbaradmin/navbaradmin.component&#x27;;
+import { FooterComponent } from &#x27;../../../footer/footer.component&#x27;;
+import { CommonModule } from &#x27;@angular/common&#x27;;
+import { ActivatedRoute } from &#x27;@angular/router&#x27;;
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from &#x27;@angular/forms&#x27;;
+
+/**
+ * @description
+ * Componente para editar productos en diferentes secciones. Permite inicializar productos según la sección,
+ * gestionar formularios de edición y actualizar la información de los productos.
+ */
+@Component({
+  selector: &#x27;app-editar-productos&#x27;,
+  standalone: true,
+  imports: [NavbaradminComponent, CommonModule, FooterComponent, ReactiveFormsModule],
+  templateUrl: &#x27;./editar-productos.component.html&#x27;,
+  styleUrl: &#x27;./editar-productos.component.scss&#x27;,
+  encapsulation: ViewEncapsulation.None
+})
+export class EditarProductosComponent implements OnInit{
+  /**
+   * Variable sección que mostrara los productos según corresponda
+   */
+  seccion: string &#x3D; &#x27;&#x27;; 
+  /**
+   * instancia de form group
+   */
+  productForms: FormGroup[] &#x3D; [];
+  /**
+   * Instancia vacia de arreglo de productos
+   */
+  products: any[] &#x3D; [];
+
+  /**
+   * @constructor
+   * @param route - Servicio de enrutamiento de Angular
+   * @param fb - Servicio de creación de formulario de Angular
+   */
+  constructor(private route: ActivatedRoute, private fb: FormBuilder) { }
+
+  /**
+   * Metodo de inicialización del componente
+   * Obtiene la sección de la ruta y llama a los métodos para inicializar productos y formularios.
+   */
+  ngOnInit(): void {
+    this.route.paramMap.subscribe(params &#x3D;&gt; {
+      this.seccion &#x3D; params.get(&#x27;seccion&#x27;) || &#x27;&#x27;;
+      this.inicializarProductos();
+      this.inicializarFormularios();
+    });
+    
+    
+  }
+
+  /**
+   * Inicializa la lista de productos basada en la sección actual.
+   */
+  inicializarProductos(){
+    if (this.seccion &#x3D;&#x3D;&#x3D; &#x27;cuidado_capilar&#x27;) {
+      this.products &#x3D; [
+        {
+          nombre: &#x27;Acond. DoyPack IO Camomilla 1000ml&#x27;,
+          precio: &#x27;1020&#x27;,
+          descripcion: &#x27;Descubre el arte del cuidado personal con el Acondicionador DoyPack IO Camomilla. Este producto incorpora esencias de camomila que nutren, revitalizan y dan suavidad a tu cabello.&#x27;,
+          image: &#x27;assets/img/cuidado_capilar/Acond. DoyPack IO Camomilla 1000ml.jpg&#x27;,
+        },
+        {
+          nombre: &#x27;Acond. DoyPack IO Hierbas 1000ml&#x27;,
+          precio: &#x27;1020&#x27;,
+          descripcion: &#x27;Vive una experiencia saludable con nuestro DoyPack IO Hierbas. Este producto único está especialmente formulado con una selección premium de hierbas, brindándote un sabor inigualable y beneficios para tu salud.&#x27;,
+          image: &#x27;assets/img/cuidado_capilar/Acond. DoyPack IO Hierbas 1000ml.jpg&#x27;,
+        },
+        {
+          nombre: &#x27;Shampoo DoyPack IO Huevo 1000ml&#x27;,
+          precio: &#x27;1020&#x27;,
+          descripcion: &#x27;Transfórmate en la mejor versión de ti con nuestro Shampoo DoyPack IO Quillay. Único en su clase, desenvuelve la magia de la naturaleza para darle vida y vigor a tu cabello.&#x27;,
+          image: &#x27;assets/img/cuidado_capilar/Shampoo DoyPack IO Huevo 1000ml.jpg&#x27;,
+        },
+        {
+          nombre: &#x27;Shampoo DoyPack IO Quillay 1000ml&#x27;,
+          precio: &#x27;1020&#x27;,
+          descripcion: &#x27;Redefine tu cuidado del cabello con el Shampoo DoyPack IO Huevo. Nutre, revitaliza y protege tu cabello con intensidad gracias a su fórmula exclusiva con extractos de huevo.&#x27;,
+          image: &#x27;assets/img/cuidado_capilar/Shampoo DoyPack IO Quillay 1000ml.jpg&#x27;,
+        }
+      ];
+    }else if(this.seccion &#x3D;&#x3D; &#x27;cuidado_ropa&#x27;){
+      this.products &#x3D; [
+        {
+          nombre: &#x27;Jabon de Lavar barra Doña Tuti 170 grs&#x27;,
+          precio: &#x27;5000&#x27;,
+          descripcion: &#x27;Jabón para Lavar en Barra Doña Tuti, poder de limpieza.&#x27;,
+          image: &#x27;assets/img/cuidado_ropa/Jabon de Lavar barra Doña Tuti 170 grs.jpg&#x27;,
+        },
+        {
+          nombre: &#x27;Cloro Concentrado Briks 5 Lts&#x27;,
+          precio: &#x27;1899&#x27;,
+          descripcion: &#x27;Disfrute de un hogar impecablemente limpio con el cloro líquido Briks. Este potente limpiador ofrece una desinfección y limpieza completa, eliminando efectivamente bacterias y suciedad.&#x27;,
+          image: &#x27;assets/img/cuidado_ropa/Cloro Concentrado Briks 5 Lts.jpg&#x27;,
+        },
+        {
+          nombre: &#x27;Detergentes Briks Verde 5 Lts&#x27;,
+          precio: &#x27;3120&#x27;,
+          descripcion: &#x27;Nunca antes tus prendas habían lucido tan bien. Introducimos Detergentes Briks Verde de 5 litros, tú solución definitiva para un lavado profundo y aromatizante.&#x27;,
+          image: &#x27;assets/img/cuidado_ropa/Detergentes Briks Verde 5 Lts.jpg&#x27;,
+        },
+        {
+          nombre: &#x27;Suavizante Doña Tuti Aloe Vera 1000ml&#x27;,
+          precio: &#x27;1100&#x27;,
+          descripcion: &#x27;Suavizante Doña Tuti Aloe Vera 1000ml.&#x27;,
+          image: &#x27;assets/img/cuidado_ropa/Suavizante Doña Tuti Aloe Vera 1000ml.jpg&#x27;,
+        }
+      ];
+
+    }else if(this.seccion &#x3D;&#x3D; &#x27;limpieza&#x27;){
+      this.products &#x3D; [
+        {
+          nombre: &#x27;Cloro Gel Briks Citrus 900ml&#x27;,
+          precio: &#x27;1050&#x27;,
+          descripcion: &#x27;Dile adiós a las bacterias con Cloro Gel Briks Citrus. Potenciado con un fresco aroma a cítricos, este producto de limpieza multifuncional ofrece una solución poderosa a tu alcance.&#x27;,
+          image: &#x27;assets/img/Limpieza/Cloro Gel Briks Citrus 900ml.jpg&#x27;,
+        },
+        {
+          nombre: &#x27;Lavaloza Verde Briks 2 Lts&#x27;,
+          precio: &#x27;1430&#x27;,
+          descripcion: &#x27;Revitaliza y da vida a tus platos con Lavaloza Verde Briks. Este detergente innovador no solo limpia a profundidad, sino que también cuida de tus manos, gracias a su formula exclusiva.&#x27;,
+          image: &#x27;assets/img/Limpieza/Lavaloza Verde Briks 2 Lts.jpg&#x27;,
+        },
+        {
+          nombre: &#x27;Trapero Humedo Doña Tuti Lavanda 40x60cm&#x27;,
+          precio: &#x27;1799&#x27;,
+          descripcion: &#x27;Trapero Humedo Doña Tuti Lavanda 40x60cm.&#x27;,
+          image: &#x27;assets/img/Limpieza/Trapero Humedo Doña Tuti Lavanda 40x60cm.jpg&#x27;,
+        },
+        {
+          nombre: &#x27;Lavalozas Briks Verde 5 Lts&#x27;,
+          precio: &#x27;3120&#x27;,
+          descripcion: &#x27;Como por arte de magia. Esta solución líquida es potente y eficaz, eliminando todo tipo de suciedad adherida en los platos y utensilios de cocina. Su fórmula única, biodegradable, respeta el medio ambiente, mientras garantiza la limpieza profunda que usted necesita.&#x27;,
+          image: &#x27;assets/img/Limpieza/Lavalozas Briks Verde 5 Lts.jpg&#x27;,
+        }
+      ];
+    }else{
+      this.products &#x3D; [
+        {
+          nombre: &#x27;Toalla de papel Nobby Fit&#x27;,
+          precio: &#x27;680&#x27;,
+          descripcion: &#x27;Toalla de papel Bobby Fit&#x27;,
+          image: &#x27;assets/img/papel/Toalla de papel Nobby Fit.jpg&#x27;,
+        },
+        {
+          nombre: &#x27;Servilleta Doña Tuti (Premium)&#x27;,
+          precio: &#x27;1290&#x27;,
+          descripcion: &#x27;300 Unidades por Paquete&#x27;,
+          image: &#x27;assets/img/papel/Servilleta Doña Tuti (Pack Familiar Premium).jpg&#x27;,
+        },
+        {
+          nombre: &#x27;Papel Higiénico Top One 20mts (Pack 12r)&#x27;,
+          precio: &#x27;2499&#x27;,
+          descripcion: &#x27;Papel Higiénico Top One 20 metros, pack de 12 rollos.&#x27;,
+          image: &#x27;assets/img/papel/Papel Higiénico Top One 20mts (Pack 12r).jpg&#x27;,
+        },
+        {
+          nombre: &#x27;Toalla Mediana HiperMax XL Doble Hoja&#x27;,
+          precio: &#x27;2580&#x27;,
+          descripcion: &#x27;Toalla HiperMax XL Doble Hoja 100 Mts&#x27;,
+          image: &#x27;assets/img/papel/Toalla Mediana HiperMax XL Doble Hoja.jpg&#x27;,
+        }
+      ];
+    }
+  }
+
+  /**
+   * Inicializa los formularios para cada producto con los datos actuales.
+   */
+  inicializarFormularios(): void{
+    this.productForms &#x3D; [];
+    this.products.forEach((product) &#x3D;&gt; {
+      this.productForms.push(this.fb.group({
+        nombre: [product.nombre, Validators.required],
+        precio: [product.precio, [Validators.required]],
+        descripcion: [product.descripcion, Validators.required]
+      }));
+    });
+  }
+
+  /**
+   * Maneja el envío de un formulario para actualizar un producto.
+   * @param form - El formulario del producto que se está editando.
+   * @param product - El producto correspondiente al formulario.
+   */
+  onSubmit(form: FormGroup, product: any) {
+    if (form.valid) {
+      const updatedProduct &#x3D; form.value;
+      product.nombre &#x3D; updatedProduct.nombre;
+      product.precio &#x3D; updatedProduct.precio;
+      product.descripcion &#x3D; updatedProduct.descripcion;
+      alert(&#x27;La información del producto ha sido actualizada correctamente.&#x27;);
+    } else {
+      alert(&#x27;Por favor, complete todos los campos correctamente.&#x27;);
+    }
+  }
+  
+/**
+ * Formatea un numero con el formato de peso chileno
+ * 
+ * @param x 
+ * @returns 
+ */
+  numberWithCommas(x: string): string {
+    return x.replace(/\B(?&#x3D;(\d{3})+(?!\d))/g, &quot;,&quot;);
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;app-navbaradmin&gt;&lt;/app-navbaradmin&gt;
+
+&lt;div *ngIf&#x3D;&quot;seccion &#x3D;&#x3D;&#x3D; &#x27;cuidado_capilar&#x27;&quot;&gt;
+    &lt;h1 class&#x3D;&quot;titulo-pagina&quot;&gt;Administrar Cuidado Capilar&lt;/h1&gt;
+    &lt;br&gt;&lt;br&gt;
+    &lt;div class&#x3D;&quot;row card-container&quot;&gt;
+        &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot; *ngFor&#x3D;&quot;let product of products; let i &#x3D; index&quot;&gt;
+            &lt;div class&#x3D;&quot;card card-content h-100&quot;&gt;
+                &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
+                    &lt;img [src]&#x3D;&quot;product.image&quot; class&#x3D;&quot;card-img-top fade-in&quot; [alt]&#x3D;&quot;product.name&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
+                    &lt;h5 class&#x3D;&quot;card-title&quot;&gt;{{ product.nombre }}&lt;/h5&gt;
+                    &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: {{ product.precio | currency }}&lt;/p&gt;
+                    &lt;b&gt;&lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;&lt;/b&gt;
+                    &lt;p class&#x3D;&quot;card-text&quot;&gt;{{ product.descripcion }}&lt;/p&gt;
+                    &lt;hr style&#x3D;&quot;width: 100%;&quot;&gt;
+                    &lt;h6 class&#x3D;&quot;edit-title&quot; style&#x3D;&quot;font-weight: bold;&quot;&gt;Editar Información de producto&lt;/h6&gt;
+                    &lt;form [formGroup]&#x3D;&quot;productForms[i]&quot; (ngSubmit)&#x3D;&quot;onSubmit(productForms[i], product)&quot; class&#x3D;&quot;edit-form&quot;&gt;
+                        &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-name-{{i}}&quot; class&#x3D;&quot;form-label&quot;&gt;Nombre:&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-name-{{i}}&quot; formControlName&#x3D;&quot;nombre&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-price-{{i}}&quot; class&#x3D;&quot;form-label&quot;&gt;Precio:&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-price-{{i}}&quot; formControlName&#x3D;&quot;precio&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-description-{{i}}&quot; class&#x3D;&quot;form-label&quot;&gt;Descripción:&lt;/label&gt;
+                            &lt;textarea class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-description-{{i}}&quot; formControlName&#x3D;&quot;descripcion&quot;&gt;&lt;/textarea&gt;
+                        &lt;/div&gt;
+                        &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary btn-save&quot;&gt;Guardar&lt;/button&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div *ngIf&#x3D;&quot;seccion &#x3D;&#x3D;&#x3D; &#x27;cuidado_ropa&#x27;&quot;&gt;
+    &lt;h1 class&#x3D;&quot;titulo-pagina&quot;&gt;Administrar Cuidado de Ropa&lt;/h1&gt;
+    &lt;br&gt;&lt;br&gt;
+    &lt;div class&#x3D;&quot;row card-container&quot;&gt;
+        &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot; *ngFor&#x3D;&quot;let product of products; let i &#x3D; index&quot;&gt;
+            &lt;div class&#x3D;&quot;card card-content h-100&quot;&gt;
+                &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
+                    &lt;img [src]&#x3D;&quot;product.image&quot; class&#x3D;&quot;card-img-top fade-in&quot; [alt]&#x3D;&quot;product.name&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
+                    &lt;h5 class&#x3D;&quot;card-title&quot;&gt;{{ product.nombre }}&lt;/h5&gt;
+                    &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: {{ product.precio | currency }}&lt;/p&gt;
+                    &lt;b&gt;&lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;&lt;/b&gt;
+                    &lt;p class&#x3D;&quot;card-text&quot;&gt;{{ product.descripcion }}&lt;/p&gt;
+                    &lt;hr style&#x3D;&quot;width: 100%;&quot;&gt;
+                    &lt;h6 class&#x3D;&quot;edit-title&quot; style&#x3D;&quot;font-weight: bold;&quot;&gt;Editar Información de producto&lt;/h6&gt;
+                    &lt;form [formGroup]&#x3D;&quot;productForms[i]&quot; (ngSubmit)&#x3D;&quot;onSubmit(productForms[i], product)&quot; class&#x3D;&quot;edit-form&quot;&gt;
+                        &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-name-{{i}}&quot; class&#x3D;&quot;form-label&quot;&gt;Nombre:&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-name-{{i}}&quot; formControlName&#x3D;&quot;nombre&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-price-{{i}}&quot; class&#x3D;&quot;form-label&quot;&gt;Precio:&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-price-{{i}}&quot; formControlName&#x3D;&quot;precio&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-description-{{i}}&quot; class&#x3D;&quot;form-label&quot;&gt;Descripción:&lt;/label&gt;
+                            &lt;textarea class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-description-{{i}}&quot; formControlName&#x3D;&quot;descripcion&quot;&gt;&lt;/textarea&gt;
+                        &lt;/div&gt;
+                        &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary btn-save&quot;&gt;Guardar&lt;/button&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div *ngIf&#x3D;&quot;seccion &#x3D;&#x3D;&#x3D; &#x27;limpieza&#x27;&quot;&gt;
+    &lt;h1 class&#x3D;&quot;titulo-pagina&quot;&gt;Administrar Limpieza&lt;/h1&gt;
+    &lt;br&gt;&lt;br&gt;
+    &lt;div class&#x3D;&quot;row card-container&quot;&gt;
+        &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot; *ngFor&#x3D;&quot;let product of products; let i &#x3D; index&quot;&gt;
+            &lt;div class&#x3D;&quot;card card-content h-100&quot;&gt;
+                &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
+                    &lt;img [src]&#x3D;&quot;product.image&quot; class&#x3D;&quot;card-img-top fade-in&quot; [alt]&#x3D;&quot;product.name&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
+                    &lt;h5 class&#x3D;&quot;card-title&quot;&gt;{{ product.nombre }}&lt;/h5&gt;
+                    &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: {{ product.precio | currency }}&lt;/p&gt;
+                    &lt;b&gt;&lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;&lt;/b&gt;
+                    &lt;p class&#x3D;&quot;card-text&quot;&gt;{{ product.descripcion }}&lt;/p&gt;
+                    &lt;hr style&#x3D;&quot;width: 100%;&quot;&gt;
+                    &lt;h6 class&#x3D;&quot;edit-title&quot; style&#x3D;&quot;font-weight: bold;&quot;&gt;Editar Información de producto&lt;/h6&gt;
+                    &lt;form [formGroup]&#x3D;&quot;productForms[i]&quot; (ngSubmit)&#x3D;&quot;onSubmit(productForms[i], product)&quot; class&#x3D;&quot;edit-form&quot;&gt;
+                        &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-name-{{i}}&quot; class&#x3D;&quot;form-label&quot;&gt;Nombre:&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-name-{{i}}&quot; formControlName&#x3D;&quot;nombre&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-price-{{i}}&quot; class&#x3D;&quot;form-label&quot;&gt;Precio:&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-price-{{i}}&quot; formControlName&#x3D;&quot;precio&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-description-{{i}}&quot; class&#x3D;&quot;form-label&quot;&gt;Descripción:&lt;/label&gt;
+                            &lt;textarea class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-description-{{i}}&quot; formControlName&#x3D;&quot;descripcion&quot;&gt;&lt;/textarea&gt;
+                        &lt;/div&gt;
+                        &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary btn-save&quot;&gt;Guardar&lt;/button&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div *ngIf&#x3D;&quot;seccion &#x3D;&#x3D;&#x3D; &#x27;papel&#x27;&quot;&gt;
+    &lt;h1 class&#x3D;&quot;titulo-pagina&quot;&gt;Administrar Papeles&lt;/h1&gt;
+    &lt;br&gt;&lt;br&gt;
+    &lt;div class&#x3D;&quot;row card-container&quot;&gt;
+        &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot; *ngFor&#x3D;&quot;let product of products; let i &#x3D; index&quot;&gt;
+            &lt;div class&#x3D;&quot;card card-content h-100&quot;&gt;
+                &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
+                    &lt;img [src]&#x3D;&quot;product.image&quot; class&#x3D;&quot;card-img-top fade-in&quot; [alt]&#x3D;&quot;product.name&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
+                    &lt;h5 class&#x3D;&quot;card-title&quot;&gt;{{ product.nombre }}&lt;/h5&gt;
+                    &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: {{ product.precio | currency }}&lt;/p&gt;
+                    &lt;b&gt;&lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;&lt;/b&gt;
+                    &lt;p class&#x3D;&quot;card-text&quot;&gt;{{ product.descripcion }}&lt;/p&gt;
+                    &lt;hr style&#x3D;&quot;width: 100%;&quot;&gt;
+                    &lt;h6 class&#x3D;&quot;edit-title&quot; style&#x3D;&quot;font-weight: bold;&quot;&gt;Editar Información de producto&lt;/h6&gt;
+                    &lt;form [formGroup]&#x3D;&quot;productForms[i]&quot; (ngSubmit)&#x3D;&quot;onSubmit(productForms[i], product)&quot; class&#x3D;&quot;edit-form&quot;&gt;
+                        &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-name-{{i}}&quot; class&#x3D;&quot;form-label&quot;&gt;Nombre:&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-name-{{i}}&quot; formControlName&#x3D;&quot;nombre&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-price-{{i}}&quot; class&#x3D;&quot;form-label&quot;&gt;Precio:&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-price-{{i}}&quot; formControlName&#x3D;&quot;precio&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-description-{{i}}&quot; class&#x3D;&quot;form-label&quot;&gt;Descripción:&lt;/label&gt;
+                            &lt;textarea class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-description-{{i}}&quot; formControlName&#x3D;&quot;descripcion&quot;&gt;&lt;/textarea&gt;
+                        &lt;/div&gt;
+                        &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary btn-save&quot;&gt;Guardar&lt;/button&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;app-footer&gt;&lt;/app-footer&gt;
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><app-navbaradmin></app-navbaradmin><div *ngIf="seccion === \'cuidado_capilar\'">    <h1 class="titulo-pagina">Administrar Cuidado Capilar</h1>    <br><br>    <div class="row card-container">        <div class="col-12 col-md-6 mb-4" *ngFor="let product of products; let i = index">            <div class="card card-content h-100">                <div class="card-img-container">                    <img [src]="product.image" class="card-img-top fade-in" [alt]="product.name">                </div>                <div class="card-body d-flex flex-column align-items-center text-center">                    <h5 class="card-title">{{ product.nombre }}</h5>                    <p class="card-text precio">Precio: {{ product.precio | currency }}</p>                    <b><p class="card-text">Información del producto</p></b>                    <p class="card-text">{{ product.descripcion }}</p>                    <hr style="width: 100%;">                    <h6 class="edit-title" style="font-weight: bold;">Editar Información de producto</h6>                    <form [formGroup]="productForms[i]" (ngSubmit)="onSubmit(productForms[i], product)" class="edit-form">                        <div class="mb-3">                            <label for="edit-name-{{i}}" class="form-label">Nombre:</label>                            <input type="text" class="form-control" id="edit-name-{{i}}" formControlName="nombre">                        </div>                        <div class="mb-3">                            <label for="edit-price-{{i}}" class="form-label">Precio:</label>                            <input type="text" class="form-control" id="edit-price-{{i}}" formControlName="precio">                        </div>                        <div class="mb-3">                            <label for="edit-description-{{i}}" class="form-label">Descripción:</label>                            <textarea class="form-control" id="edit-description-{{i}}" formControlName="descripcion"></textarea>                        </div>                        <button type="submit" class="btn btn-primary btn-save">Guardar</button>                    </form>                </div>            </div>        </div>    </div></div><div *ngIf="seccion === \'cuidado_ropa\'">    <h1 class="titulo-pagina">Administrar Cuidado de Ropa</h1>    <br><br>    <div class="row card-container">        <div class="col-12 col-md-6 mb-4" *ngFor="let product of products; let i = index">            <div class="card card-content h-100">                <div class="card-img-container">                    <img [src]="product.image" class="card-img-top fade-in" [alt]="product.name">                </div>                <div class="card-body d-flex flex-column align-items-center text-center">                    <h5 class="card-title">{{ product.nombre }}</h5>                    <p class="card-text precio">Precio: {{ product.precio | currency }}</p>                    <b><p class="card-text">Información del producto</p></b>                    <p class="card-text">{{ product.descripcion }}</p>                    <hr style="width: 100%;">                    <h6 class="edit-title" style="font-weight: bold;">Editar Información de producto</h6>                    <form [formGroup]="productForms[i]" (ngSubmit)="onSubmit(productForms[i], product)" class="edit-form">                        <div class="mb-3">                            <label for="edit-name-{{i}}" class="form-label">Nombre:</label>                            <input type="text" class="form-control" id="edit-name-{{i}}" formControlName="nombre">                        </div>                        <div class="mb-3">                            <label for="edit-price-{{i}}" class="form-label">Precio:</label>                            <input type="text" class="form-control" id="edit-price-{{i}}" formControlName="precio">                        </div>                        <div class="mb-3">                            <label for="edit-description-{{i}}" class="form-label">Descripción:</label>                            <textarea class="form-control" id="edit-description-{{i}}" formControlName="descripcion"></textarea>                        </div>                        <button type="submit" class="btn btn-primary btn-save">Guardar</button>                    </form>                </div>            </div>        </div>    </div></div><div *ngIf="seccion === \'limpieza\'">    <h1 class="titulo-pagina">Administrar Limpieza</h1>    <br><br>    <div class="row card-container">        <div class="col-12 col-md-6 mb-4" *ngFor="let product of products; let i = index">            <div class="card card-content h-100">                <div class="card-img-container">                    <img [src]="product.image" class="card-img-top fade-in" [alt]="product.name">                </div>                <div class="card-body d-flex flex-column align-items-center text-center">                    <h5 class="card-title">{{ product.nombre }}</h5>                    <p class="card-text precio">Precio: {{ product.precio | currency }}</p>                    <b><p class="card-text">Información del producto</p></b>                    <p class="card-text">{{ product.descripcion }}</p>                    <hr style="width: 100%;">                    <h6 class="edit-title" style="font-weight: bold;">Editar Información de producto</h6>                    <form [formGroup]="productForms[i]" (ngSubmit)="onSubmit(productForms[i], product)" class="edit-form">                        <div class="mb-3">                            <label for="edit-name-{{i}}" class="form-label">Nombre:</label>                            <input type="text" class="form-control" id="edit-name-{{i}}" formControlName="nombre">                        </div>                        <div class="mb-3">                            <label for="edit-price-{{i}}" class="form-label">Precio:</label>                            <input type="text" class="form-control" id="edit-price-{{i}}" formControlName="precio">                        </div>                        <div class="mb-3">                            <label for="edit-description-{{i}}" class="form-label">Descripción:</label>                            <textarea class="form-control" id="edit-description-{{i}}" formControlName="descripcion"></textarea>                        </div>                        <button type="submit" class="btn btn-primary btn-save">Guardar</button>                    </form>                </div>            </div>        </div>    </div></div><div *ngIf="seccion === \'papel\'">    <h1 class="titulo-pagina">Administrar Papeles</h1>    <br><br>    <div class="row card-container">        <div class="col-12 col-md-6 mb-4" *ngFor="let product of products; let i = index">            <div class="card card-content h-100">                <div class="card-img-container">                    <img [src]="product.image" class="card-img-top fade-in" [alt]="product.name">                </div>                <div class="card-body d-flex flex-column align-items-center text-center">                    <h5 class="card-title">{{ product.nombre }}</h5>                    <p class="card-text precio">Precio: {{ product.precio | currency }}</p>                    <b><p class="card-text">Información del producto</p></b>                    <p class="card-text">{{ product.descripcion }}</p>                    <hr style="width: 100%;">                    <h6 class="edit-title" style="font-weight: bold;">Editar Información de producto</h6>                    <form [formGroup]="productForms[i]" (ngSubmit)="onSubmit(productForms[i], product)" class="edit-form">                        <div class="mb-3">                            <label for="edit-name-{{i}}" class="form-label">Nombre:</label>                            <input type="text" class="form-control" id="edit-name-{{i}}" formControlName="nombre">                        </div>                        <div class="mb-3">                            <label for="edit-price-{{i}}" class="form-label">Precio:</label>                            <input type="text" class="form-control" id="edit-price-{{i}}" formControlName="precio">                        </div>                        <div class="mb-3">                            <label for="edit-description-{{i}}" class="form-label">Descripción:</label>                            <textarea class="form-control" id="edit-description-{{i}}" formControlName="descripcion"></textarea>                        </div>                        <button type="submit" class="btn btn-primary btn-save">Guardar</button>                    </form>                </div>            </div>        </div>    </div></div><app-footer></app-footer></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'EditarPerfilComponent', 'selector': 'app-editar-perfil'},{'name': 'EditarProductosComponent', 'selector': 'app-editar-productos'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'InicioAdminComponent', 'selector': 'app-inicio-admin'},{'name': 'InicioComponent', 'selector': 'app-inicio'},{'name': 'ListaUsuariosComponent', 'selector': 'app-lista-usuarios'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbaradminComponent', 'selector': 'app-navbaradmin'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'ProductosComponent', 'selector': 'app-productos'},{'name': 'RecuperarContrasenaComponent', 'selector': 'app-recuperar-contrasena'},{'name': 'RegistroComponent', 'selector': 'app-registro'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'EditarProductosComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'EditarProductosComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

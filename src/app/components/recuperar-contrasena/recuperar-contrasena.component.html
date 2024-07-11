@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<main class="container login">
+    <h1 class="titulo-pagina">Recuperar Contaseña</h1>
+    <br>
+    <p class="lead" style="margin: 20px;">Ingrese su correo para recuperar su Contraseña</p>
+    <br>
+    <form [formGroup]="recuperarCorreo" (ngSubmit)="recuperarContrasena()">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="mb-3">
+                    <label for="correoValidacion" class="form-label">Correo*:</label>
+                    <input type="email" class="form-control" id="correoValidacion" aria-describedby="emailHelp" formControlName="correoValidacion">
+                    <div id="emailHelp" class="form-text" *ngIf="recuperarCorreo.get('correoValidacion')?.hasError('required')">Este campo es obligatorio</div>
+                    <div id="emailHelp" class="form-text" *ngIf="recuperarCorreo.get('correoValidacion')?.hasError('email')">El Correo no es valido</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <button type="submit" class="btn btn-primary">Recuperar Contraseña</button>
+            </div>
+
+        </div>
+    </form>
+</main>
+<app-footer></app-footer>

@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+<main class="container login">
+        <h1 class="titulo-pagina">Iniciar Sesión</h1>
+        <br>
+        <br>
+        <form [formGroup]="login" (ngSubmit)="iniciarSesion()">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="mb-3">
+                        <label for="nombreCompleto" class="form-label">Nombre de usuario:</label>
+                        <input type="text" class="form-control" id="nombreUsuario" formControlName="nombreUsuario">
+                        <div id="nombreUsuarioHelp" class="form-text" *ngIf="login.get('nombreUsuario')?.hasError('required')">Este campo es obligatorio</div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="mb-3">
+                        <label for="contrasenaUsuario" class="form-label">Contraseña:</label>
+                        <input type="password" class="form-control" id="contrasenaUsuario" formControlName="contrasenaUsuario">
+                        <div id="contrasenaHelp" class="form-text" *ngIf="login.get('contrasenaUsuario')?.hasError('required')">Este campo es obligatorio</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                </div>
+
+            </div>
+        </form>
+</main>
+
+<app-footer></app-footer>

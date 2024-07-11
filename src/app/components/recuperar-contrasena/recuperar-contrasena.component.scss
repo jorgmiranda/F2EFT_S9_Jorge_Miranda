@@ -1,0 +1,32 @@
+:host {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    flex: 1;
+}
+
+.row{
+    margin: 20px;
+}
+
+.titulo-pagina{
+    margin: 20px 20px 0 20px;
+}
+
+.form-text{
+    color: red;
+}
+
+.login{
+    max-width: 700px !important;
+}

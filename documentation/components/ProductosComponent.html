@@ -1,0 +1,1464 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>actividad-examen documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">actividad-examen documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  ProductosComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/productos/productos.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Componente Productos</p>
+<p>Este componente es el encargado de cargar los productos disponibles en el sistema dependiendo de la sección ingresada.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+            <tr>
+                <td class="col-md-3">encapsulation</td>
+                <td class="col-md-9"><code>ViewEncapsulation.None</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-productos</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">standalone</td>
+                <td class="col-md-9"><code>true</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">imports</td>
+                <td class="col-md-9">
+                                <code><a href="../components/NavbarComponent.html" target="_self" >NavbarComponent</a></code>
+                                <code><a href="../components/FooterComponent.html" target="_self" >FooterComponent</a></code>
+                            <code>CommonModule</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./productos.component.html</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrl</td>
+                <td class="col-md-9"><code>./productos.component.scss</code></td>
+            </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#listaProductos" >listaProductos</a>
+                            </li>
+                            <li>
+                                <a href="#seccion" >seccion</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#funcionalidadCarrito" >funcionalidadCarrito</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#onClick" >onClick</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#showHtml" >showHtml</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>HostListeners</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#document:click" >document:click</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(platformId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank">Object</a>, route: ActivatedRoute, elRef: ElementRef)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/components/productos/productos.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>platformId</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank" >Object</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Identificado de la plataforma (Navegador o Servidor)</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                    <code>ActivatedRoute</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Servicio de enrutamiento de Angular</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>elRef</td>
+                                                  
+                                                        <td>
+                                                                    <code>ElementRef</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Referencia al elemento del DOM asociado con este componente.</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+    <section data-compodoc="block-methods">
+    <h3>HostListeners</h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="document:click"></a>
+                    <span class="name">
+                        <span ><b>document:click</b></span>
+                        <a href="#document:click"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <i>Arguments : </i><code>'$event' </code>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>document:click(event: MouseEvent)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="64"
+                                    class="link-to-prism">src/app/components/productos/productos.component.ts:64</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Maneja los eventos de clic en el documento. Agrega productos al carrito y actualiza la vista del carrito.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>event</td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>El evento de clic del ratón.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="funcionalidadCarrito"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>funcionalidadCarrito</b></span>
+                        <a href="#funcionalidadCarrito"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>funcionalidadCarrito()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="104"
+                                    class="link-to-prism">src/app/components/productos/productos.component.ts:104</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Permite agregar elementos al carrito de compras del sitio web.
+Los productos agregos son almacenados en una variable de sesión</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="45"
+                                    class="link-to-prism">src/app/components/productos/productos.component.ts:45</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Metodo de inicialización del componente
+suscribiéndose a los parámetros de la ruta y configurando la funcionalidad del carrito de compras.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onClick"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>onClick</b></span>
+                        <a href="#onClick"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onClick(event: MouseEvent)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@HostListener(&#x27;document:click&#x27;, [&#x27;$event&#x27;])<br /></code>
+                </td>
+            </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="64"
+                                    class="link-to-prism">src/app/components/productos/productos.component.ts:64</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Maneja los eventos de clic en el documento. Agrega productos al carrito y actualiza la vista del carrito.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>event</td>
+                                            <td>
+                                                        <code>MouseEvent</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>El evento de clic del ratón.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showHtml"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>showHtml</b></span>
+                        <a href="#showHtml"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>showHtml(rowProduct: HTMLElement, valorTotal: HTMLElement, contarProductos: HTMLElement, cartEmpty: HTMLElement, cartTotal: HTMLElement)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="140"
+                                    class="link-to-prism">src/app/components/productos/productos.component.ts:140</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Metodo utilizado para la generación de html en el carrito basado en la lista de productos almacenada en sesión</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>rowProduct</td>
+                                            <td>
+                                                        <code>HTMLElement</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>Elemento contenedor de los productos en el carrtio</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                                <td>valorTotal</td>
+                                            <td>
+                                                        <code>HTMLElement</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>Elemento que muestra el total a pagar</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                                <td>contarProductos</td>
+                                            <td>
+                                                        <code>HTMLElement</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>Elemento qure muestra la cantidad de productos en el carrito</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                                <td>cartEmpty</td>
+                                            <td>
+                                                        <code>HTMLElement</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>Elemento que muestra el mensaje de carrito vacio</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                                <td>cartTotal</td>
+                                            <td>
+                                                        <code>HTMLElement</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>Elemento que muestra el contenedor del valor total del carrito</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="listaProductos"></a>
+                    <span class="name">
+                        <span ><b>listaProductos</b></span>
+                        <a href="#listaProductos"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/components/productos/productos.component.ts:32</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Instancia de lista de productos</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="seccion"></a>
+                    <span class="name">
+                        <span ><b>seccion</b></span>
+                        <a href="#seccion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/components/productos/productos.component.ts:28</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Variable sección para definir que productos se mostraran</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Inject, PLATFORM_ID, ViewEncapsulation, HostListener, ElementRef } from &#x27;@angular/core&#x27;;
+import { FooterComponent } from &#x27;../../footer/footer.component&#x27;;
+import { NavbarComponent } from &#x27;../../navbar/navbar.component&#x27;;
+import { ActivatedRoute } from &#x27;@angular/router&#x27;;
+import { CommonModule } from &#x27;@angular/common&#x27;;
+import { isPlatformBrowser } from &#x27;@angular/common&#x27;;
+
+/**
+ * @description
+ * Componente Productos
+ * 
+ * Este componente es el encargado de cargar los productos disponibles en el sistema dependiendo de la sección ingresada.
+ * 
+ * 
+ */
+@Component({
+  selector: &#x27;app-productos&#x27;,
+  standalone: true,
+  imports: [NavbarComponent, FooterComponent, CommonModule],
+  templateUrl: &#x27;./productos.component.html&#x27;,
+  styleUrl: &#x27;./productos.component.scss&#x27;,
+  encapsulation: ViewEncapsulation.None
+})
+export class ProductosComponent implements OnInit {
+  /**
+   * Variable sección para definir que productos se mostraran
+   */
+  seccion: string &#x3D; &#x27;&#x27;;
+  /**
+   * Instancia de lista de productos
+   */
+  listaProductos: any[] &#x3D; [];
+  /**
+   * @constructor
+   * @param platformId - Identificado de la plataforma (Navegador o Servidor)
+   * @param route - Servicio de enrutamiento de Angular
+   * @param elRef - Referencia al elemento del DOM asociado con este componente.
+   */
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private route: ActivatedRoute, private elRef: ElementRef) { }
+
+  /**
+   * Metodo de inicialización del componente
+   * suscribiéndose a los parámetros de la ruta y configurando la funcionalidad del carrito de compras.
+   */
+  ngOnInit(): void {
+    this.route.paramMap.subscribe(params &#x3D;&gt; {
+      this.seccion &#x3D; params.get(&#x27;seccion&#x27;) || &#x27;&#x27;;
+    });
+
+    if (isPlatformBrowser(this.platformId)) {
+      this.listaProductos &#x3D; JSON.parse(sessionStorage.getItem(&#x27;listaProductos&#x27;) || &#x27;[]&#x27;);
+      this.funcionalidadCarrito();
+
+    }
+  }
+
+
+  /**
+   * Maneja los eventos de clic en el documento. Agrega productos al carrito y actualiza la vista del carrito.
+   * 
+   * @param event - El evento de clic del ratón.
+   */
+  @HostListener(&#x27;document:click&#x27;, [&#x27;$event&#x27;])
+  onClick(event: MouseEvent) {
+    const productList &#x3D; this.elRef.nativeElement.querySelector(&#x27;.card-container&#x27;);
+    const rowProduct &#x3D; this.elRef.nativeElement.querySelector(&#x27;.row-product&#x27;);
+    const valorTotal &#x3D; this.elRef.nativeElement.querySelector(&#x27;#total-pagar&#x27;);
+    const contarProductos &#x3D; this.elRef.nativeElement.querySelector(&#x27;#contador-productos&#x27;);
+    const cartEmpty &#x3D; this.elRef.nativeElement.querySelector(&#x27;.cart-empty&#x27;);
+    const cartTotal &#x3D; this.elRef.nativeElement.querySelector(&#x27;.cart-total&#x27;);
+
+    if (productList &amp;&amp; event.target instanceof HTMLElement &amp;&amp; event.target.classList.contains(&#x27;btn-add-cart&#x27;)) {
+      const producto &#x3D; event.target.parentElement as HTMLElement;
+      const infoProducto &#x3D; {
+        cantidad: 1,
+        titulo: producto.querySelector(&#x27;h5&#x27;)?.textContent || &#x27;&#x27;,
+        precio: producto.querySelector(&#x27;.precio&#x27;)?.textContent?.replace(&#x27;Precio: &#x27;, &#x27;&#x27;) || &#x27;&#x27;
+      };
+
+      const exists &#x3D; this.listaProductos.some(producto &#x3D;&gt; producto.titulo &#x3D;&#x3D;&#x3D; infoProducto.titulo);
+      if (exists) {
+        const productos &#x3D; this.listaProductos.map(producto &#x3D;&gt; {
+          if (producto.titulo &#x3D;&#x3D;&#x3D; infoProducto.titulo) {
+            producto.cantidad++;
+          }
+          return producto;
+        });
+        this.listaProductos &#x3D; [...productos];
+      } else {
+        this.listaProductos &#x3D; [...this.listaProductos, infoProducto];
+      }
+      sessionStorage.setItem(&#x27;listaProductos&#x27;, JSON.stringify(this.listaProductos));
+
+      if (rowProduct &amp;&amp; valorTotal &amp;&amp; contarProductos &amp;&amp; cartEmpty &amp;&amp; cartTotal) {
+        this.showHtml(rowProduct, valorTotal, contarProductos, cartEmpty, cartTotal);
+      }
+    }
+  }
+
+  /**
+   * Permite agregar elementos al carrito de compras del sitio web.
+   * Los productos agregos son almacenados en una variable de sesión
+   */
+  private funcionalidadCarrito(): void {
+    const cartInfo &#x3D; document.querySelector(&#x27;.cart-product&#x27;) as HTMLElement | null;
+    const rowProduct &#x3D; document.querySelector(&#x27;.row-product&#x27;) as HTMLElement | null;
+    const productList &#x3D; document.querySelector(&#x27;.card-container&#x27;) as HTMLElement | null;
+    const valorTotal &#x3D; document.querySelector(&#x27;#total-pagar&#x27;) as HTMLElement | null;
+    const contarProductos &#x3D; document.querySelector(&#x27;#contador-productos&#x27;) as HTMLElement | null;
+    const cartEmpty &#x3D; document.querySelector(&#x27;.cart-empty&#x27;) as HTMLElement | null;
+    const cartTotal &#x3D; document.querySelector(&#x27;.cart-total&#x27;) as HTMLElement | null;
+
+    if (rowProduct &amp;&amp; valorTotal &amp;&amp; contarProductos &amp;&amp; cartEmpty &amp;&amp; cartTotal) {
+      rowProduct.addEventListener(&#x27;click&#x27;, (e) &#x3D;&gt; {
+        if ((e.target as HTMLElement).classList.contains(&#x27;icon-close&#x27;)) {
+          const producto &#x3D; (e.target as HTMLElement).parentElement as HTMLElement;
+          const titulo &#x3D; (producto.querySelector(&#x27;p&#x27;) as HTMLElement).textContent || &#x27;&#x27;;
+
+          this.listaProductos &#x3D; this.listaProductos.filter(
+            producto &#x3D;&gt; producto.titulo !&#x3D;&#x3D; titulo
+          );
+
+          sessionStorage.setItem(&#x27;listaProductos&#x27;, JSON.stringify(this.listaProductos));
+          this.showHtml(rowProduct, valorTotal, contarProductos, cartEmpty, cartTotal);
+          console.log(this.listaProductos);
+        }
+      });
+    }
+  }
+
+ /**
+   * Metodo utilizado para la generación de html en el carrito basado en la lista de productos almacenada en sesión
+   * 
+   * @param rowProduct - Elemento contenedor de los productos en el carrtio
+   * @param valorTotal - Elemento que muestra el total a pagar
+   * @param contarProductos - Elemento qure muestra la cantidad de productos en el carrito
+   * @param cartEmpty - Elemento que muestra el mensaje de carrito vacio
+   * @param cartTotal - Elemento que muestra el contenedor del valor total del carrito
+   */
+  private showHtml(
+    rowProduct: HTMLElement,
+    valorTotal: HTMLElement,
+    contarProductos: HTMLElement,
+    cartEmpty: HTMLElement,
+    cartTotal: HTMLElement
+  ): void {
+    if (!this.listaProductos.length) {
+      cartEmpty.classList.remove(&#x27;hidden&#x27;);
+      rowProduct.classList.add(&#x27;hidden&#x27;);
+      cartTotal.classList.add(&#x27;hidden&#x27;);
+    } else {
+      cartEmpty.classList.add(&#x27;hidden&#x27;);
+      rowProduct.classList.remove(&#x27;hidden&#x27;);
+      cartTotal.classList.remove(&#x27;hidden&#x27;);
+    }
+
+    // Limpiar HTML
+    rowProduct.innerHTML &#x3D; &#x27;&#x27;;
+
+    let total &#x3D; 0;
+    let totalProductos &#x3D; 0;
+
+    this.listaProductos.forEach(producto &#x3D;&gt; {
+      const containerProduct &#x3D; document.createElement(&#x27;div&#x27;);
+      containerProduct.classList.add(&#x27;cart-product&#x27;);
+
+      containerProduct.innerHTML &#x3D; &#x60;
+        &lt;div class&#x3D;&quot;info-cart-product&quot;&gt;
+          &lt;span class&#x3D;&quot;cantidad-producto-carrito&quot;&gt;${producto.cantidad}&lt;/span&gt;
+          &lt;p class&#x3D;&quot;titulo-producto-carrito&quot;&gt;${producto.titulo}&lt;/p&gt;
+          &lt;span class&#x3D;&quot;precio-producto-carrito&quot;&gt;${producto.precio}&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;svg width&#x3D;&quot;40&quot; height&#x3D;&quot;40&quot; viewBox&#x3D;&quot;0 0 40 40&quot; class&#x3D;&quot;icon-close&quot;&gt;
+          &lt;path d&#x3D;&quot;M 10,10 L 30,30 M 30,10 L 10,30&quot; stroke&#x3D;&quot;black&quot; stroke-width&#x3D;&quot;4&quot; /&gt;
+        &lt;/svg&gt;
+      &#x60;;
+
+      rowProduct.append(containerProduct);
+
+      total +&#x3D; producto.cantidad * parseInt(producto.precio.replace(&#x27;.&#x27;, &#x27;&#x27;).replace(&#x27;$&#x27;, &#x27;&#x27;));
+      totalProductos +&#x3D; producto.cantidad;
+    });
+
+    valorTotal.innerText &#x3D; &#x60;$${numberWithCommas(total)}&#x60;;
+    contarProductos.innerText &#x3D; totalProductos.toString();
+
+  }
+
+}
+/**
+ * Formatea un numero con el formato de peso chileno
+ * @param x 
+ * @returns 
+ */
+function numberWithCommas(x: number): string {
+  return x.toString().replace(/\B(?&#x3D;(\d{3})+(?!\d))/g, &quot;.&quot;);
+}
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;app-navbar&gt;&lt;/app-navbar&gt;
+&lt;main&gt;
+    &lt;div *ngIf&#x3D;&quot;this.seccion &#x3D;&#x3D;&#x3D; &#x27;cuidado_capilar&#x27;&quot;&gt;
+        &lt;h1 class&#x3D;&quot;titulo-pagina&quot;&gt;Cuidado Capilar&lt;/h1&gt;
+        &lt;br&gt;
+        &lt;br&gt;
+        &lt;div class&#x3D;&quot;row card-container&quot;&gt;
+            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
+                &lt;div class&#x3D;&quot;card card-content h-100&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
+                        &lt;img src&#x3D;&quot;../../../assets/img/cuidado_capilar/Acond. DoyPack IO Camomilla 1000ml.jpg&quot;
+                            class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Acond. DoyPack IO Camomilla 1000ml&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
+                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Acond. DoyPack IO Camomilla 1000ml&lt;/h5&gt;
+                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $1.020&lt;/p&gt;
+                        &lt;b&gt;
+                            &lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;
+                        &lt;/b&gt;
+                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Descubre el arte del cuidado personal con el Acondicionador DoyPack IO
+                            Camomilla. Este producto incorpora esencias de camomila que nutren, revitalizan y dan
+                            suavidad a tu cabello.&lt;/p&gt;
+                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
+                &lt;div class&#x3D;&quot;card card-content  h-100&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
+                        &lt;img src&#x3D;&quot;../../../assets/img/cuidado_capilar/Acond. DoyPack IO Hierbas 1000ml.jpg&quot;
+                            class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Acond. DoyPack IO Hierbas 1000ml&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
+                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Acond. DoyPack IO Hierbas 1000ml&lt;/h5&gt;
+                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $1.020&lt;/p&gt;
+                        &lt;b&gt;
+                            &lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;
+                        &lt;/b&gt;
+                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Vive una experiencia saludable con nuestro DoyPack IO Hierbas. Este
+                            producto único está especialmente formulado con una selección premium de hierbas,
+                            brindándote un sabor inigualable y beneficios para tu salud.&lt;/p&gt;
+                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
+                &lt;div class&#x3D;&quot;card card-content  h-100&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
+                        &lt;img src&#x3D;&quot;../../../assets/img/cuidado_capilar/Shampoo DoyPack IO Huevo 1000ml.jpg&quot;
+                            class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Shampoo DoyPack IO Huevo 1000ml&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
+                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Shampoo DoyPack IO Huevo 1000ml&lt;/h5&gt;
+                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $1.020&lt;/p&gt;
+                        &lt;b&gt;
+                            &lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;
+                        &lt;/b&gt;
+                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Transfórmate en la mejor versión de ti con nuestro Shampoo DoyPack IO
+                            Quillay. Único en su clase, desenvuelve la magia de la naturaleza para darle vida y vigor a
+                            tu cabello.&lt;/p&gt;
+                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
+                &lt;div class&#x3D;&quot;card card-content  h-100&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
+                        &lt;img src&#x3D;&quot;../../../assets/img/cuidado_capilar/Shampoo DoyPack IO Quillay 1000ml.jpg&quot;
+                            class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Shampoo DoyPack IO Quillay 1000ml&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
+                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Shampoo DoyPack IO Quillay 1000ml&lt;/h5&gt;
+                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $1.020&lt;/p&gt;
+                        &lt;b&gt;
+                            &lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;
+                        &lt;/b&gt;
+                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Redefine tu cuidado del cabello con el Shampoo DoyPack IO Huevo. Nutre,
+                            revitaliza y protege tu cabello con intensidad gracias a su fórmula exclusiva con extractos
+                            de huevo.&lt;/p&gt;
+                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div *ngIf&#x3D;&quot;this.seccion &#x3D;&#x3D;&#x3D; &#x27;cuidado_ropa&#x27;&quot;&gt;
+        &lt;h1 class&#x3D;&quot;titulo-pagina&quot;&gt;Cuidado de Ropa&lt;/h1&gt;
+        &lt;br&gt;
+        &lt;br&gt;
+        &lt;div class&#x3D;&quot;row card-container&quot;&gt;
+            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
+                &lt;div class&#x3D;&quot;card card-content h-100&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
+                        &lt;img src&#x3D;&quot;../../../assets/img/cuidado_ropa/Jabon de Lavar barra Doña Tuti 170 grs.jpg&quot;
+                            class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Jabon Doña Tuti&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
+                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Jabon de Lavar barra Doña Tuti 170 grs&lt;/h5&gt;
+                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $5.000&lt;/p&gt;
+                        &lt;b&gt;
+                            &lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;
+                        &lt;/b&gt;
+                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Jabón para Lavar en Barra Doña Tuti, poder de limpieza&lt;/p&gt;
+                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
+                &lt;div class&#x3D;&quot;card card-content  h-100&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
+                        &lt;img src&#x3D;&quot;../../../assets/img/cuidado_ropa/Cloro Concentrado Briks 5 Lts.jpg&quot;
+                            class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Cloro Briks&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
+                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Cloro Concentrado Briks 5 Lts&lt;/h5&gt;
+                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $1.899&lt;/p&gt;
+                        &lt;b&gt;
+                            &lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;
+                        &lt;/b&gt;
+                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Disfrute de un hogar impecablemente limpio con el cloro líquido Briks. Este
+                            potente limpiador ofrece una desinfección y limpieza completa, eliminando efectivamente
+                            bacterias y suciedad.&lt;/p&gt;
+                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
+                &lt;div class&#x3D;&quot;card card-content  h-100&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
+                        &lt;img src&#x3D;&quot;../../../assets/img/cuidado_ropa/Detergentes Briks Verde 5 Lts.jpg&quot;
+                            class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Detergente Briks&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
+                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Detergentes Briks Verde 5 Lts&lt;/h5&gt;
+                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $3.120&lt;/p&gt;
+                        &lt;b&gt;
+                            &lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;
+                        &lt;/b&gt;
+                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Nunca antes tus prendas habían lucido tan bien. Introducimos Detergentes
+                            Briks Verde de 5 litros, tú solución definitiva para un lavado profundo y aromatizante.&lt;/p&gt;
+                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
+                &lt;div class&#x3D;&quot;card card-content  h-100&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
+                        &lt;img src&#x3D;&quot;../../../assets/img/cuidado_ropa/Suavizante Doña Tuti Aloe Vera 1000ml.jpg&quot;
+                            class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Suavizante Doña Tuti&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
+                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Suavizante Doña Tuti Aloe Vera 1000ml&lt;/h5&gt;
+                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $1.100&lt;/p&gt;
+                        &lt;b&gt;
+                            &lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;
+                        &lt;/b&gt;
+                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Suavizante Doña Tuti Aloe Vera 1000ml&lt;/p&gt;
+                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div *ngIf&#x3D;&quot;this.seccion &#x3D;&#x3D;&#x3D; &#x27;limpieza&#x27;&quot;&gt;
+        &lt;h1 class&#x3D;&quot;titulo-pagina&quot;&gt;Productos de Limpeiza&lt;/h1&gt;
+        &lt;br&gt;
+        &lt;br&gt;
+        &lt;div class&#x3D;&quot;row card-container&quot;&gt;
+            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
+                &lt;div class&#x3D;&quot;card card-content h-100&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
+                        &lt;img src&#x3D;&quot;../../../assets/img/Limpieza/Cloro Gel Briks Citrus 900ml.jpg&quot; class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Cloro Gel Briks Citrus 900ml&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
+                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Cloro Gel Briks Citrus 900ml&lt;/h5&gt;
+                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $1.050&lt;/p&gt;
+                        &lt;b&gt;&lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;&lt;/b&gt;
+                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Dile adiós a las bacterias con Cloro Gel Briks Citrus. Potenciado con un fresco aroma a cítricos, este producto de limpieza multifuncional ofrece una solución poderosa a tu alcance.&lt;/p&gt;
+                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
+                &lt;div class&#x3D;&quot;card card-content  h-100&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
+                        &lt;img src&#x3D;&quot;../../../assets/img/Limpieza/Lavaloza Verde Briks 2 Lts.jpg&quot; class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Lavaloza Verde Briks 2 Lts&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
+                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Lavaloza Verde Briks 2 Lts&lt;/h5&gt;
+                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $1.430&lt;/p&gt;
+                        &lt;b&gt;&lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;&lt;/b&gt;
+                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Revitaliza y da vida a tus platos con Lavaloza Verde Briks. Este detergente innovador no solo limpia a profundidad, sino que también cuida de tus manos, gracias a su formula exclusiva.&lt;/p&gt;
+                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
+                &lt;div class&#x3D;&quot;card card-content  h-100&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
+                        &lt;img src&#x3D;&quot;../../../assets/img/Limpieza/Trapero Humedo Doña Tuti Lavanda 40x60cm.jpg&quot; class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Trapero Humedo Doña Tuti Lavanda 40x60cm&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
+                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Trapero Humedo Doña Tuti Lavanda 40x60cm&lt;/h5&gt;
+                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $1.799&lt;/p&gt;
+                        &lt;b&gt;&lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;&lt;/b&gt;
+                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Trapero Humedo Doña Tuti Lavanda 40x60cm.&lt;/p&gt;
+                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
+                &lt;div class&#x3D;&quot;card card-content  h-100&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
+                        &lt;img src&#x3D;&quot;../../../assets/img/Limpieza/Lavalozas Briks Verde 5 Lts.jpg&quot; class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Lavalozas Briks Verde 5 Lts&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
+                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Lavalozas Briks Verde 5 Lts&lt;/h5&gt;
+                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $3.120&lt;/p&gt;
+                        &lt;b&gt;&lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;&lt;/b&gt;
+                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Como por arte de magia. Esta solución líquida es potente y eficaz, eliminando todo tipo de suciedad adherida en los platos y utensilios de cocina. Su fórmula única, biodegradable, respeta el medio ambiente, mientras garantiza la limpieza profunda que usted necesita.&lt;/p&gt;
+                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div *ngIf&#x3D;&quot;this.seccion &#x3D;&#x3D;&#x3D; &#x27;papel&#x27;&quot;&gt;
+        &lt;h1 class&#x3D;&quot;titulo-pagina&quot;&gt;Papeles&lt;/h1&gt;
+        &lt;br&gt;
+        &lt;br&gt;
+        &lt;div class&#x3D;&quot;row card-container&quot;&gt;
+            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
+                &lt;div class&#x3D;&quot;card card-content h-100&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
+                        &lt;img src&#x3D;&quot;../../../assets/img/papel/Toalla de papel Nobby Fit.jpg&quot; class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Toalla de papel Nobby Fit&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
+                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Toalla de papel Nobby Fit&lt;/h5&gt;
+                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $680&lt;/p&gt;
+                        &lt;b&gt;&lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;&lt;/b&gt;
+                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Toalla de papel Bobby Fit&lt;/p&gt;
+                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
+                &lt;div class&#x3D;&quot;card card-content  h-100&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
+                        &lt;img src&#x3D;&quot;../../../assets/img/papel/Servilleta Doña Tuti (Pack Familiar Premium).jpg&quot; class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Servilleta Doña Tuti (Pack Familiar Premium)&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
+                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Servilleta Doña Tuti (Premium)&lt;/h5&gt;
+                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $1.290&lt;/p&gt;
+                        &lt;b&gt;&lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;&lt;/b&gt;
+                        &lt;p class&#x3D;&quot;card-text&quot;&gt;300 Unidades por Paquete&lt;/p&gt;
+                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
+                &lt;div class&#x3D;&quot;card card-content  h-100&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
+                        &lt;img src&#x3D;&quot;../../../assets/img/papel/Papel Higiénico Top One 20mts (Pack 12r).jpg&quot; class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Papel Higiénico Top One 20mts (Pack 12r)&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
+                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Papel Higiénico Top One 20mts (Pack 12r)&lt;/h5&gt;
+                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $2.499&lt;/p&gt;
+                        &lt;b&gt;&lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;&lt;/b&gt;
+                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Papel Higiénico Top One 20 metros, pack de 12 rollos.&lt;/p&gt;
+                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
+                &lt;div class&#x3D;&quot;card card-content  h-100&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
+                        &lt;img src&#x3D;&quot;../../../assets/img/papel/Toalla Mediana HiperMax XL Doble Hoja.jpg&quot; class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Toalla Mediana HiperMax XL Doble Hoja&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
+                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Toalla Mediana HiperMax XL Doble Hoja&lt;/h5&gt;
+                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $2.580&lt;/p&gt;
+                        &lt;b&gt;&lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;&lt;/b&gt;
+                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Toalla HiperMax XL Doble Hoja 100 Mts&lt;/p&gt;
+                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+&lt;app-footer&gt;&lt;/app-footer&gt;</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><app-navbar></app-navbar><main>    <div *ngIf="this.seccion === \'cuidado_capilar\'">        <h1 class="titulo-pagina">Cuidado Capilar</h1>        <br>        <br>        <div class="row card-container">            <div class="col-12 col-md-6 mb-4">                <div class="card card-content h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/cuidado_capilar/Acond. DoyPack IO Camomilla 1000ml.jpg"                            class="card-img-top fade-in" alt="Acond. DoyPack IO Camomilla 1000ml">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Acond. DoyPack IO Camomilla 1000ml</h5>                        <p class="card-text precio">Precio: $1.020</p>                        <b>                            <p class="card-text">Información del producto</p>                        </b>                        <p class="card-text">Descubre el arte del cuidado personal con el Acondicionador DoyPack IO                            Camomilla. Este producto incorpora esencias de camomila que nutren, revitalizan y dan                            suavidad a tu cabello.</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>            <div class="col-12 col-md-6 mb-4">                <div class="card card-content  h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/cuidado_capilar/Acond. DoyPack IO Hierbas 1000ml.jpg"                            class="card-img-top fade-in" alt="Acond. DoyPack IO Hierbas 1000ml">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Acond. DoyPack IO Hierbas 1000ml</h5>                        <p class="card-text precio">Precio: $1.020</p>                        <b>                            <p class="card-text">Información del producto</p>                        </b>                        <p class="card-text">Vive una experiencia saludable con nuestro DoyPack IO Hierbas. Este                            producto único está especialmente formulado con una selección premium de hierbas,                            brindándote un sabor inigualable y beneficios para tu salud.</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>            <div class="col-12 col-md-6 mb-4">                <div class="card card-content  h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/cuidado_capilar/Shampoo DoyPack IO Huevo 1000ml.jpg"                            class="card-img-top fade-in" alt="Shampoo DoyPack IO Huevo 1000ml">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Shampoo DoyPack IO Huevo 1000ml</h5>                        <p class="card-text precio">Precio: $1.020</p>                        <b>                            <p class="card-text">Información del producto</p>                        </b>                        <p class="card-text">Transfórmate en la mejor versión de ti con nuestro Shampoo DoyPack IO                            Quillay. Único en su clase, desenvuelve la magia de la naturaleza para darle vida y vigor a                            tu cabello.</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>            <div class="col-12 col-md-6 mb-4">                <div class="card card-content  h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/cuidado_capilar/Shampoo DoyPack IO Quillay 1000ml.jpg"                            class="card-img-top fade-in" alt="Shampoo DoyPack IO Quillay 1000ml">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Shampoo DoyPack IO Quillay 1000ml</h5>                        <p class="card-text precio">Precio: $1.020</p>                        <b>                            <p class="card-text">Información del producto</p>                        </b>                        <p class="card-text">Redefine tu cuidado del cabello con el Shampoo DoyPack IO Huevo. Nutre,                            revitaliza y protege tu cabello con intensidad gracias a su fórmula exclusiva con extractos                            de huevo.</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>        </div>    </div>    <div *ngIf="this.seccion === \'cuidado_ropa\'">        <h1 class="titulo-pagina">Cuidado de Ropa</h1>        <br>        <br>        <div class="row card-container">            <div class="col-12 col-md-6 mb-4">                <div class="card card-content h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/cuidado_ropa/Jabon de Lavar barra Doña Tuti 170 grs.jpg"                            class="card-img-top fade-in" alt="Jabon Doña Tuti">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Jabon de Lavar barra Doña Tuti 170 grs</h5>                        <p class="card-text precio">Precio: $5.000</p>                        <b>                            <p class="card-text">Información del producto</p>                        </b>                        <p class="card-text">Jabón para Lavar en Barra Doña Tuti, poder de limpieza</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>            <div class="col-12 col-md-6 mb-4">                <div class="card card-content  h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/cuidado_ropa/Cloro Concentrado Briks 5 Lts.jpg"                            class="card-img-top fade-in" alt="Cloro Briks">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Cloro Concentrado Briks 5 Lts</h5>                        <p class="card-text precio">Precio: $1.899</p>                        <b>                            <p class="card-text">Información del producto</p>                        </b>                        <p class="card-text">Disfrute de un hogar impecablemente limpio con el cloro líquido Briks. Este                            potente limpiador ofrece una desinfección y limpieza completa, eliminando efectivamente                            bacterias y suciedad.</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>            <div class="col-12 col-md-6 mb-4">                <div class="card card-content  h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/cuidado_ropa/Detergentes Briks Verde 5 Lts.jpg"                            class="card-img-top fade-in" alt="Detergente Briks">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Detergentes Briks Verde 5 Lts</h5>                        <p class="card-text precio">Precio: $3.120</p>                        <b>                            <p class="card-text">Información del producto</p>                        </b>                        <p class="card-text">Nunca antes tus prendas habían lucido tan bien. Introducimos Detergentes                            Briks Verde de 5 litros, tú solución definitiva para un lavado profundo y aromatizante.</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>            <div class="col-12 col-md-6 mb-4">                <div class="card card-content  h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/cuidado_ropa/Suavizante Doña Tuti Aloe Vera 1000ml.jpg"                            class="card-img-top fade-in" alt="Suavizante Doña Tuti">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Suavizante Doña Tuti Aloe Vera 1000ml</h5>                        <p class="card-text precio">Precio: $1.100</p>                        <b>                            <p class="card-text">Información del producto</p>                        </b>                        <p class="card-text">Suavizante Doña Tuti Aloe Vera 1000ml</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>        </div>    </div>    <div *ngIf="this.seccion === \'limpieza\'">        <h1 class="titulo-pagina">Productos de Limpeiza</h1>        <br>        <br>        <div class="row card-container">            <div class="col-12 col-md-6 mb-4">                <div class="card card-content h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/Limpieza/Cloro Gel Briks Citrus 900ml.jpg" class="card-img-top fade-in" alt="Cloro Gel Briks Citrus 900ml">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Cloro Gel Briks Citrus 900ml</h5>                        <p class="card-text precio">Precio: $1.050</p>                        <b><p class="card-text">Información del producto</p></b>                        <p class="card-text">Dile adiós a las bacterias con Cloro Gel Briks Citrus. Potenciado con un fresco aroma a cítricos, este producto de limpieza multifuncional ofrece una solución poderosa a tu alcance.</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>            <div class="col-12 col-md-6 mb-4">                <div class="card card-content  h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/Limpieza/Lavaloza Verde Briks 2 Lts.jpg" class="card-img-top fade-in" alt="Lavaloza Verde Briks 2 Lts">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Lavaloza Verde Briks 2 Lts</h5>                        <p class="card-text precio">Precio: $1.430</p>                        <b><p class="card-text">Información del producto</p></b>                        <p class="card-text">Revitaliza y da vida a tus platos con Lavaloza Verde Briks. Este detergente innovador no solo limpia a profundidad, sino que también cuida de tus manos, gracias a su formula exclusiva.</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>            <div class="col-12 col-md-6 mb-4">                <div class="card card-content  h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/Limpieza/Trapero Humedo Doña Tuti Lavanda 40x60cm.jpg" class="card-img-top fade-in" alt="Trapero Humedo Doña Tuti Lavanda 40x60cm">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Trapero Humedo Doña Tuti Lavanda 40x60cm</h5>                        <p class="card-text precio">Precio: $1.799</p>                        <b><p class="card-text">Información del producto</p></b>                        <p class="card-text">Trapero Humedo Doña Tuti Lavanda 40x60cm.</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>            <div class="col-12 col-md-6 mb-4">                <div class="card card-content  h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/Limpieza/Lavalozas Briks Verde 5 Lts.jpg" class="card-img-top fade-in" alt="Lavalozas Briks Verde 5 Lts">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Lavalozas Briks Verde 5 Lts</h5>                        <p class="card-text precio">Precio: $3.120</p>                        <b><p class="card-text">Información del producto</p></b>                        <p class="card-text">Como por arte de magia. Esta solución líquida es potente y eficaz, eliminando todo tipo de suciedad adherida en los platos y utensilios de cocina. Su fórmula única, biodegradable, respeta el medio ambiente, mientras garantiza la limpieza profunda que usted necesita.</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>        </div>    </div>    <div *ngIf="this.seccion === \'papel\'">        <h1 class="titulo-pagina">Papeles</h1>        <br>        <br>        <div class="row card-container">            <div class="col-12 col-md-6 mb-4">                <div class="card card-content h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/papel/Toalla de papel Nobby Fit.jpg" class="card-img-top fade-in" alt="Toalla de papel Nobby Fit">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Toalla de papel Nobby Fit</h5>                        <p class="card-text precio">Precio: $680</p>                        <b><p class="card-text">Información del producto</p></b>                        <p class="card-text">Toalla de papel Bobby Fit</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>            <div class="col-12 col-md-6 mb-4">                <div class="card card-content  h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/papel/Servilleta Doña Tuti (Pack Familiar Premium).jpg" class="card-img-top fade-in" alt="Servilleta Doña Tuti (Pack Familiar Premium)">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Servilleta Doña Tuti (Premium)</h5>                        <p class="card-text precio">Precio: $1.290</p>                        <b><p class="card-text">Información del producto</p></b>                        <p class="card-text">300 Unidades por Paquete</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>            <div class="col-12 col-md-6 mb-4">                <div class="card card-content  h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/papel/Papel Higiénico Top One 20mts (Pack 12r).jpg" class="card-img-top fade-in" alt="Papel Higiénico Top One 20mts (Pack 12r)">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Papel Higiénico Top One 20mts (Pack 12r)</h5>                        <p class="card-text precio">Precio: $2.499</p>                        <b><p class="card-text">Información del producto</p></b>                        <p class="card-text">Papel Higiénico Top One 20 metros, pack de 12 rollos.</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>            <div class="col-12 col-md-6 mb-4">                <div class="card card-content  h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/papel/Toalla Mediana HiperMax XL Doble Hoja.jpg" class="card-img-top fade-in" alt="Toalla Mediana HiperMax XL Doble Hoja">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Toalla Mediana HiperMax XL Doble Hoja</h5>                        <p class="card-text precio">Precio: $2.580</p>                        <b><p class="card-text">Información del producto</p></b>                        <p class="card-text">Toalla HiperMax XL Doble Hoja 100 Mts</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>        </div>    </div></main><app-footer></app-footer></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'EditarPerfilComponent', 'selector': 'app-editar-perfil'},{'name': 'EditarProductosComponent', 'selector': 'app-editar-productos'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'InicioAdminComponent', 'selector': 'app-inicio-admin'},{'name': 'InicioComponent', 'selector': 'app-inicio'},{'name': 'ListaUsuariosComponent', 'selector': 'app-lista-usuarios'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbaradminComponent', 'selector': 'app-navbaradmin'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'ProductosComponent', 'selector': 'app-productos'},{'name': 'RecuperarContrasenaComponent', 'selector': 'app-recuperar-contrasena'},{'name': 'RegistroComponent', 'selector': 'app-registro'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ProductosComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ProductosComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
