@@ -22,8 +22,8 @@ export class ProductoService {
   /**
    * URL base del endpoint de productos.
    */
-  private baseUrl = 'http://localhost:8080/productos';
-  //private baseUrl = 'http://52.200.236.194:8080/productos';
+  //private baseUrl = 'http://localhost:8080/productos';
+  private baseUrl = 'http://52.200.236.194:8080/productos';
 
   /**
    * Constructor del servicio que inyecta el HttpClient.
