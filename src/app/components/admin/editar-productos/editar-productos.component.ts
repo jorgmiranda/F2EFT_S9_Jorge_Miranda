@@ -11,6 +11,11 @@ import { getDownloadURL, ref, Storage, uploadBytesResumable } from '@angular/fir
 import { Observable } from 'rxjs';
 
 /**
+ * Se declara la variable de bootstrap para el modal
+ */
+declare var bootstrap: any;
+
+/**
  * @description
  * Componente para editar productos en diferentes secciones. Permite inicializar productos según la sección,
  * gestionar formularios de edición y actualizar la información de los productos.
@@ -34,10 +39,16 @@ export class EditarProductosComponent implements OnInit{
    */
   //productForms: FormGroup[] = [];
   productForms: { [key: number]: FormGroup } = {};
+  //Formulario de creación
+  crearProdcutoForm!: FormGroup;
   /**
    * Instancia vacia de arreglo de productos
    */
   products: Producto[] = [];
+  /**
+   * Obtiene todos los productos del json
+   */
+  allProducts:Producto [] = [];
   /**
    * Tipo de productos
    */
@@ -47,11 +58,10 @@ export class EditarProductosComponent implements OnInit{
     { value: 'limpieza', display: 'Limpieza' },
     { value: 'papel', display: 'Papel' },
   ];
-  uploadProgress$!: Observable<number>;
-  downloadURL$!: Observable<string>;
 
   private storage:Storage = inject(Storage);
 
+  modalInstance: any;
 
   /**
    * @constructor
@@ -68,7 +78,7 @@ export class EditarProductosComponent implements OnInit{
     this.route.paramMap.subscribe(params => {
       this.seccion = params.get('seccion') || '';
       this.inicializarProductos();
-      
+      this.modalInstance = new bootstrap.Modal(document.getElementById('productoModal'));
     });
     
     
@@ -81,6 +91,10 @@ export class EditarProductosComponent implements OnInit{
     this.productoService.obtenerProductosPorTipo(this.seccion).subscribe(data => {
       this.products = data;
       this.inicializarFormularios();
+    });
+
+    this.productoService.obtenerTodosLosProductos().subscribe(data => {
+      this.allProducts = data;
     });
 
   }
@@ -99,6 +113,18 @@ export class EditarProductosComponent implements OnInit{
         imagen: [null ]
       });
     });
+
+    this.crearProdcutoForm = this.fb.group({
+      nombreProducto: ['', Validators.required],
+      precioProducto: ['', Validators.required],
+      tipoProducto: [this.seccion, Validators.required],
+      descripcionProducto: ['', Validators.required],
+      imagenProducto: [null]
+    });
+  }
+
+  abrirModal(): void {
+    this.modalInstance.show();
   }
 
   /**
@@ -111,6 +137,15 @@ export class EditarProductosComponent implements OnInit{
     if (input.files && input.files.length) {
       const file = input.files[0];
       this.productForms[productId].get('imagen')?.setValue(file);
+    
+    }
+  }
+
+  onFileChangeCreate(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    if (input.files && input.files.length) {
+      const file = input.files[0];
+      this.crearProdcutoForm.get('imagenProducto')?.setValue(file);
     
     }
   }
@@ -160,21 +195,74 @@ export class EditarProductosComponent implements OnInit{
       product.nombre = updatedProduct.nombre;
       product.precio = updatedProduct.precio;
       product.descripcion = updatedProduct.descripcion;
+      product.tipoProducto = updatedProduct.tipoProducto;
+      console.log(product);
       //Verificar si hay archivo adjunto
       const file = form.get('imagen')?.value;
       if (file instanceof File) {
         const url = await this.guardarImagenStorage(file);
-        //alert(url);
+        product.urlImg = url;
       }
 
-
+      this.productoService.actualizarProducto(product.id, product).subscribe(edit =>{
+        console.log("El Producto a sido actualizado exitosamente ",edit  );
+        this.inicializarProductos();
+      }, error => {
+        console.error('Ocurrio un error al editar el producto:', error);
+      });
 
       alert('La información del producto ha sido actualizada correctamente.');
     } else {
       alert('Por favor, complete todos los campos correctamente.');
     }
   }
-  
+  eliminar(event: Event, prodcuto : Producto){
+    event.preventDefault();
+    this.productoService.eliminarProducto(prodcuto.id).subscribe(eliminado =>{
+      console.log("El prodcuto fue eliminado correctamente");
+      this.inicializarProductos();
+      alert("Producto eliminado exitosamente");
+    }, error => {
+      console.error('Ocurrio un error al eliminar el producto:', error);
+    });
+  }
+
+
+  async submitForm(){
+    if(this.crearProdcutoForm.valid){
+      const file = this.crearProdcutoForm.get('imagenProducto')?.value;
+      if (file instanceof File) {
+        const url = await this.guardarImagenStorage(file);
+
+        const nuevoProdcuto: Producto = {
+          id :this.allProducts.length > 0 ? Math.max(...this.allProducts.map((p: any) => p.id)) + 1 : 1,
+          nombre: this.crearProdcutoForm.get('nombreProducto')?.value,
+          precio: this.crearProdcutoForm.get('precioProducto')?.value,
+          tipoProducto: this.crearProdcutoForm.get('tipoProducto')?.value,
+          descripcion: this.crearProdcutoForm.get('descripcionProducto')?.value,
+          urlImg: url
+        }
+
+        console.log(nuevoProdcuto);
+        this.productoService.agregarProducto(nuevoProdcuto).subscribe(nuevo =>{
+          console.log("Producto Agregado Exitosamente!");
+          this.inicializarProductos();
+        }, error => {
+          console.error('Ocurrio un error al agregar un producto:', error);
+        });
+        this.modalInstance.hide();
+        alert("Producto Creado Exitosamente");
+
+      }else{
+        alert("Favor de subir una imagen para el producto");
+      }
+
+    }else {
+      console.log(this.crearProdcutoForm.errors);
+      alert('Favor de ingresar los campos obligatorios');
+    }
+  }
+
 /**
  * Formatea un numero con el formato de peso chileno
  * 

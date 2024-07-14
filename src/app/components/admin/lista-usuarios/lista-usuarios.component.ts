@@ -194,7 +194,7 @@ export class ListaUsuariosComponent {
           console.log('Usuario Editado Exitosamente', edit);
           this.obtenerTodosLosUsuarios();  
         }, error => {
-          console.error('Ocurrio un error al agregar un usuario:', error);
+          console.error('Ocurrio un error al editar un usuario:', error);
         });
       } else {
         // Lógica para agregar nueva persona

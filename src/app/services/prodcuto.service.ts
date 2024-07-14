@@ -48,6 +48,10 @@ export class ProductoService {
     return this.http.get<Producto>(`${this.baseUrl}/${id}`);
   }
 
+  agregarProducto(producto : Producto): Observable<Producto>{
+    return this.http.post<Producto>(this.baseUrl, producto, this.httpOptions);
+  }
+
   /**
    * Obtiene los productos segun su tipo
    * @param tipo - Tipo de producto a obtener

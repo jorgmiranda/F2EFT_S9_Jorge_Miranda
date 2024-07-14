@@ -1,8 +1,9 @@
 <app-navbaradmin></app-navbaradmin>
 
 <div *ngIf="seccion === 'cuidado_capilar'">
-    <h1 class="titulo-pagina">Administrar Cuidado Capilar</h1>
-    <br><br>
+    <h1 class="titulo-pagina">Administrar Cuidado Capilar <button type="submit" class="btn btn-primary btn-save" (click)="abrirModal()">Agregar Producto</button></h1> 
+    <br>
+    <br>
     <div class="row card-container">
         <div class="col-12 col-md-6 mb-4" *ngFor="let product of products">
             <div class="card card-content h-100">
@@ -47,6 +48,7 @@
                             <input type="file" class="form-control" id="edit-file-{{product.id}}" (change)="onFileChange($event, product.id)" accept="image/*">
                           </div>
                         <button type="submit" class="btn btn-primary btn-save">Guardar</button>
+                        <button class="btn btn-danger" (click)="eliminar($event, product)">Eliminar</button>
                     </form>
                 </div>
             </div>
@@ -100,6 +102,7 @@
                             <input type="file" class="form-control" id="edit-file-{{product.id}}" (change)="onFileChange($event, product.id)" accept="image/*">
                           </div>
                         <button type="submit" class="btn btn-primary btn-save">Guardar</button>
+                        <button class="btn btn-danger" (click)="eliminar($event, product)">Eliminar</button>
                     </form>
                 </div>
             </div>
@@ -153,6 +156,7 @@
                             <input type="file" class="form-control" id="edit-file-{{product.id}}" (change)="onFileChange($event, product.id)" accept="image/*">
                         </div>
                         <button type="submit" class="btn btn-primary btn-save">Guardar</button>
+                        <button class="btn btn-danger" (click)="eliminar($event, product)">Eliminar</button>
                     </form>
                 </div>
             </div>
@@ -206,8 +210,53 @@
                             <input type="file" class="form-control" id="edit-file-{{product.id}}" (change)="onFileChange($event, product.id)" accept="image/*">
                         </div>
                         <button type="submit" class="btn btn-primary btn-save">Guardar</button>
+                        <button class="btn btn-danger" (click)="eliminar($event, product)">Eliminar</button>
                     </form>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="productoModal" tabindex="-1" aria-labelledby="productoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="usuarioModalLabel">Crear Prodcuto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="crearProdcutoForm" (ngSubmit)="submitForm()">
+                    <div class="mb-3">
+                            <label for="nombreProducto" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="nombreProducto"
+                                formControlName="nombreProducto">
+                        </div>
+                        <div class="mb-3">
+                            <label for="precioProducto" class="form-label">Precio:</label>
+                            <input type="text" class="form-control" id="precioProducto"
+                                formControlName="precioProducto">
+                        </div>
+                        <div class="mb-3">
+                            <label for="tipoProducto" class="form-label">Tipo de producto:</label>
+                            <select class="form-control" id="tipoProducto" formControlName="tipoProducto">
+                                <option *ngFor="let opcion of opciones" [value]="opcion.value">{{ opcion.display }}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="descripcionProducto" class="form-label">Descripción:</label>
+                            <textarea class="form-control" id="descripcionProducto"
+                                formControlName="descripcionProducto"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="imagenProducto" class="form-label">Imagen:</label>
+                            <input type="file" class="form-control" id="imagenProducto" (change)="onFileChangeCreate($event)" accept="image/*">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-save">Guardar</button>
+                    
+                </form>
             </div>
         </div>
     </div>
