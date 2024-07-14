@@ -8,7 +8,7 @@ import { ProductoService } from '../../../services/prodcuto.service';
 import { HttpClientModule } from '@angular/common/http';
 import { Producto } from '../../../model/producto';
 import { getDownloadURL, ref, Storage, uploadBytesResumable } from '@angular/fire/storage';
-import { Observable } from 'rxjs';
+
 
 /**
  * Se declara la variable de bootstrap para el modal
@@ -37,9 +37,10 @@ export class EditarProductosComponent implements OnInit{
   /**
    * instancia de form group
    */
-  //productForms: FormGroup[] = [];
   productForms: { [key: number]: FormGroup } = {};
-  //Formulario de creación
+  /**
+   * Instancia de formulario para creación de productos
+   */
   crearProdcutoForm!: FormGroup;
   /**
    * Instancia vacia de arreglo de productos
@@ -59,8 +60,14 @@ export class EditarProductosComponent implements OnInit{
     { value: 'papel', display: 'Papel' },
   ];
 
+  /**
+   * Instancia de Storage para integrarse con firebase
+   */
   private storage:Storage = inject(Storage);
 
+  /**
+   * Instancia de modal utilizada para la creación de productos
+   */
   modalInstance: any;
 
   /**
@@ -123,14 +130,17 @@ export class EditarProductosComponent implements OnInit{
     });
   }
 
+  /**
+   * Permite visualizar el modal definido
+   */
   abrirModal(): void {
     this.modalInstance.show();
   }
 
   /**
-   * 
-   * @param event 
-   * @param productId 
+   * Cuando se cambia un input file, se toma el valor y lo setea al campo imagen
+   * @param event - Variable de evento
+   * @param productId - Id del producto a editar
    */
   onFileChange(event: Event, productId: number): void {
     const input = event.target as HTMLInputElement;
@@ -141,6 +151,11 @@ export class EditarProductosComponent implements OnInit{
     }
   }
 
+  /**
+   * Cuando se cambia un input file, se toma el valor y lo setea al campo imagen producto
+   * Solo ocurre en la creación
+   * @param event - Variable de evento
+   */
   onFileChangeCreate(event: Event): void {
     const input = event.target as HTMLInputElement;
     if (input.files && input.files.length) {
@@ -180,7 +195,6 @@ export class EditarProductosComponent implements OnInit{
     });
 
     
-    //return url;
   }
 
   /**
@@ -216,6 +230,11 @@ export class EditarProductosComponent implements OnInit{
       alert('Por favor, complete todos los campos correctamente.');
     }
   }
+  /**
+   * Eliminar un producto seleccionado. 
+   * @param event - Variable evento
+   * @param prodcuto - producto a eliminar
+   */
   eliminar(event: Event, prodcuto : Producto){
     event.preventDefault();
     this.productoService.eliminarProducto(prodcuto.id).subscribe(eliminado =>{
@@ -227,7 +246,9 @@ export class EditarProductosComponent implements OnInit{
     });
   }
 
-
+  /**
+   * Encargado de manejar la creación de un nuevo producto
+   */
   async submitForm(){
     if(this.crearProdcutoForm.valid){
       const file = this.crearProdcutoForm.get('imagenProducto')?.value;

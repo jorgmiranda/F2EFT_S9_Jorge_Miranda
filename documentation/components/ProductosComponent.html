@@ -156,6 +156,12 @@
 
 
 
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                                <code><a href="../injectables/ProductoService.html" target="_self" >ProductoService</a></code>
+                </td>
+            </tr>
 
 
             <tr>
@@ -216,6 +222,9 @@
                                 <a href="#listaProductos" >listaProductos</a>
                             </li>
                             <li>
+                                <a href="#productos" >productos</a>
+                            </li>
+                            <li>
                                 <a href="#seccion" >seccion</a>
                             </li>
                         </ul>
@@ -233,6 +242,9 @@
                             <li>
                                     <span class="modifier">Private</span>
                                 <a href="#funcionalidadCarrito" >funcionalidadCarrito</a>
+                            </li>
+                            <li>
+                                <a href="#inicializarProductos" >inicializarProductos</a>
                             </li>
                             <li>
                                 <a href="#ngOnInit" >ngOnInit</a>
@@ -277,12 +289,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(platformId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank">Object</a>, route: ActivatedRoute, elRef: ElementRef)</code>
+<code>constructor(platformId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank">Object</a>, route: ActivatedRoute, elRef: ElementRef, productoService: <a href="../injectables/ProductoService.html" target="_self">ProductoService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/components/productos/productos.component.ts:32</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/components/productos/productos.component.ts:39</a></div>
                             </td>
                         </tr>
 
@@ -354,6 +366,20 @@
 
                                                         </td>
                                                 </tr>
+                                                <tr>
+                                                        <td>productoService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ProductoService.html" target="_self" >ProductoService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                        </td>
+                                                </tr>
                                         </tbody>
                                     </table>
                             </div>
@@ -392,8 +418,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="64"
-                                    class="link-to-prism">src/app/components/productos/productos.component.ts:64</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="81"
+                                    class="link-to-prism">src/app/components/productos/productos.component.ts:81</a></div>
                         </td>
                     </tr>
 
@@ -465,8 +491,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="104"
-                                    class="link-to-prism">src/app/components/productos/productos.component.ts:104</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="121"
+                                    class="link-to-prism">src/app/components/productos/productos.component.ts:121</a></div>
                         </td>
                     </tr>
 
@@ -475,6 +501,45 @@
                 <td class="col-md-4">
                         <div class="io-description"><p>Permite agregar elementos al carrito de compras del sitio web.
 Los productos agregos son almacenados en una variable de sesión</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="inicializarProductos"></a>
+                    <span class="name">
+                        <span ><b>inicializarProductos</b></span>
+                        <a href="#inicializarProductos"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>inicializarProductos()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="69"
+                                    class="link-to-prism">src/app/components/productos/productos.component.ts:69</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Inicializa la lista de productos basada en la sección actual.</p>
 </div>
 
                         <div class="io-description">
@@ -505,8 +570,8 @@ Los productos agregos son almacenados en una variable de sesión</p>
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="45"
-                                    class="link-to-prism">src/app/components/productos/productos.component.ts:45</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="53"
+                                    class="link-to-prism">src/app/components/productos/productos.component.ts:53</a></div>
                         </td>
                     </tr>
 
@@ -554,8 +619,8 @@ suscribiéndose a los parámetros de la ruta y configurando la funcionalidad del
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="64"
-                                    class="link-to-prism">src/app/components/productos/productos.component.ts:64</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="81"
+                                    class="link-to-prism">src/app/components/productos/productos.component.ts:81</a></div>
                         </td>
                     </tr>
 
@@ -632,8 +697,8 @@ suscribiéndose a los parámetros de la ruta y configurando la funcionalidad del
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="140"
-                                    class="link-to-prism">src/app/components/productos/productos.component.ts:140</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="157"
+                                    class="link-to-prism">src/app/components/productos/productos.component.ts:157</a></div>
                         </td>
                     </tr>
 
@@ -790,13 +855,50 @@ suscribiéndose a los parámetros de la ruta y configurando la funcionalidad del
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/components/productos/productos.component.ts:32</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/components/productos/productos.component.ts:35</a></div>
                         </td>
                     </tr>
 
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Instancia de lista de productos</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="productos"></a>
+                    <span class="name">
+                        <span ><b>productos</b></span>
+                        <a href="#productos"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Producto.html" target="_self" >Producto[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/components/productos/productos.component.ts:39</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Instancia que almacenara los productos recuperados del servicio</p>
 </div>
                 </td>
             </tr>
@@ -827,7 +929,7 @@ suscribiéndose a los parámetros de la ruta y configurando la funcionalidad del
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/components/productos/productos.component.ts:28</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/components/productos/productos.component.ts:31</a></div>
                         </td>
                     </tr>
 
@@ -852,6 +954,8 @@ import { NavbarComponent } from &#x27;../../navbar/navbar.component&#x27;;
 import { ActivatedRoute } from &#x27;@angular/router&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
 import { isPlatformBrowser } from &#x27;@angular/common&#x27;;
+import { Producto } from &#x27;../../model/producto&#x27;;
+import { ProductoService } from &#x27;../../services/prodcuto.service&#x27;;
 
 /**
  * @description
@@ -867,7 +971,8 @@ import { isPlatformBrowser } from &#x27;@angular/common&#x27;;
   imports: [NavbarComponent, FooterComponent, CommonModule],
   templateUrl: &#x27;./productos.component.html&#x27;,
   styleUrl: &#x27;./productos.component.scss&#x27;,
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  providers: [ProductoService]
 })
 export class ProductosComponent implements OnInit {
   /**
@@ -879,12 +984,17 @@ export class ProductosComponent implements OnInit {
    */
   listaProductos: any[] &#x3D; [];
   /**
+   * Instancia que almacenara los productos recuperados del servicio
+   */
+  productos: Producto[] &#x3D; [];
+  /**
    * @constructor
    * @param platformId - Identificado de la plataforma (Navegador o Servidor)
    * @param route - Servicio de enrutamiento de Angular
    * @param elRef - Referencia al elemento del DOM asociado con este componente.
    */
-  constructor(@Inject(PLATFORM_ID) private platformId: Object, private route: ActivatedRoute, private elRef: ElementRef) { }
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private route: ActivatedRoute, private elRef: ElementRef
+  , private productoService: ProductoService) { }
 
   /**
    * Metodo de inicialización del componente
@@ -893,6 +1003,7 @@ export class ProductosComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe(params &#x3D;&gt; {
       this.seccion &#x3D; params.get(&#x27;seccion&#x27;) || &#x27;&#x27;;
+      this.inicializarProductos();
     });
 
     if (isPlatformBrowser(this.platformId)) {
@@ -902,6 +1013,14 @@ export class ProductosComponent implements OnInit {
     }
   }
 
+  /**
+   * Inicializa la lista de productos basada en la sección actual.
+   */
+  inicializarProductos(){
+    this.productoService.obtenerProductosPorTipo(this.seccion).subscribe(data &#x3D;&gt; {
+      this.productos &#x3D; data;
+    });
+  }
 
   /**
    * Maneja los eventos de clic en el documento. Agrega productos al carrito y actualiza la vista del carrito.
@@ -1024,9 +1143,9 @@ export class ProductosComponent implements OnInit {
       &#x60;;
 
       rowProduct.append(containerProduct);
-
-      total +&#x3D; producto.cantidad * parseInt(producto.precio.replace(&#x27;.&#x27;, &#x27;&#x27;).replace(&#x27;$&#x27;, &#x27;&#x27;));
+      total +&#x3D; producto.cantidad * parseInt(producto.precio.replace(&#x27;,&#x27;, &#x27;&#x27;).replace(&#x27;$&#x27;, &#x27;&#x27;));
       totalProductos +&#x3D; producto.cantidad;
+      
     });
 
     valorTotal.innerText &#x3D; &#x60;$${numberWithCommas(total)}&#x60;;
@@ -1055,78 +1174,18 @@ function numberWithCommas(x: number): string {
         &lt;br&gt;
         &lt;br&gt;
         &lt;div class&#x3D;&quot;row card-container&quot;&gt;
-            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
+            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot; *ngFor&#x3D;&quot;let product of productos&quot;&gt;
                 &lt;div class&#x3D;&quot;card card-content h-100&quot;&gt;
                     &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
-                        &lt;img src&#x3D;&quot;../../../assets/img/cuidado_capilar/Acond. DoyPack IO Camomilla 1000ml.jpg&quot;
-                            class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Acond. DoyPack IO Camomilla 1000ml&quot;&gt;
+                        &lt;img [src]&#x3D;&quot;product.urlImg&quot; class&#x3D;&quot;card-img-top fade-in&quot; [alt]&#x3D;&quot;product.nombre&quot;&gt;
                     &lt;/div&gt;
                     &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
-                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Acond. DoyPack IO Camomilla 1000ml&lt;/h5&gt;
-                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $1.020&lt;/p&gt;
+                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;{{ product.nombre }}&lt;/h5&gt;
+                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: {{ product.precio | currency:&#x27;&#x27;:&#x27;symbol&#x27;:&#x27;1.0-0&#x27; }}&lt;/p&gt;
                         &lt;b&gt;
                             &lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;
                         &lt;/b&gt;
-                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Descubre el arte del cuidado personal con el Acondicionador DoyPack IO
-                            Camomilla. Este producto incorpora esencias de camomila que nutren, revitalizan y dan
-                            suavidad a tu cabello.&lt;/p&gt;
-                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
-                &lt;div class&#x3D;&quot;card card-content  h-100&quot;&gt;
-                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
-                        &lt;img src&#x3D;&quot;../../../assets/img/cuidado_capilar/Acond. DoyPack IO Hierbas 1000ml.jpg&quot;
-                            class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Acond. DoyPack IO Hierbas 1000ml&quot;&gt;
-                    &lt;/div&gt;
-                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
-                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Acond. DoyPack IO Hierbas 1000ml&lt;/h5&gt;
-                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $1.020&lt;/p&gt;
-                        &lt;b&gt;
-                            &lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;
-                        &lt;/b&gt;
-                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Vive una experiencia saludable con nuestro DoyPack IO Hierbas. Este
-                            producto único está especialmente formulado con una selección premium de hierbas,
-                            brindándote un sabor inigualable y beneficios para tu salud.&lt;/p&gt;
-                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
-                &lt;div class&#x3D;&quot;card card-content  h-100&quot;&gt;
-                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
-                        &lt;img src&#x3D;&quot;../../../assets/img/cuidado_capilar/Shampoo DoyPack IO Huevo 1000ml.jpg&quot;
-                            class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Shampoo DoyPack IO Huevo 1000ml&quot;&gt;
-                    &lt;/div&gt;
-                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
-                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Shampoo DoyPack IO Huevo 1000ml&lt;/h5&gt;
-                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $1.020&lt;/p&gt;
-                        &lt;b&gt;
-                            &lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;
-                        &lt;/b&gt;
-                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Transfórmate en la mejor versión de ti con nuestro Shampoo DoyPack IO
-                            Quillay. Único en su clase, desenvuelve la magia de la naturaleza para darle vida y vigor a
-                            tu cabello.&lt;/p&gt;
-                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
-                &lt;div class&#x3D;&quot;card card-content  h-100&quot;&gt;
-                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
-                        &lt;img src&#x3D;&quot;../../../assets/img/cuidado_capilar/Shampoo DoyPack IO Quillay 1000ml.jpg&quot;
-                            class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Shampoo DoyPack IO Quillay 1000ml&quot;&gt;
-                    &lt;/div&gt;
-                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
-                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Shampoo DoyPack IO Quillay 1000ml&lt;/h5&gt;
-                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $1.020&lt;/p&gt;
-                        &lt;b&gt;
-                            &lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;
-                        &lt;/b&gt;
-                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Redefine tu cuidado del cabello con el Shampoo DoyPack IO Huevo. Nutre,
-                            revitaliza y protege tu cabello con intensidad gracias a su fórmula exclusiva con extractos
-                            de huevo.&lt;/p&gt;
+                        &lt;p class&#x3D;&quot;card-text&quot;&gt;{{ product.descripcion }}&lt;/p&gt;
                         &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
@@ -1138,136 +1197,42 @@ function numberWithCommas(x: number): string {
         &lt;br&gt;
         &lt;br&gt;
         &lt;div class&#x3D;&quot;row card-container&quot;&gt;
-            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
+            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot; *ngFor&#x3D;&quot;let product of productos&quot;&gt;
                 &lt;div class&#x3D;&quot;card card-content h-100&quot;&gt;
                     &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
-                        &lt;img src&#x3D;&quot;../../../assets/img/cuidado_ropa/Jabon de Lavar barra Doña Tuti 170 grs.jpg&quot;
-                            class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Jabon Doña Tuti&quot;&gt;
+                        &lt;img [src]&#x3D;&quot;product.urlImg&quot; class&#x3D;&quot;card-img-top fade-in&quot; [alt]&#x3D;&quot;product.nombre&quot;&gt;
                     &lt;/div&gt;
                     &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
-                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Jabon de Lavar barra Doña Tuti 170 grs&lt;/h5&gt;
-                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $5.000&lt;/p&gt;
+                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;{{ product.nombre }}&lt;/h5&gt;
+                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: {{ product.precio | currency:&#x27;&#x27;:&#x27;symbol&#x27;:&#x27;1.0-0&#x27; }}&lt;/p&gt;
                         &lt;b&gt;
                             &lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;
                         &lt;/b&gt;
-                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Jabón para Lavar en Barra Doña Tuti, poder de limpieza&lt;/p&gt;
-                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
-                &lt;div class&#x3D;&quot;card card-content  h-100&quot;&gt;
-                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
-                        &lt;img src&#x3D;&quot;../../../assets/img/cuidado_ropa/Cloro Concentrado Briks 5 Lts.jpg&quot;
-                            class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Cloro Briks&quot;&gt;
-                    &lt;/div&gt;
-                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
-                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Cloro Concentrado Briks 5 Lts&lt;/h5&gt;
-                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $1.899&lt;/p&gt;
-                        &lt;b&gt;
-                            &lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;
-                        &lt;/b&gt;
-                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Disfrute de un hogar impecablemente limpio con el cloro líquido Briks. Este
-                            potente limpiador ofrece una desinfección y limpieza completa, eliminando efectivamente
-                            bacterias y suciedad.&lt;/p&gt;
-                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
-                &lt;div class&#x3D;&quot;card card-content  h-100&quot;&gt;
-                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
-                        &lt;img src&#x3D;&quot;../../../assets/img/cuidado_ropa/Detergentes Briks Verde 5 Lts.jpg&quot;
-                            class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Detergente Briks&quot;&gt;
-                    &lt;/div&gt;
-                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
-                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Detergentes Briks Verde 5 Lts&lt;/h5&gt;
-                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $3.120&lt;/p&gt;
-                        &lt;b&gt;
-                            &lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;
-                        &lt;/b&gt;
-                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Nunca antes tus prendas habían lucido tan bien. Introducimos Detergentes
-                            Briks Verde de 5 litros, tú solución definitiva para un lavado profundo y aromatizante.&lt;/p&gt;
-                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
-                &lt;div class&#x3D;&quot;card card-content  h-100&quot;&gt;
-                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
-                        &lt;img src&#x3D;&quot;../../../assets/img/cuidado_ropa/Suavizante Doña Tuti Aloe Vera 1000ml.jpg&quot;
-                            class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Suavizante Doña Tuti&quot;&gt;
-                    &lt;/div&gt;
-                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
-                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Suavizante Doña Tuti Aloe Vera 1000ml&lt;/h5&gt;
-                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $1.100&lt;/p&gt;
-                        &lt;b&gt;
-                            &lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;
-                        &lt;/b&gt;
-                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Suavizante Doña Tuti Aloe Vera 1000ml&lt;/p&gt;
+                        &lt;p class&#x3D;&quot;card-text&quot;&gt;{{ product.descripcion }}&lt;/p&gt;
                         &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
+
     &lt;div *ngIf&#x3D;&quot;this.seccion &#x3D;&#x3D;&#x3D; &#x27;limpieza&#x27;&quot;&gt;
         &lt;h1 class&#x3D;&quot;titulo-pagina&quot;&gt;Productos de Limpeiza&lt;/h1&gt;
         &lt;br&gt;
         &lt;br&gt;
         &lt;div class&#x3D;&quot;row card-container&quot;&gt;
-            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
+            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot; *ngFor&#x3D;&quot;let product of productos&quot;&gt;
                 &lt;div class&#x3D;&quot;card card-content h-100&quot;&gt;
                     &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
-                        &lt;img src&#x3D;&quot;../../../assets/img/Limpieza/Cloro Gel Briks Citrus 900ml.jpg&quot; class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Cloro Gel Briks Citrus 900ml&quot;&gt;
+                        &lt;img [src]&#x3D;&quot;product.urlImg&quot; class&#x3D;&quot;card-img-top fade-in&quot; [alt]&#x3D;&quot;product.nombre&quot;&gt;
                     &lt;/div&gt;
                     &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
-                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Cloro Gel Briks Citrus 900ml&lt;/h5&gt;
-                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $1.050&lt;/p&gt;
-                        &lt;b&gt;&lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;&lt;/b&gt;
-                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Dile adiós a las bacterias con Cloro Gel Briks Citrus. Potenciado con un fresco aroma a cítricos, este producto de limpieza multifuncional ofrece una solución poderosa a tu alcance.&lt;/p&gt;
-                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
-                &lt;div class&#x3D;&quot;card card-content  h-100&quot;&gt;
-                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
-                        &lt;img src&#x3D;&quot;../../../assets/img/Limpieza/Lavaloza Verde Briks 2 Lts.jpg&quot; class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Lavaloza Verde Briks 2 Lts&quot;&gt;
-                    &lt;/div&gt;
-                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
-                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Lavaloza Verde Briks 2 Lts&lt;/h5&gt;
-                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $1.430&lt;/p&gt;
-                        &lt;b&gt;&lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;&lt;/b&gt;
-                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Revitaliza y da vida a tus platos con Lavaloza Verde Briks. Este detergente innovador no solo limpia a profundidad, sino que también cuida de tus manos, gracias a su formula exclusiva.&lt;/p&gt;
-                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
-                &lt;div class&#x3D;&quot;card card-content  h-100&quot;&gt;
-                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
-                        &lt;img src&#x3D;&quot;../../../assets/img/Limpieza/Trapero Humedo Doña Tuti Lavanda 40x60cm.jpg&quot; class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Trapero Humedo Doña Tuti Lavanda 40x60cm&quot;&gt;
-                    &lt;/div&gt;
-                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
-                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Trapero Humedo Doña Tuti Lavanda 40x60cm&lt;/h5&gt;
-                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $1.799&lt;/p&gt;
-                        &lt;b&gt;&lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;&lt;/b&gt;
-                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Trapero Humedo Doña Tuti Lavanda 40x60cm.&lt;/p&gt;
-                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
-                &lt;div class&#x3D;&quot;card card-content  h-100&quot;&gt;
-                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
-                        &lt;img src&#x3D;&quot;../../../assets/img/Limpieza/Lavalozas Briks Verde 5 Lts.jpg&quot; class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Lavalozas Briks Verde 5 Lts&quot;&gt;
-                    &lt;/div&gt;
-                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
-                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Lavalozas Briks Verde 5 Lts&lt;/h5&gt;
-                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $3.120&lt;/p&gt;
-                        &lt;b&gt;&lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;&lt;/b&gt;
-                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Como por arte de magia. Esta solución líquida es potente y eficaz, eliminando todo tipo de suciedad adherida en los platos y utensilios de cocina. Su fórmula única, biodegradable, respeta el medio ambiente, mientras garantiza la limpieza profunda que usted necesita.&lt;/p&gt;
+                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;{{ product.nombre }}&lt;/h5&gt;
+                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: {{ product.precio | currency:&#x27;&#x27;:&#x27;symbol&#x27;:&#x27;1.0-0&#x27; }}&lt;/p&gt;
+                        &lt;b&gt;
+                            &lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;
+                        &lt;/b&gt;
+                        &lt;p class&#x3D;&quot;card-text&quot;&gt;{{ product.descripcion }}&lt;/p&gt;
                         &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
@@ -1279,58 +1244,18 @@ function numberWithCommas(x: number): string {
         &lt;br&gt;
         &lt;br&gt;
         &lt;div class&#x3D;&quot;row card-container&quot;&gt;
-            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
+            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot; *ngFor&#x3D;&quot;let product of productos&quot;&gt;
                 &lt;div class&#x3D;&quot;card card-content h-100&quot;&gt;
                     &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
-                        &lt;img src&#x3D;&quot;../../../assets/img/papel/Toalla de papel Nobby Fit.jpg&quot; class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Toalla de papel Nobby Fit&quot;&gt;
+                        &lt;img [src]&#x3D;&quot;product.urlImg&quot; class&#x3D;&quot;card-img-top fade-in&quot; [alt]&#x3D;&quot;product.nombre&quot;&gt;
                     &lt;/div&gt;
                     &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
-                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Toalla de papel Nobby Fit&lt;/h5&gt;
-                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $680&lt;/p&gt;
-                        &lt;b&gt;&lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;&lt;/b&gt;
-                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Toalla de papel Bobby Fit&lt;/p&gt;
-                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
-                &lt;div class&#x3D;&quot;card card-content  h-100&quot;&gt;
-                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
-                        &lt;img src&#x3D;&quot;../../../assets/img/papel/Servilleta Doña Tuti (Pack Familiar Premium).jpg&quot; class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Servilleta Doña Tuti (Pack Familiar Premium)&quot;&gt;
-                    &lt;/div&gt;
-                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
-                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Servilleta Doña Tuti (Premium)&lt;/h5&gt;
-                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $1.290&lt;/p&gt;
-                        &lt;b&gt;&lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;&lt;/b&gt;
-                        &lt;p class&#x3D;&quot;card-text&quot;&gt;300 Unidades por Paquete&lt;/p&gt;
-                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
-                &lt;div class&#x3D;&quot;card card-content  h-100&quot;&gt;
-                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
-                        &lt;img src&#x3D;&quot;../../../assets/img/papel/Papel Higiénico Top One 20mts (Pack 12r).jpg&quot; class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Papel Higiénico Top One 20mts (Pack 12r)&quot;&gt;
-                    &lt;/div&gt;
-                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
-                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Papel Higiénico Top One 20mts (Pack 12r)&lt;/h5&gt;
-                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $2.499&lt;/p&gt;
-                        &lt;b&gt;&lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;&lt;/b&gt;
-                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Papel Higiénico Top One 20 metros, pack de 12 rollos.&lt;/p&gt;
-                        &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot;&gt;
-                &lt;div class&#x3D;&quot;card card-content  h-100&quot;&gt;
-                    &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
-                        &lt;img src&#x3D;&quot;../../../assets/img/papel/Toalla Mediana HiperMax XL Doble Hoja.jpg&quot; class&#x3D;&quot;card-img-top fade-in&quot; alt&#x3D;&quot;Toalla Mediana HiperMax XL Doble Hoja&quot;&gt;
-                    &lt;/div&gt;
-                    &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
-                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Toalla Mediana HiperMax XL Doble Hoja&lt;/h5&gt;
-                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: $2.580&lt;/p&gt;
-                        &lt;b&gt;&lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;&lt;/b&gt;
-                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Toalla HiperMax XL Doble Hoja 100 Mts&lt;/p&gt;
+                        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;{{ product.nombre }}&lt;/h5&gt;
+                        &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: {{ product.precio | currency:&#x27;&#x27;:&#x27;symbol&#x27;:&#x27;1.0-0&#x27; }}&lt;/p&gt;
+                        &lt;b&gt;
+                            &lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;
+                        &lt;/b&gt;
+                        &lt;p class&#x3D;&quot;card-text&quot;&gt;{{ product.descripcion }}&lt;/p&gt;
                         &lt;button class&#x3D;&quot;btn btn-primary btn-add-cart&quot;&gt;Añadir al carrito&lt;/button&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
@@ -1367,7 +1292,7 @@ function numberWithCommas(x: number): string {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><app-navbar></app-navbar><main>    <div *ngIf="this.seccion === \'cuidado_capilar\'">        <h1 class="titulo-pagina">Cuidado Capilar</h1>        <br>        <br>        <div class="row card-container">            <div class="col-12 col-md-6 mb-4">                <div class="card card-content h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/cuidado_capilar/Acond. DoyPack IO Camomilla 1000ml.jpg"                            class="card-img-top fade-in" alt="Acond. DoyPack IO Camomilla 1000ml">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Acond. DoyPack IO Camomilla 1000ml</h5>                        <p class="card-text precio">Precio: $1.020</p>                        <b>                            <p class="card-text">Información del producto</p>                        </b>                        <p class="card-text">Descubre el arte del cuidado personal con el Acondicionador DoyPack IO                            Camomilla. Este producto incorpora esencias de camomila que nutren, revitalizan y dan                            suavidad a tu cabello.</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>            <div class="col-12 col-md-6 mb-4">                <div class="card card-content  h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/cuidado_capilar/Acond. DoyPack IO Hierbas 1000ml.jpg"                            class="card-img-top fade-in" alt="Acond. DoyPack IO Hierbas 1000ml">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Acond. DoyPack IO Hierbas 1000ml</h5>                        <p class="card-text precio">Precio: $1.020</p>                        <b>                            <p class="card-text">Información del producto</p>                        </b>                        <p class="card-text">Vive una experiencia saludable con nuestro DoyPack IO Hierbas. Este                            producto único está especialmente formulado con una selección premium de hierbas,                            brindándote un sabor inigualable y beneficios para tu salud.</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>            <div class="col-12 col-md-6 mb-4">                <div class="card card-content  h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/cuidado_capilar/Shampoo DoyPack IO Huevo 1000ml.jpg"                            class="card-img-top fade-in" alt="Shampoo DoyPack IO Huevo 1000ml">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Shampoo DoyPack IO Huevo 1000ml</h5>                        <p class="card-text precio">Precio: $1.020</p>                        <b>                            <p class="card-text">Información del producto</p>                        </b>                        <p class="card-text">Transfórmate en la mejor versión de ti con nuestro Shampoo DoyPack IO                            Quillay. Único en su clase, desenvuelve la magia de la naturaleza para darle vida y vigor a                            tu cabello.</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>            <div class="col-12 col-md-6 mb-4">                <div class="card card-content  h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/cuidado_capilar/Shampoo DoyPack IO Quillay 1000ml.jpg"                            class="card-img-top fade-in" alt="Shampoo DoyPack IO Quillay 1000ml">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Shampoo DoyPack IO Quillay 1000ml</h5>                        <p class="card-text precio">Precio: $1.020</p>                        <b>                            <p class="card-text">Información del producto</p>                        </b>                        <p class="card-text">Redefine tu cuidado del cabello con el Shampoo DoyPack IO Huevo. Nutre,                            revitaliza y protege tu cabello con intensidad gracias a su fórmula exclusiva con extractos                            de huevo.</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>        </div>    </div>    <div *ngIf="this.seccion === \'cuidado_ropa\'">        <h1 class="titulo-pagina">Cuidado de Ropa</h1>        <br>        <br>        <div class="row card-container">            <div class="col-12 col-md-6 mb-4">                <div class="card card-content h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/cuidado_ropa/Jabon de Lavar barra Doña Tuti 170 grs.jpg"                            class="card-img-top fade-in" alt="Jabon Doña Tuti">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Jabon de Lavar barra Doña Tuti 170 grs</h5>                        <p class="card-text precio">Precio: $5.000</p>                        <b>                            <p class="card-text">Información del producto</p>                        </b>                        <p class="card-text">Jabón para Lavar en Barra Doña Tuti, poder de limpieza</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>            <div class="col-12 col-md-6 mb-4">                <div class="card card-content  h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/cuidado_ropa/Cloro Concentrado Briks 5 Lts.jpg"                            class="card-img-top fade-in" alt="Cloro Briks">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Cloro Concentrado Briks 5 Lts</h5>                        <p class="card-text precio">Precio: $1.899</p>                        <b>                            <p class="card-text">Información del producto</p>                        </b>                        <p class="card-text">Disfrute de un hogar impecablemente limpio con el cloro líquido Briks. Este                            potente limpiador ofrece una desinfección y limpieza completa, eliminando efectivamente                            bacterias y suciedad.</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>            <div class="col-12 col-md-6 mb-4">                <div class="card card-content  h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/cuidado_ropa/Detergentes Briks Verde 5 Lts.jpg"                            class="card-img-top fade-in" alt="Detergente Briks">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Detergentes Briks Verde 5 Lts</h5>                        <p class="card-text precio">Precio: $3.120</p>                        <b>                            <p class="card-text">Información del producto</p>                        </b>                        <p class="card-text">Nunca antes tus prendas habían lucido tan bien. Introducimos Detergentes                            Briks Verde de 5 litros, tú solución definitiva para un lavado profundo y aromatizante.</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>            <div class="col-12 col-md-6 mb-4">                <div class="card card-content  h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/cuidado_ropa/Suavizante Doña Tuti Aloe Vera 1000ml.jpg"                            class="card-img-top fade-in" alt="Suavizante Doña Tuti">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Suavizante Doña Tuti Aloe Vera 1000ml</h5>                        <p class="card-text precio">Precio: $1.100</p>                        <b>                            <p class="card-text">Información del producto</p>                        </b>                        <p class="card-text">Suavizante Doña Tuti Aloe Vera 1000ml</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>        </div>    </div>    <div *ngIf="this.seccion === \'limpieza\'">        <h1 class="titulo-pagina">Productos de Limpeiza</h1>        <br>        <br>        <div class="row card-container">            <div class="col-12 col-md-6 mb-4">                <div class="card card-content h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/Limpieza/Cloro Gel Briks Citrus 900ml.jpg" class="card-img-top fade-in" alt="Cloro Gel Briks Citrus 900ml">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Cloro Gel Briks Citrus 900ml</h5>                        <p class="card-text precio">Precio: $1.050</p>                        <b><p class="card-text">Información del producto</p></b>                        <p class="card-text">Dile adiós a las bacterias con Cloro Gel Briks Citrus. Potenciado con un fresco aroma a cítricos, este producto de limpieza multifuncional ofrece una solución poderosa a tu alcance.</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>            <div class="col-12 col-md-6 mb-4">                <div class="card card-content  h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/Limpieza/Lavaloza Verde Briks 2 Lts.jpg" class="card-img-top fade-in" alt="Lavaloza Verde Briks 2 Lts">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Lavaloza Verde Briks 2 Lts</h5>                        <p class="card-text precio">Precio: $1.430</p>                        <b><p class="card-text">Información del producto</p></b>                        <p class="card-text">Revitaliza y da vida a tus platos con Lavaloza Verde Briks. Este detergente innovador no solo limpia a profundidad, sino que también cuida de tus manos, gracias a su formula exclusiva.</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>            <div class="col-12 col-md-6 mb-4">                <div class="card card-content  h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/Limpieza/Trapero Humedo Doña Tuti Lavanda 40x60cm.jpg" class="card-img-top fade-in" alt="Trapero Humedo Doña Tuti Lavanda 40x60cm">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Trapero Humedo Doña Tuti Lavanda 40x60cm</h5>                        <p class="card-text precio">Precio: $1.799</p>                        <b><p class="card-text">Información del producto</p></b>                        <p class="card-text">Trapero Humedo Doña Tuti Lavanda 40x60cm.</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>            <div class="col-12 col-md-6 mb-4">                <div class="card card-content  h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/Limpieza/Lavalozas Briks Verde 5 Lts.jpg" class="card-img-top fade-in" alt="Lavalozas Briks Verde 5 Lts">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Lavalozas Briks Verde 5 Lts</h5>                        <p class="card-text precio">Precio: $3.120</p>                        <b><p class="card-text">Información del producto</p></b>                        <p class="card-text">Como por arte de magia. Esta solución líquida es potente y eficaz, eliminando todo tipo de suciedad adherida en los platos y utensilios de cocina. Su fórmula única, biodegradable, respeta el medio ambiente, mientras garantiza la limpieza profunda que usted necesita.</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>        </div>    </div>    <div *ngIf="this.seccion === \'papel\'">        <h1 class="titulo-pagina">Papeles</h1>        <br>        <br>        <div class="row card-container">            <div class="col-12 col-md-6 mb-4">                <div class="card card-content h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/papel/Toalla de papel Nobby Fit.jpg" class="card-img-top fade-in" alt="Toalla de papel Nobby Fit">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Toalla de papel Nobby Fit</h5>                        <p class="card-text precio">Precio: $680</p>                        <b><p class="card-text">Información del producto</p></b>                        <p class="card-text">Toalla de papel Bobby Fit</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>            <div class="col-12 col-md-6 mb-4">                <div class="card card-content  h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/papel/Servilleta Doña Tuti (Pack Familiar Premium).jpg" class="card-img-top fade-in" alt="Servilleta Doña Tuti (Pack Familiar Premium)">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Servilleta Doña Tuti (Premium)</h5>                        <p class="card-text precio">Precio: $1.290</p>                        <b><p class="card-text">Información del producto</p></b>                        <p class="card-text">300 Unidades por Paquete</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>            <div class="col-12 col-md-6 mb-4">                <div class="card card-content  h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/papel/Papel Higiénico Top One 20mts (Pack 12r).jpg" class="card-img-top fade-in" alt="Papel Higiénico Top One 20mts (Pack 12r)">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Papel Higiénico Top One 20mts (Pack 12r)</h5>                        <p class="card-text precio">Precio: $2.499</p>                        <b><p class="card-text">Información del producto</p></b>                        <p class="card-text">Papel Higiénico Top One 20 metros, pack de 12 rollos.</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>            <div class="col-12 col-md-6 mb-4">                <div class="card card-content  h-100">                    <div class="card-img-container">                        <img src="../../../assets/img/papel/Toalla Mediana HiperMax XL Doble Hoja.jpg" class="card-img-top fade-in" alt="Toalla Mediana HiperMax XL Doble Hoja">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">Toalla Mediana HiperMax XL Doble Hoja</h5>                        <p class="card-text precio">Precio: $2.580</p>                        <b><p class="card-text">Información del producto</p></b>                        <p class="card-text">Toalla HiperMax XL Doble Hoja 100 Mts</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>        </div>    </div></main><app-footer></app-footer></div>'
+        var COMPONENT_TEMPLATE = '<div><app-navbar></app-navbar><main>    <div *ngIf="this.seccion === \'cuidado_capilar\'">        <h1 class="titulo-pagina">Cuidado Capilar</h1>        <br>        <br>        <div class="row card-container">            <div class="col-12 col-md-6 mb-4" *ngFor="let product of productos">                <div class="card card-content h-100">                    <div class="card-img-container">                        <img [src]="product.urlImg" class="card-img-top fade-in" [alt]="product.nombre">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">{{ product.nombre }}</h5>                        <p class="card-text precio">Precio: {{ product.precio | currency:\'\':\'symbol\':\'1.0-0\' }}</p>                        <b>                            <p class="card-text">Información del producto</p>                        </b>                        <p class="card-text">{{ product.descripcion }}</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>        </div>    </div>    <div *ngIf="this.seccion === \'cuidado_ropa\'">        <h1 class="titulo-pagina">Cuidado de Ropa</h1>        <br>        <br>        <div class="row card-container">            <div class="col-12 col-md-6 mb-4" *ngFor="let product of productos">                <div class="card card-content h-100">                    <div class="card-img-container">                        <img [src]="product.urlImg" class="card-img-top fade-in" [alt]="product.nombre">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">{{ product.nombre }}</h5>                        <p class="card-text precio">Precio: {{ product.precio | currency:\'\':\'symbol\':\'1.0-0\' }}</p>                        <b>                            <p class="card-text">Información del producto</p>                        </b>                        <p class="card-text">{{ product.descripcion }}</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>        </div>    </div>    <div *ngIf="this.seccion === \'limpieza\'">        <h1 class="titulo-pagina">Productos de Limpeiza</h1>        <br>        <br>        <div class="row card-container">            <div class="col-12 col-md-6 mb-4" *ngFor="let product of productos">                <div class="card card-content h-100">                    <div class="card-img-container">                        <img [src]="product.urlImg" class="card-img-top fade-in" [alt]="product.nombre">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">{{ product.nombre }}</h5>                        <p class="card-text precio">Precio: {{ product.precio | currency:\'\':\'symbol\':\'1.0-0\' }}</p>                        <b>                            <p class="card-text">Información del producto</p>                        </b>                        <p class="card-text">{{ product.descripcion }}</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>        </div>    </div>    <div *ngIf="this.seccion === \'papel\'">        <h1 class="titulo-pagina">Papeles</h1>        <br>        <br>        <div class="row card-container">            <div class="col-12 col-md-6 mb-4" *ngFor="let product of productos">                <div class="card card-content h-100">                    <div class="card-img-container">                        <img [src]="product.urlImg" class="card-img-top fade-in" [alt]="product.nombre">                    </div>                    <div class="card-body d-flex flex-column align-items-center text-center">                        <h5 class="card-title">{{ product.nombre }}</h5>                        <p class="card-text precio">Precio: {{ product.precio | currency:\'\':\'symbol\':\'1.0-0\' }}</p>                        <b>                            <p class="card-text">Información del producto</p>                        </b>                        <p class="card-text">{{ product.descripcion }}</p>                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>                    </div>                </div>            </div>        </div>    </div></main><app-footer></app-footer></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'EditarPerfilComponent', 'selector': 'app-editar-perfil'},{'name': 'EditarProductosComponent', 'selector': 'app-editar-productos'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'InicioAdminComponent', 'selector': 'app-inicio-admin'},{'name': 'InicioComponent', 'selector': 'app-inicio'},{'name': 'ListaUsuariosComponent', 'selector': 'app-lista-usuarios'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbaradminComponent', 'selector': 'app-navbaradmin'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'ProductosComponent', 'selector': 'app-productos'},{'name': 'RecuperarContrasenaComponent', 'selector': 'app-recuperar-contrasena'},{'name': 'RegistroComponent', 'selector': 'app-registro'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ProductosComponent'};

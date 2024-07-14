@@ -118,6 +118,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </div>
                             <ul class="links collapse " ${ isNormalMode ? 'id="injectables-links"' : 'id="xs-injectables-links"' }>
                                 <li class="link">
+                                    <a href="injectables/ProductoService.html" data-type="entity-link" >ProductoService</a>
+                                </li>
+                                <li class="link">
                                     <a href="injectables/UsuarioService.html" data-type="entity-link" >UsuarioService</a>
                                 </li>
                             </ul>
@@ -130,6 +133,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             <span class="icon ion-ios-arrow-down"></span>
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
+                            <li class="link">
+                                <a href="interfaces/Producto.html" data-type="entity-link" >Producto</a>
+                            </li>
                             <li class="link">
                                 <a href="interfaces/Usuario.html" data-type="entity-link" >Usuario</a>
                             </li>

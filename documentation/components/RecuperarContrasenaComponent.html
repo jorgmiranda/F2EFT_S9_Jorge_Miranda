@@ -146,6 +146,12 @@
 
 
 
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                                <code><a href="../injectables/UsuarioService.html" target="_self" >UsuarioService</a></code>
+                </td>
+            </tr>
 
 
             <tr>
@@ -225,6 +231,9 @@
                                 <a href="#ngOnInit" >ngOnInit</a>
                             </li>
                             <li>
+                                <a href="#obtenerTodosLosUsuarios" >obtenerTodosLosUsuarios</a>
+                            </li>
+                            <li>
                                 <a href="#recuperarContrasena" >recuperarContrasena</a>
                             </li>
                         </ul>
@@ -245,12 +254,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(fb: FormBuilder)</code>
+<code>constructor(fb: FormBuilder, usuarioService: <a href="../injectables/UsuarioService.html" target="_self">UsuarioService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/components/recuperar-contrasena/recuperar-contrasena.component.ts:28</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/components/recuperar-contrasena/recuperar-contrasena.component.ts:31</a></div>
                             </td>
                         </tr>
 
@@ -284,6 +293,20 @@
 <li>Servicio de creación de formulario de Angular</li>
 </ul>
 
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>usuarioService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UsuarioService.html" target="_self" >UsuarioService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
                                                         </td>
                                                 </tr>
                                         </tbody>
@@ -324,8 +347,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="40"
-                                    class="link-to-prism">src/app/components/recuperar-contrasena/recuperar-contrasena.component.ts:40</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="43"
+                                    class="link-to-prism">src/app/components/recuperar-contrasena/recuperar-contrasena.component.ts:43</a></div>
                         </td>
                     </tr>
 
@@ -333,7 +356,47 @@
             <tr>
                 <td class="col-md-4">
                         <div class="io-description"><p>Metodo de inicialización del componente.
-Inicializa el formulario de recpuerar contraseña y obtiene el listado de usuarios registrados en el sesión storage</p>
+Inicializa el formulario de recpuerar contraseña y obtiene el listado de usuarios registrados</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="obtenerTodosLosUsuarios"></a>
+                    <span class="name">
+                        <span ><b>obtenerTodosLosUsuarios</b></span>
+                        <a href="#obtenerTodosLosUsuarios"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>obtenerTodosLosUsuarios()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="81"
+                                    class="link-to-prism">src/app/components/recuperar-contrasena/recuperar-contrasena.component.ts:81</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Obtiene todos los usuarios registrados en el JSON REST
+Una vez obtenidos, llama al metodo verificarSessionUsuario</p>
 </div>
 
                         <div class="io-description">
@@ -364,8 +427,8 @@ Inicializa el formulario de recpuerar contraseña y obtiene el listado de usuari
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="51"
-                                    class="link-to-prism">src/app/components/recuperar-contrasena/recuperar-contrasena.component.ts:51</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="55"
+                                    class="link-to-prism">src/app/components/recuperar-contrasena/recuperar-contrasena.component.ts:55</a></div>
                         </td>
                     </tr>
 
@@ -403,7 +466,7 @@ Recupera la contraseña del usuario, si el correo esta registrado en la variable
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>    <code>any[]</code>
+                        <i>Type : </i>        <code><a href="../interfaces/Usuario.html" target="_self" >Usuario[]</a></code>
 
                     </td>
                 </tr>
@@ -414,7 +477,7 @@ Recupera la contraseña del usuario, si el correo esta registrado en la variable
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/components/recuperar-contrasena/recuperar-contrasena.component.ts:28</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/components/recuperar-contrasena/recuperar-contrasena.component.ts:31</a></div>
                         </td>
                     </tr>
 
@@ -446,7 +509,7 @@ Recupera la contraseña del usuario, si el correo esta registrado en la variable
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/components/recuperar-contrasena/recuperar-contrasena.component.ts:24</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/components/recuperar-contrasena/recuperar-contrasena.component.ts:27</a></div>
                         </td>
                     </tr>
 
@@ -470,6 +533,8 @@ import { NavbarComponent } from &#x27;../../navbar/navbar.component&#x27;;
 import { FooterComponent } from &#x27;../../footer/footer.component&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators  } from &#x27;@angular/forms&#x27;; 
+import { Usuario } from &#x27;../../model/usuario&#x27;;
+import { UsuarioService } from &#x27;../../services/usuario.service&#x27;;
 
 /**
  * @description
@@ -482,7 +547,8 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators  } from &#x27;@
   standalone: true,
   imports: [NavbarComponent, FooterComponent, ReactiveFormsModule, CommonModule],
   templateUrl: &#x27;./recuperar-contrasena.component.html&#x27;,
-  styleUrl: &#x27;./recuperar-contrasena.component.scss&#x27;
+  styleUrl: &#x27;./recuperar-contrasena.component.scss&#x27;,
+  providers: [UsuarioService]
 })
 export class RecuperarContrasenaComponent {
   /**
@@ -492,23 +558,24 @@ export class RecuperarContrasenaComponent {
   /**
    * Instancia de arreglo de usuarios
    */
-  listaUsuarios: any[] &#x3D; [];
+  listaUsuarios: Usuario[] &#x3D; [];
 
   /**
    * @constructor
    * @param fb - Servicio de creación de formulario de Angular
    */
-  constructor (private fb: FormBuilder) {}
+  constructor (private fb: FormBuilder, private usuarioService: UsuarioService) {}
 
   /**
    * Metodo de inicialización del componente.
-   * Inicializa el formulario de recpuerar contraseña y obtiene el listado de usuarios registrados en el sesión storage
+   * Inicializa el formulario de recpuerar contraseña y obtiene el listado de usuarios registrados
    */
   ngOnInit(): void{
     this.recuperarCorreo &#x3D; this.fb.group({
       correoValidacion: [&#x27;&#x27;, [Validators.required, Validators.email]]
     });
-    this.listaUsuarios &#x3D; JSON.parse(sessionStorage.getItem(&#x27;usuarios&#x27;) || &#x27;[]&#x27;);
+    //this.listaUsuarios &#x3D; JSON.parse(sessionStorage.getItem(&#x27;usuarios&#x27;) || &#x27;[]&#x27;);
+    this.obtenerTodosLosUsuarios();
   }
 
   /**
@@ -521,7 +588,7 @@ export class RecuperarContrasenaComponent {
       let contrasenaEncontrada &#x3D; &#x27;&#x27;;
       if(this.listaUsuarios){
         this.listaUsuarios.forEach(function (usuario) {
-          if (usuario.correo &#x3D;&#x3D; correo) {
+          if (usuario.correoUsuario &#x3D;&#x3D; correo) {
             contrasenaEncontrada &#x3D; usuario.contrasena;
           }
       });
@@ -536,6 +603,16 @@ export class RecuperarContrasenaComponent {
       }
     }
   }
+
+    /**
+   * Obtiene todos los usuarios registrados en el JSON REST
+   * Una vez obtenidos, llama al metodo verificarSessionUsuario
+   */
+    obtenerTodosLosUsuarios():void{
+      this.usuarioService.obtenerTodosLosUsuarios().subscribe(data &#x3D;&gt; {
+        this.listaUsuarios &#x3D; data;
+      });
+    }
 
 }
 </code></pre>
