@@ -5,78 +5,18 @@
         <br>
         <br>
         <div class="row card-container">
-            <div class="col-12 col-md-6 mb-4">
+            <div class="col-12 col-md-6 mb-4" *ngFor="let product of productos">
                 <div class="card card-content h-100">
                     <div class="card-img-container">
-                        <img src="../../../assets/img/cuidado_capilar/Acond. DoyPack IO Camomilla 1000ml.jpg"
-                            class="card-img-top fade-in" alt="Acond. DoyPack IO Camomilla 1000ml">
+                        <img [src]="product.urlImg" class="card-img-top fade-in" [alt]="product.nombre">
                     </div>
                     <div class="card-body d-flex flex-column align-items-center text-center">
-                        <h5 class="card-title">Acond. DoyPack IO Camomilla 1000ml</h5>
-                        <p class="card-text precio">Precio: $1.020</p>
+                        <h5 class="card-title">{{ product.nombre }}</h5>
+                        <p class="card-text precio">Precio: {{ product.precio | currency:'':'symbol':'1.0-0' }}</p>
                         <b>
                             <p class="card-text">Información del producto</p>
                         </b>
-                        <p class="card-text">Descubre el arte del cuidado personal con el Acondicionador DoyPack IO
-                            Camomilla. Este producto incorpora esencias de camomila que nutren, revitalizan y dan
-                            suavidad a tu cabello.</p>
-                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 mb-4">
-                <div class="card card-content  h-100">
-                    <div class="card-img-container">
-                        <img src="../../../assets/img/cuidado_capilar/Acond. DoyPack IO Hierbas 1000ml.jpg"
-                            class="card-img-top fade-in" alt="Acond. DoyPack IO Hierbas 1000ml">
-                    </div>
-                    <div class="card-body d-flex flex-column align-items-center text-center">
-                        <h5 class="card-title">Acond. DoyPack IO Hierbas 1000ml</h5>
-                        <p class="card-text precio">Precio: $1.020</p>
-                        <b>
-                            <p class="card-text">Información del producto</p>
-                        </b>
-                        <p class="card-text">Vive una experiencia saludable con nuestro DoyPack IO Hierbas. Este
-                            producto único está especialmente formulado con una selección premium de hierbas,
-                            brindándote un sabor inigualable y beneficios para tu salud.</p>
-                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 mb-4">
-                <div class="card card-content  h-100">
-                    <div class="card-img-container">
-                        <img src="../../../assets/img/cuidado_capilar/Shampoo DoyPack IO Huevo 1000ml.jpg"
-                            class="card-img-top fade-in" alt="Shampoo DoyPack IO Huevo 1000ml">
-                    </div>
-                    <div class="card-body d-flex flex-column align-items-center text-center">
-                        <h5 class="card-title">Shampoo DoyPack IO Huevo 1000ml</h5>
-                        <p class="card-text precio">Precio: $1.020</p>
-                        <b>
-                            <p class="card-text">Información del producto</p>
-                        </b>
-                        <p class="card-text">Transfórmate en la mejor versión de ti con nuestro Shampoo DoyPack IO
-                            Quillay. Único en su clase, desenvuelve la magia de la naturaleza para darle vida y vigor a
-                            tu cabello.</p>
-                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 mb-4">
-                <div class="card card-content  h-100">
-                    <div class="card-img-container">
-                        <img src="../../../assets/img/cuidado_capilar/Shampoo DoyPack IO Quillay 1000ml.jpg"
-                            class="card-img-top fade-in" alt="Shampoo DoyPack IO Quillay 1000ml">
-                    </div>
-                    <div class="card-body d-flex flex-column align-items-center text-center">
-                        <h5 class="card-title">Shampoo DoyPack IO Quillay 1000ml</h5>
-                        <p class="card-text precio">Precio: $1.020</p>
-                        <b>
-                            <p class="card-text">Información del producto</p>
-                        </b>
-                        <p class="card-text">Redefine tu cuidado del cabello con el Shampoo DoyPack IO Huevo. Nutre,
-                            revitaliza y protege tu cabello con intensidad gracias a su fórmula exclusiva con extractos
-                            de huevo.</p>
+                        <p class="card-text">{{ product.descripcion }}</p>
                         <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>
                     </div>
                 </div>
@@ -88,136 +28,42 @@
         <br>
         <br>
         <div class="row card-container">
-            <div class="col-12 col-md-6 mb-4">
+            <div class="col-12 col-md-6 mb-4" *ngFor="let product of productos">
                 <div class="card card-content h-100">
                     <div class="card-img-container">
-                        <img src="../../../assets/img/cuidado_ropa/Jabon de Lavar barra Doña Tuti 170 grs.jpg"
-                            class="card-img-top fade-in" alt="Jabon Doña Tuti">
+                        <img [src]="product.urlImg" class="card-img-top fade-in" [alt]="product.nombre">
                     </div>
                     <div class="card-body d-flex flex-column align-items-center text-center">
-                        <h5 class="card-title">Jabon de Lavar barra Doña Tuti 170 grs</h5>
-                        <p class="card-text precio">Precio: $5.000</p>
+                        <h5 class="card-title">{{ product.nombre }}</h5>
+                        <p class="card-text precio">Precio: {{ product.precio | currency:'':'symbol':'1.0-0' }}</p>
                         <b>
                             <p class="card-text">Información del producto</p>
                         </b>
-                        <p class="card-text">Jabón para Lavar en Barra Doña Tuti, poder de limpieza</p>
-                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 mb-4">
-                <div class="card card-content  h-100">
-                    <div class="card-img-container">
-                        <img src="../../../assets/img/cuidado_ropa/Cloro Concentrado Briks 5 Lts.jpg"
-                            class="card-img-top fade-in" alt="Cloro Briks">
-                    </div>
-                    <div class="card-body d-flex flex-column align-items-center text-center">
-                        <h5 class="card-title">Cloro Concentrado Briks 5 Lts</h5>
-                        <p class="card-text precio">Precio: $1.899</p>
-                        <b>
-                            <p class="card-text">Información del producto</p>
-                        </b>
-                        <p class="card-text">Disfrute de un hogar impecablemente limpio con el cloro líquido Briks. Este
-                            potente limpiador ofrece una desinfección y limpieza completa, eliminando efectivamente
-                            bacterias y suciedad.</p>
-                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 mb-4">
-                <div class="card card-content  h-100">
-                    <div class="card-img-container">
-                        <img src="../../../assets/img/cuidado_ropa/Detergentes Briks Verde 5 Lts.jpg"
-                            class="card-img-top fade-in" alt="Detergente Briks">
-                    </div>
-                    <div class="card-body d-flex flex-column align-items-center text-center">
-                        <h5 class="card-title">Detergentes Briks Verde 5 Lts</h5>
-                        <p class="card-text precio">Precio: $3.120</p>
-                        <b>
-                            <p class="card-text">Información del producto</p>
-                        </b>
-                        <p class="card-text">Nunca antes tus prendas habían lucido tan bien. Introducimos Detergentes
-                            Briks Verde de 5 litros, tú solución definitiva para un lavado profundo y aromatizante.</p>
-                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 mb-4">
-                <div class="card card-content  h-100">
-                    <div class="card-img-container">
-                        <img src="../../../assets/img/cuidado_ropa/Suavizante Doña Tuti Aloe Vera 1000ml.jpg"
-                            class="card-img-top fade-in" alt="Suavizante Doña Tuti">
-                    </div>
-                    <div class="card-body d-flex flex-column align-items-center text-center">
-                        <h5 class="card-title">Suavizante Doña Tuti Aloe Vera 1000ml</h5>
-                        <p class="card-text precio">Precio: $1.100</p>
-                        <b>
-                            <p class="card-text">Información del producto</p>
-                        </b>
-                        <p class="card-text">Suavizante Doña Tuti Aloe Vera 1000ml</p>
+                        <p class="card-text">{{ product.descripcion }}</p>
                         <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <div *ngIf="this.seccion === 'limpieza'">
         <h1 class="titulo-pagina">Productos de Limpeiza</h1>
         <br>
         <br>
         <div class="row card-container">
-            <div class="col-12 col-md-6 mb-4">
+            <div class="col-12 col-md-6 mb-4" *ngFor="let product of productos">
                 <div class="card card-content h-100">
                     <div class="card-img-container">
-                        <img src="../../../assets/img/Limpieza/Cloro Gel Briks Citrus 900ml.jpg" class="card-img-top fade-in" alt="Cloro Gel Briks Citrus 900ml">
+                        <img [src]="product.urlImg" class="card-img-top fade-in" [alt]="product.nombre">
                     </div>
                     <div class="card-body d-flex flex-column align-items-center text-center">
-                        <h5 class="card-title">Cloro Gel Briks Citrus 900ml</h5>
-                        <p class="card-text precio">Precio: $1.050</p>
-                        <b><p class="card-text">Información del producto</p></b>
-                        <p class="card-text">Dile adiós a las bacterias con Cloro Gel Briks Citrus. Potenciado con un fresco aroma a cítricos, este producto de limpieza multifuncional ofrece una solución poderosa a tu alcance.</p>
-                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 mb-4">
-                <div class="card card-content  h-100">
-                    <div class="card-img-container">
-                        <img src="../../../assets/img/Limpieza/Lavaloza Verde Briks 2 Lts.jpg" class="card-img-top fade-in" alt="Lavaloza Verde Briks 2 Lts">
-                    </div>
-                    <div class="card-body d-flex flex-column align-items-center text-center">
-                        <h5 class="card-title">Lavaloza Verde Briks 2 Lts</h5>
-                        <p class="card-text precio">Precio: $1.430</p>
-                        <b><p class="card-text">Información del producto</p></b>
-                        <p class="card-text">Revitaliza y da vida a tus platos con Lavaloza Verde Briks. Este detergente innovador no solo limpia a profundidad, sino que también cuida de tus manos, gracias a su formula exclusiva.</p>
-                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 mb-4">
-                <div class="card card-content  h-100">
-                    <div class="card-img-container">
-                        <img src="../../../assets/img/Limpieza/Trapero Humedo Doña Tuti Lavanda 40x60cm.jpg" class="card-img-top fade-in" alt="Trapero Humedo Doña Tuti Lavanda 40x60cm">
-                    </div>
-                    <div class="card-body d-flex flex-column align-items-center text-center">
-                        <h5 class="card-title">Trapero Humedo Doña Tuti Lavanda 40x60cm</h5>
-                        <p class="card-text precio">Precio: $1.799</p>
-                        <b><p class="card-text">Información del producto</p></b>
-                        <p class="card-text">Trapero Humedo Doña Tuti Lavanda 40x60cm.</p>
-                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 mb-4">
-                <div class="card card-content  h-100">
-                    <div class="card-img-container">
-                        <img src="../../../assets/img/Limpieza/Lavalozas Briks Verde 5 Lts.jpg" class="card-img-top fade-in" alt="Lavalozas Briks Verde 5 Lts">
-                    </div>
-                    <div class="card-body d-flex flex-column align-items-center text-center">
-                        <h5 class="card-title">Lavalozas Briks Verde 5 Lts</h5>
-                        <p class="card-text precio">Precio: $3.120</p>
-                        <b><p class="card-text">Información del producto</p></b>
-                        <p class="card-text">Como por arte de magia. Esta solución líquida es potente y eficaz, eliminando todo tipo de suciedad adherida en los platos y utensilios de cocina. Su fórmula única, biodegradable, respeta el medio ambiente, mientras garantiza la limpieza profunda que usted necesita.</p>
+                        <h5 class="card-title">{{ product.nombre }}</h5>
+                        <p class="card-text precio">Precio: {{ product.precio | currency:'':'symbol':'1.0-0' }}</p>
+                        <b>
+                            <p class="card-text">Información del producto</p>
+                        </b>
+                        <p class="card-text">{{ product.descripcion }}</p>
                         <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>
                     </div>
                 </div>
@@ -229,58 +75,18 @@
         <br>
         <br>
         <div class="row card-container">
-            <div class="col-12 col-md-6 mb-4">
+            <div class="col-12 col-md-6 mb-4" *ngFor="let product of productos">
                 <div class="card card-content h-100">
                     <div class="card-img-container">
-                        <img src="../../../assets/img/papel/Toalla de papel Nobby Fit.jpg" class="card-img-top fade-in" alt="Toalla de papel Nobby Fit">
+                        <img [src]="product.urlImg" class="card-img-top fade-in" [alt]="product.nombre">
                     </div>
                     <div class="card-body d-flex flex-column align-items-center text-center">
-                        <h5 class="card-title">Toalla de papel Nobby Fit</h5>
-                        <p class="card-text precio">Precio: $680</p>
-                        <b><p class="card-text">Información del producto</p></b>
-                        <p class="card-text">Toalla de papel Bobby Fit</p>
-                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 mb-4">
-                <div class="card card-content  h-100">
-                    <div class="card-img-container">
-                        <img src="../../../assets/img/papel/Servilleta Doña Tuti (Pack Familiar Premium).jpg" class="card-img-top fade-in" alt="Servilleta Doña Tuti (Pack Familiar Premium)">
-                    </div>
-                    <div class="card-body d-flex flex-column align-items-center text-center">
-                        <h5 class="card-title">Servilleta Doña Tuti (Premium)</h5>
-                        <p class="card-text precio">Precio: $1.290</p>
-                        <b><p class="card-text">Información del producto</p></b>
-                        <p class="card-text">300 Unidades por Paquete</p>
-                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 mb-4">
-                <div class="card card-content  h-100">
-                    <div class="card-img-container">
-                        <img src="../../../assets/img/papel/Papel Higiénico Top One 20mts (Pack 12r).jpg" class="card-img-top fade-in" alt="Papel Higiénico Top One 20mts (Pack 12r)">
-                    </div>
-                    <div class="card-body d-flex flex-column align-items-center text-center">
-                        <h5 class="card-title">Papel Higiénico Top One 20mts (Pack 12r)</h5>
-                        <p class="card-text precio">Precio: $2.499</p>
-                        <b><p class="card-text">Información del producto</p></b>
-                        <p class="card-text">Papel Higiénico Top One 20 metros, pack de 12 rollos.</p>
-                        <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 mb-4">
-                <div class="card card-content  h-100">
-                    <div class="card-img-container">
-                        <img src="../../../assets/img/papel/Toalla Mediana HiperMax XL Doble Hoja.jpg" class="card-img-top fade-in" alt="Toalla Mediana HiperMax XL Doble Hoja">
-                    </div>
-                    <div class="card-body d-flex flex-column align-items-center text-center">
-                        <h5 class="card-title">Toalla Mediana HiperMax XL Doble Hoja</h5>
-                        <p class="card-text precio">Precio: $2.580</p>
-                        <b><p class="card-text">Información del producto</p></b>
-                        <p class="card-text">Toalla HiperMax XL Doble Hoja 100 Mts</p>
+                        <h5 class="card-title">{{ product.nombre }}</h5>
+                        <p class="card-text precio">Precio: {{ product.precio | currency:'':'symbol':'1.0-0' }}</p>
+                        <b>
+                            <p class="card-text">Información del producto</p>
+                        </b>
+                        <p class="card-text">{{ product.descripcion }}</p>
                         <button class="btn btn-primary btn-add-cart">Añadir al carrito</button>
                     </div>
                 </div>

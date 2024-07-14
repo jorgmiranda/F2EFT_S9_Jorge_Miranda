@@ -3,6 +3,8 @@ import { NavbarComponent } from '../../navbar/navbar.component';
 import { FooterComponent } from '../../footer/footer.component';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators  } from '@angular/forms'; 
+import { Usuario } from '../../model/usuario';
+import { UsuarioService } from '../../services/usuario.service';
 
 /**
  * @description
@@ -15,7 +17,8 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators  } from '@angul
   standalone: true,
   imports: [NavbarComponent, FooterComponent, ReactiveFormsModule, CommonModule],
   templateUrl: './recuperar-contrasena.component.html',
-  styleUrl: './recuperar-contrasena.component.scss'
+  styleUrl: './recuperar-contrasena.component.scss',
+  providers: [UsuarioService]
 })
 export class RecuperarContrasenaComponent {
   /**
@@ -25,23 +28,24 @@ export class RecuperarContrasenaComponent {
   /**
    * Instancia de arreglo de usuarios
    */
-  listaUsuarios: any[] = [];
+  listaUsuarios: Usuario[] = [];
 
   /**
    * @constructor
    * @param fb - Servicio de creación de formulario de Angular
    */
-  constructor (private fb: FormBuilder) {}
+  constructor (private fb: FormBuilder, private usuarioService: UsuarioService) {}
 
   /**
    * Metodo de inicialización del componente.
-   * Inicializa el formulario de recpuerar contraseña y obtiene el listado de usuarios registrados en el sesión storage
+   * Inicializa el formulario de recpuerar contraseña y obtiene el listado de usuarios registrados
    */
   ngOnInit(): void{
     this.recuperarCorreo = this.fb.group({
       correoValidacion: ['', [Validators.required, Validators.email]]
     });
-    this.listaUsuarios = JSON.parse(sessionStorage.getItem('usuarios') || '[]');
+    //this.listaUsuarios = JSON.parse(sessionStorage.getItem('usuarios') || '[]');
+    this.obtenerTodosLosUsuarios();
   }
 
   /**
@@ -54,7 +58,7 @@ export class RecuperarContrasenaComponent {
       let contrasenaEncontrada = '';
       if(this.listaUsuarios){
         this.listaUsuarios.forEach(function (usuario) {
-          if (usuario.correo == correo) {
+          if (usuario.correoUsuario == correo) {
             contrasenaEncontrada = usuario.contrasena;
           }
       });
@@ -69,5 +73,15 @@ export class RecuperarContrasenaComponent {
       }
     }
   }
+
+    /**
+   * Obtiene todos los usuarios registrados en el JSON REST
+   * Una vez obtenidos, llama al metodo verificarSessionUsuario
+   */
+    obtenerTodosLosUsuarios():void{
+      this.usuarioService.obtenerTodosLosUsuarios().subscribe(data => {
+        this.listaUsuarios = data;
+      });
+    }
 
 }

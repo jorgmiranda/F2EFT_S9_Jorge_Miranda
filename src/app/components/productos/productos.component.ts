@@ -4,6 +4,8 @@ import { NavbarComponent } from '../../navbar/navbar.component';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { isPlatformBrowser } from '@angular/common';
+import { Producto } from '../../model/producto';
+import { ProductoService } from '../../services/prodcuto.service';
 
 /**
  * @description
@@ -19,7 +21,8 @@ import { isPlatformBrowser } from '@angular/common';
   imports: [NavbarComponent, FooterComponent, CommonModule],
   templateUrl: './productos.component.html',
   styleUrl: './productos.component.scss',
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  providers: [ProductoService]
 })
 export class ProductosComponent implements OnInit {
   /**
@@ -31,12 +34,17 @@ export class ProductosComponent implements OnInit {
    */
   listaProductos: any[] = [];
   /**
+   * Instancia que almacenara los productos recuperados del servicio
+   */
+  productos: Producto[] = [];
+  /**
    * @constructor
    * @param platformId - Identificado de la plataforma (Navegador o Servidor)
    * @param route - Servicio de enrutamiento de Angular
    * @param elRef - Referencia al elemento del DOM asociado con este componente.
    */
-  constructor(@Inject(PLATFORM_ID) private platformId: Object, private route: ActivatedRoute, private elRef: ElementRef) { }
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private route: ActivatedRoute, private elRef: ElementRef
+  , private productoService: ProductoService) { }
 
   /**
    * Metodo de inicialización del componente
@@ -45,6 +53,7 @@ export class ProductosComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       this.seccion = params.get('seccion') || '';
+      this.inicializarProductos();
     });
 
     if (isPlatformBrowser(this.platformId)) {
@@ -54,6 +63,14 @@ export class ProductosComponent implements OnInit {
     }
   }
 
+  /**
+   * Inicializa la lista de productos basada en la sección actual.
+   */
+  inicializarProductos(){
+    this.productoService.obtenerProductosPorTipo(this.seccion).subscribe(data => {
+      this.productos = data;
+    });
+  }
 
   /**
    * Maneja los eventos de clic en el documento. Agrega productos al carrito y actualiza la vista del carrito.
@@ -176,9 +193,9 @@ export class ProductosComponent implements OnInit {
       `;
 
       rowProduct.append(containerProduct);
-
-      total += producto.cantidad * parseInt(producto.precio.replace('.', '').replace('$', ''));
+      total += producto.cantidad * parseInt(producto.precio.replace(',', '').replace('$', ''));
       totalProductos += producto.cantidad;
+      
     });
 
     valorTotal.innerText = `$${numberWithCommas(total)}`;
