@@ -156,6 +156,12 @@ gestionar formularios de edición y actualizar la información de los productos.
 
 
 
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                                <code><a href="../injectables/ProductoService.html" target="_self" >ProductoService</a></code>
+                </td>
+            </tr>
 
 
             <tr>
@@ -175,6 +181,7 @@ gestionar formularios de edición y actualizar la información de los productos.
                             <code>CommonModule</code>
                                 <code><a href="../components/FooterComponent.html" target="_self" >FooterComponent</a></code>
                             <code>ReactiveFormsModule</code>
+                            <code>HttpClientModule</code>
                 </td>
             </tr>
 
@@ -214,6 +221,18 @@ gestionar formularios de edición y actualizar la información de los productos.
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#allProducts" >allProducts</a>
+                            </li>
+                            <li>
+                                <a href="#crearProdcutoForm" >crearProdcutoForm</a>
+                            </li>
+                            <li>
+                                <a href="#modalInstance" >modalInstance</a>
+                            </li>
+                            <li>
+                                <a href="#opciones" >opciones</a>
+                            </li>
+                            <li>
                                 <a href="#productForms" >productForms</a>
                             </li>
                             <li>
@@ -221,6 +240,10 @@ gestionar formularios de edición y actualizar la información de los productos.
                             </li>
                             <li>
                                 <a href="#seccion" >seccion</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#storage" >storage</a>
                             </li>
                         </ul>
                     </td>
@@ -235,6 +258,16 @@ gestionar formularios de edición y actualizar la información de los productos.
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#abrirModal" >abrirModal</a>
+                            </li>
+                            <li>
+                                <a href="#eliminar" >eliminar</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#guardarImagenStorage" >guardarImagenStorage</a>
+                            </li>
+                            <li>
                                 <a href="#inicializarFormularios" >inicializarFormularios</a>
                             </li>
                             <li>
@@ -247,7 +280,18 @@ gestionar formularios de edición y actualizar la información de los productos.
                                 <a href="#numberWithCommas" >numberWithCommas</a>
                             </li>
                             <li>
+                                <a href="#onFileChange" >onFileChange</a>
+                            </li>
+                            <li>
+                                <a href="#onFileChangeCreate" >onFileChangeCreate</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
                                 <a href="#onSubmit" >onSubmit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#submitForm" >submitForm</a>
                             </li>
                         </ul>
                     </td>
@@ -267,12 +311,12 @@ gestionar formularios de edición y actualizar la información de los productos.
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(route: ActivatedRoute, fb: FormBuilder)</code>
+<code>constructor(route: ActivatedRoute, fb: FormBuilder, productoService: <a href="../injectables/ProductoService.html" target="_self">ProductoService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:33</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:71</a></div>
                             </td>
                         </tr>
 
@@ -326,6 +370,20 @@ gestionar formularios de edición y actualizar la información de los productos.
 
                                                         </td>
                                                 </tr>
+                                                <tr>
+                                                        <td>productoService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ProductoService.html" target="_self" >ProductoService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                        </td>
+                                                </tr>
                                         </tbody>
                                     </table>
                             </div>
@@ -348,6 +406,217 @@ gestionar formularios de edición y actualizar la información de los productos.
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="abrirModal"></a>
+                    <span class="name">
+                        <span ><b>abrirModal</b></span>
+                        <a href="#abrirModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>abrirModal()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="136"
+                                    class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:136</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Permite visualizar el modal definido</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="eliminar"></a>
+                    <span class="name">
+                        <span ><b>eliminar</b></span>
+                        <a href="#eliminar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>eliminar(event: Event, prodcuto: <a href="../interfaces/Producto.html" target="_self">Producto</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="238"
+                                    class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:238</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Eliminar un producto seleccionado.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>event</td>
+                                            <td>
+                                                        <code>Event</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>Variable evento</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                                <td>prodcuto</td>
+                                            <td>
+                                                            <code><a href="../interfaces/Producto.html" target="_self" >Producto</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>producto a eliminar</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="guardarImagenStorage"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>guardarImagenStorage</b></span>
+                        <a href="#guardarImagenStorage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>guardarImagenStorage(file: File)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="172"
+                                    class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:172</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Permite la subida de archivos al Storage de Firebase</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>file</td>
+                                            <td>
+                                                        <code>File</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>Archivo File obtenido desde la subida de archivos</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;string&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="inicializarFormularios"></a>
                     <span class="name">
                         <span ><b>inicializarFormularios</b></span>
@@ -364,8 +633,8 @@ gestionar formularios de edición y actualizar la información de los productos.
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="175"
-                                    class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:175</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="112"
+                                    class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:112</a></div>
                         </td>
                     </tr>
 
@@ -403,8 +672,8 @@ gestionar formularios de edición y actualizar la información de los productos.
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="59"
-                                    class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:59</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="97"
+                                    class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:97</a></div>
                         </td>
                     </tr>
 
@@ -442,8 +711,8 @@ gestionar formularios de edición y actualizar la información de los productos.
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="46"
-                                    class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:46</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="84"
+                                    class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:84</a></div>
                         </td>
                     </tr>
 
@@ -482,8 +751,8 @@ Obtiene la sección de la ruta y llama a los métodos para inicializar productos
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="209"
-                                    class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:209</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="293"
+                                    class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:293</a></div>
                         </td>
                     </tr>
 
@@ -535,8 +804,180 @@ Obtiene la sección de la ruta y llama a los métodos para inicializar productos
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="onFileChange"></a>
+                    <span class="name">
+                        <span ><b>onFileChange</b></span>
+                        <a href="#onFileChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onFileChange(event: Event, productId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="145"
+                                    class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:145</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Cuando se cambia un input file, se toma el valor y lo setea al campo imagen</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>event</td>
+                                            <td>
+                                                        <code>Event</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>Variable de evento</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                                <td>productId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>Id del producto a editar</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onFileChangeCreate"></a>
+                    <span class="name">
+                        <span ><b>onFileChangeCreate</b></span>
+                        <a href="#onFileChangeCreate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onFileChangeCreate(event: Event)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="159"
+                                    class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:159</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Cuando se cambia un input file, se toma el valor y lo setea al campo imagen producto
+Solo ocurre en la creación</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>event</td>
+                                            <td>
+                                                        <code>Event</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>Variable de evento</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="onSubmit"></a>
                     <span class="name">
+                            <span class="modifier">Async</span>
                         <span ><b>onSubmit</b></span>
                         <a href="#onSubmit"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -544,15 +985,16 @@ Obtiene la sección de la ruta y llama a los métodos para inicializar productos
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>onSubmit(form: FormGroup, product: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onSubmit(form: FormGroup, product: <a href="../interfaces/Producto.html" target="_self">Producto</a>)</code>
                 </td>
             </tr>
 
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="191"
-                                    class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:191</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="205"
+                                    class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:205</a></div>
                         </td>
                     </tr>
 
@@ -596,7 +1038,7 @@ Obtiene la sección de la ruta y llama a los métodos para inicializar productos
                                         <tr>
                                                 <td>product</td>
                                             <td>
-                                                            <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                            <code><a href="../interfaces/Producto.html" target="_self" >Producto</a></code>
                                             </td>
 
                                             <td>
@@ -615,12 +1057,53 @@ Obtiene la sección de la ruta y llama a los métodos para inicializar productos
                                 </table>
                             </div>
                         <div class="io-description">
-                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                         </div>
                             <div class="io-description">
                                 
                             </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="submitForm"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>submitForm</b></span>
+                        <a href="#submitForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>submitForm()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="252"
+                                    class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:252</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Encargado de manejar la creación de un nuevo producto</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
                 </td>
             </tr>
         </tbody>
@@ -635,16 +1118,16 @@ Obtiene la sección de la ruta y llama a los métodos para inicializar productos
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="productForms"></a>
+                    <a name="allProducts"></a>
                     <span class="name">
-                        <span ><b>productForms</b></span>
-                        <a href="#productForms"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>allProducts</b></span>
+                        <a href="#allProducts"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>    <code>FormGroup[]</code>
+                        <i>Type : </i>        <code><a href="../interfaces/Producto.html" target="_self" >Producto[]</a></code>
 
                     </td>
                 </tr>
@@ -655,7 +1138,150 @@ Obtiene la sección de la ruta y llama a los métodos para inicializar productos
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:29</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:52</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Obtiene todos los productos del json</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="crearProdcutoForm"></a>
+                    <span class="name">
+                        <span ><b>crearProdcutoForm</b></span>
+                        <a href="#crearProdcutoForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>FormGroup</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:44</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Instancia de formulario para creación de productos</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="modalInstance"></a>
+                    <span class="name">
+                        <span ><b>modalInstance</b></span>
+                        <a href="#modalInstance"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:71</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Instancia de modal utilizada para la creación de productos</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="opciones"></a>
+                    <span class="name">
+                        <span ><b>opciones</b></span>
+                        <a href="#opciones"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>literal type[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    { value: &#x27;cuidado_capilar&#x27;, display: &#x27;Cuidado Capilar&#x27; },
+    { value: &#x27;cuidado_ropa&#x27;, display: &#x27;Cuidado de Ropa&#x27; },
+    { value: &#x27;limpieza&#x27;, display: &#x27;Limpieza&#x27; },
+    { value: &#x27;papel&#x27;, display: &#x27;Papel&#x27; },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:56</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Tipo de productos</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="productForms"></a>
+                    <span class="name">
+                        <span ><b>productForms</b></span>
+                        <a href="#productForms"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>literal type</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:40</a></div>
                         </td>
                     </tr>
 
@@ -681,7 +1307,7 @@ Obtiene la sección de la ruta y llama a los métodos para inicializar productos
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>    <code>any[]</code>
+                        <i>Type : </i>        <code><a href="../interfaces/Producto.html" target="_self" >Producto[]</a></code>
 
                     </td>
                 </tr>
@@ -692,7 +1318,7 @@ Obtiene la sección de la ruta y llama a los métodos para inicializar productos
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:33</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:48</a></div>
                         </td>
                     </tr>
 
@@ -729,7 +1355,7 @@ Obtiene la sección de la ruta y llama a los métodos para inicializar productos
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:36</a></div>
                         </td>
                     </tr>
 
@@ -742,18 +1368,66 @@ Obtiene la sección de la ruta y llama a los métodos para inicializar productos
 
         </tbody>
     </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="storage"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>storage</b></span>
+                        <a href="#storage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Storage</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>inject(Storage)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">src/app/components/admin/editar-productos/editar-productos.component.ts:66</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Instancia de Storage para integrarse con firebase</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
 </section>
 
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, ViewEncapsulation} from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, inject, OnInit, ViewEncapsulation} from &#x27;@angular/core&#x27;;
 import { NavbaradminComponent } from &#x27;../navbaradmin/navbaradmin.component&#x27;;
 import { FooterComponent } from &#x27;../../../footer/footer.component&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
 import { ActivatedRoute } from &#x27;@angular/router&#x27;;
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from &#x27;@angular/forms&#x27;;
+import { ProductoService } from &#x27;../../../services/prodcuto.service&#x27;;
+import { HttpClientModule } from &#x27;@angular/common/http&#x27;;
+import { Producto } from &#x27;../../../model/producto&#x27;;
+import { getDownloadURL, ref, Storage, uploadBytesResumable } from &#x27;@angular/fire/storage&#x27;;
+
+
+/**
+ * Se declara la variable de bootstrap para el modal
+ */
+declare var bootstrap: any;
 
 /**
  * @description
@@ -763,10 +1437,11 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from &#x27;@a
 @Component({
   selector: &#x27;app-editar-productos&#x27;,
   standalone: true,
-  imports: [NavbaradminComponent, CommonModule, FooterComponent, ReactiveFormsModule],
+  imports: [NavbaradminComponent, CommonModule, FooterComponent, ReactiveFormsModule, HttpClientModule],
   templateUrl: &#x27;./editar-productos.component.html&#x27;,
   styleUrl: &#x27;./editar-productos.component.scss&#x27;,
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  providers: [ProductoService]
 })
 export class EditarProductosComponent implements OnInit{
   /**
@@ -776,18 +1451,45 @@ export class EditarProductosComponent implements OnInit{
   /**
    * instancia de form group
    */
-  productForms: FormGroup[] &#x3D; [];
+  productForms: { [key: number]: FormGroup } &#x3D; {};
+  /**
+   * Instancia de formulario para creación de productos
+   */
+  crearProdcutoForm!: FormGroup;
   /**
    * Instancia vacia de arreglo de productos
    */
-  products: any[] &#x3D; [];
+  products: Producto[] &#x3D; [];
+  /**
+   * Obtiene todos los productos del json
+   */
+  allProducts:Producto [] &#x3D; [];
+  /**
+   * Tipo de productos
+   */
+  opciones: { value: string, display: string }[] &#x3D; [
+    { value: &#x27;cuidado_capilar&#x27;, display: &#x27;Cuidado Capilar&#x27; },
+    { value: &#x27;cuidado_ropa&#x27;, display: &#x27;Cuidado de Ropa&#x27; },
+    { value: &#x27;limpieza&#x27;, display: &#x27;Limpieza&#x27; },
+    { value: &#x27;papel&#x27;, display: &#x27;Papel&#x27; },
+  ];
+
+  /**
+   * Instancia de Storage para integrarse con firebase
+   */
+  private storage:Storage &#x3D; inject(Storage);
+
+  /**
+   * Instancia de modal utilizada para la creación de productos
+   */
+  modalInstance: any;
 
   /**
    * @constructor
    * @param route - Servicio de enrutamiento de Angular
    * @param fb - Servicio de creación de formulario de Angular
    */
-  constructor(private route: ActivatedRoute, private fb: FormBuilder) { }
+  constructor(private route: ActivatedRoute, private fb: FormBuilder, private productoService: ProductoService) { }
 
   /**
    * Metodo de inicialización del componente
@@ -797,7 +1499,7 @@ export class EditarProductosComponent implements OnInit{
     this.route.paramMap.subscribe(params &#x3D;&gt; {
       this.seccion &#x3D; params.get(&#x27;seccion&#x27;) || &#x27;&#x27;;
       this.inicializarProductos();
-      this.inicializarFormularios();
+      this.modalInstance &#x3D; new bootstrap.Modal(document.getElementById(&#x27;productoModal&#x27;));
     });
     
     
@@ -807,130 +1509,106 @@ export class EditarProductosComponent implements OnInit{
    * Inicializa la lista de productos basada en la sección actual.
    */
   inicializarProductos(){
-    if (this.seccion &#x3D;&#x3D;&#x3D; &#x27;cuidado_capilar&#x27;) {
-      this.products &#x3D; [
-        {
-          nombre: &#x27;Acond. DoyPack IO Camomilla 1000ml&#x27;,
-          precio: &#x27;1020&#x27;,
-          descripcion: &#x27;Descubre el arte del cuidado personal con el Acondicionador DoyPack IO Camomilla. Este producto incorpora esencias de camomila que nutren, revitalizan y dan suavidad a tu cabello.&#x27;,
-          image: &#x27;assets/img/cuidado_capilar/Acond. DoyPack IO Camomilla 1000ml.jpg&#x27;,
-        },
-        {
-          nombre: &#x27;Acond. DoyPack IO Hierbas 1000ml&#x27;,
-          precio: &#x27;1020&#x27;,
-          descripcion: &#x27;Vive una experiencia saludable con nuestro DoyPack IO Hierbas. Este producto único está especialmente formulado con una selección premium de hierbas, brindándote un sabor inigualable y beneficios para tu salud.&#x27;,
-          image: &#x27;assets/img/cuidado_capilar/Acond. DoyPack IO Hierbas 1000ml.jpg&#x27;,
-        },
-        {
-          nombre: &#x27;Shampoo DoyPack IO Huevo 1000ml&#x27;,
-          precio: &#x27;1020&#x27;,
-          descripcion: &#x27;Transfórmate en la mejor versión de ti con nuestro Shampoo DoyPack IO Quillay. Único en su clase, desenvuelve la magia de la naturaleza para darle vida y vigor a tu cabello.&#x27;,
-          image: &#x27;assets/img/cuidado_capilar/Shampoo DoyPack IO Huevo 1000ml.jpg&#x27;,
-        },
-        {
-          nombre: &#x27;Shampoo DoyPack IO Quillay 1000ml&#x27;,
-          precio: &#x27;1020&#x27;,
-          descripcion: &#x27;Redefine tu cuidado del cabello con el Shampoo DoyPack IO Huevo. Nutre, revitaliza y protege tu cabello con intensidad gracias a su fórmula exclusiva con extractos de huevo.&#x27;,
-          image: &#x27;assets/img/cuidado_capilar/Shampoo DoyPack IO Quillay 1000ml.jpg&#x27;,
-        }
-      ];
-    }else if(this.seccion &#x3D;&#x3D; &#x27;cuidado_ropa&#x27;){
-      this.products &#x3D; [
-        {
-          nombre: &#x27;Jabon de Lavar barra Doña Tuti 170 grs&#x27;,
-          precio: &#x27;5000&#x27;,
-          descripcion: &#x27;Jabón para Lavar en Barra Doña Tuti, poder de limpieza.&#x27;,
-          image: &#x27;assets/img/cuidado_ropa/Jabon de Lavar barra Doña Tuti 170 grs.jpg&#x27;,
-        },
-        {
-          nombre: &#x27;Cloro Concentrado Briks 5 Lts&#x27;,
-          precio: &#x27;1899&#x27;,
-          descripcion: &#x27;Disfrute de un hogar impecablemente limpio con el cloro líquido Briks. Este potente limpiador ofrece una desinfección y limpieza completa, eliminando efectivamente bacterias y suciedad.&#x27;,
-          image: &#x27;assets/img/cuidado_ropa/Cloro Concentrado Briks 5 Lts.jpg&#x27;,
-        },
-        {
-          nombre: &#x27;Detergentes Briks Verde 5 Lts&#x27;,
-          precio: &#x27;3120&#x27;,
-          descripcion: &#x27;Nunca antes tus prendas habían lucido tan bien. Introducimos Detergentes Briks Verde de 5 litros, tú solución definitiva para un lavado profundo y aromatizante.&#x27;,
-          image: &#x27;assets/img/cuidado_ropa/Detergentes Briks Verde 5 Lts.jpg&#x27;,
-        },
-        {
-          nombre: &#x27;Suavizante Doña Tuti Aloe Vera 1000ml&#x27;,
-          precio: &#x27;1100&#x27;,
-          descripcion: &#x27;Suavizante Doña Tuti Aloe Vera 1000ml.&#x27;,
-          image: &#x27;assets/img/cuidado_ropa/Suavizante Doña Tuti Aloe Vera 1000ml.jpg&#x27;,
-        }
-      ];
+    this.productoService.obtenerProductosPorTipo(this.seccion).subscribe(data &#x3D;&gt; {
+      this.products &#x3D; data;
+      this.inicializarFormularios();
+    });
 
-    }else if(this.seccion &#x3D;&#x3D; &#x27;limpieza&#x27;){
-      this.products &#x3D; [
-        {
-          nombre: &#x27;Cloro Gel Briks Citrus 900ml&#x27;,
-          precio: &#x27;1050&#x27;,
-          descripcion: &#x27;Dile adiós a las bacterias con Cloro Gel Briks Citrus. Potenciado con un fresco aroma a cítricos, este producto de limpieza multifuncional ofrece una solución poderosa a tu alcance.&#x27;,
-          image: &#x27;assets/img/Limpieza/Cloro Gel Briks Citrus 900ml.jpg&#x27;,
-        },
-        {
-          nombre: &#x27;Lavaloza Verde Briks 2 Lts&#x27;,
-          precio: &#x27;1430&#x27;,
-          descripcion: &#x27;Revitaliza y da vida a tus platos con Lavaloza Verde Briks. Este detergente innovador no solo limpia a profundidad, sino que también cuida de tus manos, gracias a su formula exclusiva.&#x27;,
-          image: &#x27;assets/img/Limpieza/Lavaloza Verde Briks 2 Lts.jpg&#x27;,
-        },
-        {
-          nombre: &#x27;Trapero Humedo Doña Tuti Lavanda 40x60cm&#x27;,
-          precio: &#x27;1799&#x27;,
-          descripcion: &#x27;Trapero Humedo Doña Tuti Lavanda 40x60cm.&#x27;,
-          image: &#x27;assets/img/Limpieza/Trapero Humedo Doña Tuti Lavanda 40x60cm.jpg&#x27;,
-        },
-        {
-          nombre: &#x27;Lavalozas Briks Verde 5 Lts&#x27;,
-          precio: &#x27;3120&#x27;,
-          descripcion: &#x27;Como por arte de magia. Esta solución líquida es potente y eficaz, eliminando todo tipo de suciedad adherida en los platos y utensilios de cocina. Su fórmula única, biodegradable, respeta el medio ambiente, mientras garantiza la limpieza profunda que usted necesita.&#x27;,
-          image: &#x27;assets/img/Limpieza/Lavalozas Briks Verde 5 Lts.jpg&#x27;,
-        }
-      ];
-    }else{
-      this.products &#x3D; [
-        {
-          nombre: &#x27;Toalla de papel Nobby Fit&#x27;,
-          precio: &#x27;680&#x27;,
-          descripcion: &#x27;Toalla de papel Bobby Fit&#x27;,
-          image: &#x27;assets/img/papel/Toalla de papel Nobby Fit.jpg&#x27;,
-        },
-        {
-          nombre: &#x27;Servilleta Doña Tuti (Premium)&#x27;,
-          precio: &#x27;1290&#x27;,
-          descripcion: &#x27;300 Unidades por Paquete&#x27;,
-          image: &#x27;assets/img/papel/Servilleta Doña Tuti (Pack Familiar Premium).jpg&#x27;,
-        },
-        {
-          nombre: &#x27;Papel Higiénico Top One 20mts (Pack 12r)&#x27;,
-          precio: &#x27;2499&#x27;,
-          descripcion: &#x27;Papel Higiénico Top One 20 metros, pack de 12 rollos.&#x27;,
-          image: &#x27;assets/img/papel/Papel Higiénico Top One 20mts (Pack 12r).jpg&#x27;,
-        },
-        {
-          nombre: &#x27;Toalla Mediana HiperMax XL Doble Hoja&#x27;,
-          precio: &#x27;2580&#x27;,
-          descripcion: &#x27;Toalla HiperMax XL Doble Hoja 100 Mts&#x27;,
-          image: &#x27;assets/img/papel/Toalla Mediana HiperMax XL Doble Hoja.jpg&#x27;,
-        }
-      ];
-    }
+    this.productoService.obtenerTodosLosProductos().subscribe(data &#x3D;&gt; {
+      this.allProducts &#x3D; data;
+    });
+
   }
 
   /**
    * Inicializa los formularios para cada producto con los datos actuales.
    */
   inicializarFormularios(): void{
-    this.productForms &#x3D; [];
+    this.productForms &#x3D; {};
     this.products.forEach((product) &#x3D;&gt; {
-      this.productForms.push(this.fb.group({
+      this.productForms[product.id] &#x3D; this.fb.group({
         nombre: [product.nombre, Validators.required],
         precio: [product.precio, [Validators.required]],
-        descripcion: [product.descripcion, Validators.required]
-      }));
+        descripcion: [product.descripcion, Validators.required],
+        tipoProducto: [product.tipoProducto, Validators.required],
+        imagen: [null ]
+      });
     });
+
+    this.crearProdcutoForm &#x3D; this.fb.group({
+      nombreProducto: [&#x27;&#x27;, Validators.required],
+      precioProducto: [&#x27;&#x27;, Validators.required],
+      tipoProducto: [this.seccion, Validators.required],
+      descripcionProducto: [&#x27;&#x27;, Validators.required],
+      imagenProducto: [null]
+    });
+  }
+
+  /**
+   * Permite visualizar el modal definido
+   */
+  abrirModal(): void {
+    this.modalInstance.show();
+  }
+
+  /**
+   * Cuando se cambia un input file, se toma el valor y lo setea al campo imagen
+   * @param event - Variable de evento
+   * @param productId - Id del producto a editar
+   */
+  onFileChange(event: Event, productId: number): void {
+    const input &#x3D; event.target as HTMLInputElement;
+    if (input.files &amp;&amp; input.files.length) {
+      const file &#x3D; input.files[0];
+      this.productForms[productId].get(&#x27;imagen&#x27;)?.setValue(file);
+    
+    }
+  }
+
+  /**
+   * Cuando se cambia un input file, se toma el valor y lo setea al campo imagen producto
+   * Solo ocurre en la creación
+   * @param event - Variable de evento
+   */
+  onFileChangeCreate(event: Event): void {
+    const input &#x3D; event.target as HTMLInputElement;
+    if (input.files &amp;&amp; input.files.length) {
+      const file &#x3D; input.files[0];
+      this.crearProdcutoForm.get(&#x27;imagenProducto&#x27;)?.setValue(file);
+    
+    }
+  }
+
+  /**
+   * Permite la subida de archivos al Storage de Firebase
+   * @param file - Archivo File obtenido desde la subida de archivos
+   */
+  async guardarImagenStorage(file: File) : Promise&lt;string&gt;{
+    const filePath &#x3D; &#x60;uploads/${file.name}&#x60;
+    const fileRef &#x3D; ref(this.storage, filePath);
+    const uploadFile &#x3D; uploadBytesResumable(fileRef, file);
+
+    return new Promise&lt;string&gt;((resolve, reject) &#x3D;&gt;{
+      uploadFile.on(&#x27;state_changed&#x27;,
+        (snapshot) &#x3D;&gt;{
+          const progress &#x3D; (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          console.log(&#x27;Progreso de carga&#x27;, progress);
+        },
+        (error) &#x3D;&gt;{
+          console.error(&#x27;Error en la carga del archivo: &#x27;, error);
+        },
+        async () &#x3D;&gt;{
+          console.log(&#x27;El archivo se subio exitosamente&#x27;);
+          const url &#x3D; await getDownloadURL(fileRef);
+          console.log(&#x27;URL del archivo: &#x27;+url);
+          resolve(url);
+          
+        }
+      );
+  
+    });
+
+    
   }
 
   /**
@@ -938,18 +1616,88 @@ export class EditarProductosComponent implements OnInit{
    * @param form - El formulario del producto que se está editando.
    * @param product - El producto correspondiente al formulario.
    */
-  onSubmit(form: FormGroup, product: any) {
+  async onSubmit(form: FormGroup, product: Producto) {
     if (form.valid) {
+      console.log(product.id)
       const updatedProduct &#x3D; form.value;
       product.nombre &#x3D; updatedProduct.nombre;
       product.precio &#x3D; updatedProduct.precio;
       product.descripcion &#x3D; updatedProduct.descripcion;
+      product.tipoProducto &#x3D; updatedProduct.tipoProducto;
+      console.log(product);
+      //Verificar si hay archivo adjunto
+      const file &#x3D; form.get(&#x27;imagen&#x27;)?.value;
+      if (file instanceof File) {
+        const url &#x3D; await this.guardarImagenStorage(file);
+        product.urlImg &#x3D; url;
+      }
+
+      this.productoService.actualizarProducto(product.id, product).subscribe(edit &#x3D;&gt;{
+        console.log(&quot;El Producto a sido actualizado exitosamente &quot;,edit  );
+        this.inicializarProductos();
+      }, error &#x3D;&gt; {
+        console.error(&#x27;Ocurrio un error al editar el producto:&#x27;, error);
+      });
+
       alert(&#x27;La información del producto ha sido actualizada correctamente.&#x27;);
     } else {
       alert(&#x27;Por favor, complete todos los campos correctamente.&#x27;);
     }
   }
-  
+  /**
+   * Eliminar un producto seleccionado. 
+   * @param event - Variable evento
+   * @param prodcuto - producto a eliminar
+   */
+  eliminar(event: Event, prodcuto : Producto){
+    event.preventDefault();
+    this.productoService.eliminarProducto(prodcuto.id).subscribe(eliminado &#x3D;&gt;{
+      console.log(&quot;El prodcuto fue eliminado correctamente&quot;);
+      this.inicializarProductos();
+      alert(&quot;Producto eliminado exitosamente&quot;);
+    }, error &#x3D;&gt; {
+      console.error(&#x27;Ocurrio un error al eliminar el producto:&#x27;, error);
+    });
+  }
+
+  /**
+   * Encargado de manejar la creación de un nuevo producto
+   */
+  async submitForm(){
+    if(this.crearProdcutoForm.valid){
+      const file &#x3D; this.crearProdcutoForm.get(&#x27;imagenProducto&#x27;)?.value;
+      if (file instanceof File) {
+        const url &#x3D; await this.guardarImagenStorage(file);
+
+        const nuevoProdcuto: Producto &#x3D; {
+          id :this.allProducts.length &gt; 0 ? Math.max(...this.allProducts.map((p: any) &#x3D;&gt; p.id)) + 1 : 1,
+          nombre: this.crearProdcutoForm.get(&#x27;nombreProducto&#x27;)?.value,
+          precio: this.crearProdcutoForm.get(&#x27;precioProducto&#x27;)?.value,
+          tipoProducto: this.crearProdcutoForm.get(&#x27;tipoProducto&#x27;)?.value,
+          descripcion: this.crearProdcutoForm.get(&#x27;descripcionProducto&#x27;)?.value,
+          urlImg: url
+        }
+
+        console.log(nuevoProdcuto);
+        this.productoService.agregarProducto(nuevoProdcuto).subscribe(nuevo &#x3D;&gt;{
+          console.log(&quot;Producto Agregado Exitosamente!&quot;);
+          this.inicializarProductos();
+        }, error &#x3D;&gt; {
+          console.error(&#x27;Ocurrio un error al agregar un producto:&#x27;, error);
+        });
+        this.modalInstance.hide();
+        alert(&quot;Producto Creado Exitosamente&quot;);
+
+      }else{
+        alert(&quot;Favor de subir una imagen para el producto&quot;);
+      }
+
+    }else {
+      console.log(this.crearProdcutoForm.errors);
+      alert(&#x27;Favor de ingresar los campos obligatorios&#x27;);
+    }
+  }
+
 /**
  * Formatea un numero con el formato de peso chileno
  * 
@@ -968,35 +1716,54 @@ export class EditarProductosComponent implements OnInit{
         <pre class="line-numbers"><code class="language-html">&lt;app-navbaradmin&gt;&lt;/app-navbaradmin&gt;
 
 &lt;div *ngIf&#x3D;&quot;seccion &#x3D;&#x3D;&#x3D; &#x27;cuidado_capilar&#x27;&quot;&gt;
-    &lt;h1 class&#x3D;&quot;titulo-pagina&quot;&gt;Administrar Cuidado Capilar&lt;/h1&gt;
-    &lt;br&gt;&lt;br&gt;
+    &lt;h1 class&#x3D;&quot;titulo-pagina&quot;&gt;Administrar Cuidado Capilar &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary btn-save&quot; (click)&#x3D;&quot;abrirModal()&quot;&gt;Agregar Producto&lt;/button&gt;&lt;/h1&gt; 
+    &lt;br&gt;
+    &lt;br&gt;
     &lt;div class&#x3D;&quot;row card-container&quot;&gt;
-        &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot; *ngFor&#x3D;&quot;let product of products; let i &#x3D; index&quot;&gt;
+        &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot; *ngFor&#x3D;&quot;let product of products&quot;&gt;
             &lt;div class&#x3D;&quot;card card-content h-100&quot;&gt;
                 &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
-                    &lt;img [src]&#x3D;&quot;product.image&quot; class&#x3D;&quot;card-img-top fade-in&quot; [alt]&#x3D;&quot;product.name&quot;&gt;
+                    &lt;img [src]&#x3D;&quot;product.urlImg&quot; class&#x3D;&quot;card-img-top fade-in&quot; [alt]&#x3D;&quot;product.nombre&quot;&gt;
                 &lt;/div&gt;
                 &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
                     &lt;h5 class&#x3D;&quot;card-title&quot;&gt;{{ product.nombre }}&lt;/h5&gt;
-                    &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: {{ product.precio | currency }}&lt;/p&gt;
-                    &lt;b&gt;&lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;&lt;/b&gt;
+                    &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: {{ product.precio | currency:&#x27;&#x27;:&#x27;symbol&#x27;:&#x27;1.0-0&#x27; }}&lt;/p&gt;
+                    &lt;b&gt;
+                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;
+                    &lt;/b&gt;
                     &lt;p class&#x3D;&quot;card-text&quot;&gt;{{ product.descripcion }}&lt;/p&gt;
                     &lt;hr style&#x3D;&quot;width: 100%;&quot;&gt;
                     &lt;h6 class&#x3D;&quot;edit-title&quot; style&#x3D;&quot;font-weight: bold;&quot;&gt;Editar Información de producto&lt;/h6&gt;
-                    &lt;form [formGroup]&#x3D;&quot;productForms[i]&quot; (ngSubmit)&#x3D;&quot;onSubmit(productForms[i], product)&quot; class&#x3D;&quot;edit-form&quot;&gt;
+                    &lt;form [formGroup]&#x3D;&quot;productForms[product.id]&quot;
+                        (ngSubmit)&#x3D;&quot;onSubmit(productForms[product.id], product)&quot; class&#x3D;&quot;edit-form&quot;&gt;
                         &lt;div class&#x3D;&quot;mb-3&quot;&gt;
-                            &lt;label for&#x3D;&quot;edit-name-{{i}}&quot; class&#x3D;&quot;form-label&quot;&gt;Nombre:&lt;/label&gt;
-                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-name-{{i}}&quot; formControlName&#x3D;&quot;nombre&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-name-{{product.id}}&quot; class&#x3D;&quot;form-label&quot;&gt;Nombre:&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-name-{{product.id}}&quot;
+                                formControlName&#x3D;&quot;nombre&quot;&gt;
                         &lt;/div&gt;
                         &lt;div class&#x3D;&quot;mb-3&quot;&gt;
-                            &lt;label for&#x3D;&quot;edit-price-{{i}}&quot; class&#x3D;&quot;form-label&quot;&gt;Precio:&lt;/label&gt;
-                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-price-{{i}}&quot; formControlName&#x3D;&quot;precio&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-price-{{product.id}}&quot; class&#x3D;&quot;form-label&quot;&gt;Precio:&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-price-{{product.id}}&quot;
+                                formControlName&#x3D;&quot;precio&quot;&gt;
                         &lt;/div&gt;
                         &lt;div class&#x3D;&quot;mb-3&quot;&gt;
-                            &lt;label for&#x3D;&quot;edit-description-{{i}}&quot; class&#x3D;&quot;form-label&quot;&gt;Descripción:&lt;/label&gt;
-                            &lt;textarea class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-description-{{i}}&quot; formControlName&#x3D;&quot;descripcion&quot;&gt;&lt;/textarea&gt;
+                            &lt;label for&#x3D;&quot;edit-select-{{product.id}}&quot; class&#x3D;&quot;form-label&quot;&gt;Tipo de producto:&lt;/label&gt;
+                            &lt;select class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-select-{{product.id}}&quot; formControlName&#x3D;&quot;tipoProducto&quot;&gt;
+                                &lt;option *ngFor&#x3D;&quot;let opcion of opciones&quot; [value]&#x3D;&quot;opcion.value&quot;&gt;{{ opcion.display }}
+                                &lt;/option&gt;
+                            &lt;/select&gt;
                         &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-description-{{product.id}}&quot; class&#x3D;&quot;form-label&quot;&gt;Descripción:&lt;/label&gt;
+                            &lt;textarea class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-description-{{product.id}}&quot;
+                                formControlName&#x3D;&quot;descripcion&quot;&gt;&lt;/textarea&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-file-{{product.id}}&quot; class&#x3D;&quot;form-label&quot;&gt;Imagen:&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;file&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-file-{{product.id}}&quot; (change)&#x3D;&quot;onFileChange($event, product.id)&quot; accept&#x3D;&quot;image/*&quot;&gt;
+                          &lt;/div&gt;
                         &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary btn-save&quot;&gt;Guardar&lt;/button&gt;
+                        &lt;button class&#x3D;&quot;btn btn-danger&quot; (click)&#x3D;&quot;eliminar($event, product)&quot;&gt;Eliminar&lt;/button&gt;
                     &lt;/form&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
@@ -1007,32 +1774,50 @@ export class EditarProductosComponent implements OnInit{
     &lt;h1 class&#x3D;&quot;titulo-pagina&quot;&gt;Administrar Cuidado de Ropa&lt;/h1&gt;
     &lt;br&gt;&lt;br&gt;
     &lt;div class&#x3D;&quot;row card-container&quot;&gt;
-        &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot; *ngFor&#x3D;&quot;let product of products; let i &#x3D; index&quot;&gt;
+        &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot; *ngFor&#x3D;&quot;let product of products&quot;&gt;
             &lt;div class&#x3D;&quot;card card-content h-100&quot;&gt;
                 &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
-                    &lt;img [src]&#x3D;&quot;product.image&quot; class&#x3D;&quot;card-img-top fade-in&quot; [alt]&#x3D;&quot;product.name&quot;&gt;
+                    &lt;img [src]&#x3D;&quot;product.urlImg&quot; class&#x3D;&quot;card-img-top fade-in&quot; [alt]&#x3D;&quot;product.nombre&quot;&gt;
                 &lt;/div&gt;
                 &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
                     &lt;h5 class&#x3D;&quot;card-title&quot;&gt;{{ product.nombre }}&lt;/h5&gt;
-                    &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: {{ product.precio | currency }}&lt;/p&gt;
-                    &lt;b&gt;&lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;&lt;/b&gt;
+                    &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: {{ product.precio | currency:&#x27;&#x27;:&#x27;symbol&#x27;:&#x27;1.0-0&#x27; }}&lt;/p&gt;
+                    &lt;b&gt;
+                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;
+                    &lt;/b&gt;
                     &lt;p class&#x3D;&quot;card-text&quot;&gt;{{ product.descripcion }}&lt;/p&gt;
                     &lt;hr style&#x3D;&quot;width: 100%;&quot;&gt;
                     &lt;h6 class&#x3D;&quot;edit-title&quot; style&#x3D;&quot;font-weight: bold;&quot;&gt;Editar Información de producto&lt;/h6&gt;
-                    &lt;form [formGroup]&#x3D;&quot;productForms[i]&quot; (ngSubmit)&#x3D;&quot;onSubmit(productForms[i], product)&quot; class&#x3D;&quot;edit-form&quot;&gt;
+                    &lt;form [formGroup]&#x3D;&quot;productForms[product.id]&quot;
+                        (ngSubmit)&#x3D;&quot;onSubmit(productForms[product.id], product)&quot; class&#x3D;&quot;edit-form&quot;&gt;
                         &lt;div class&#x3D;&quot;mb-3&quot;&gt;
-                            &lt;label for&#x3D;&quot;edit-name-{{i}}&quot; class&#x3D;&quot;form-label&quot;&gt;Nombre:&lt;/label&gt;
-                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-name-{{i}}&quot; formControlName&#x3D;&quot;nombre&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-name-{{product.id}}&quot; class&#x3D;&quot;form-label&quot;&gt;Nombre:&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-name-{{product.id}}&quot;
+                                formControlName&#x3D;&quot;nombre&quot;&gt;
                         &lt;/div&gt;
                         &lt;div class&#x3D;&quot;mb-3&quot;&gt;
-                            &lt;label for&#x3D;&quot;edit-price-{{i}}&quot; class&#x3D;&quot;form-label&quot;&gt;Precio:&lt;/label&gt;
-                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-price-{{i}}&quot; formControlName&#x3D;&quot;precio&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-price-{{product.id}}&quot; class&#x3D;&quot;form-label&quot;&gt;Precio:&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-price-{{product.id}}&quot;
+                                formControlName&#x3D;&quot;precio&quot;&gt;
                         &lt;/div&gt;
                         &lt;div class&#x3D;&quot;mb-3&quot;&gt;
-                            &lt;label for&#x3D;&quot;edit-description-{{i}}&quot; class&#x3D;&quot;form-label&quot;&gt;Descripción:&lt;/label&gt;
-                            &lt;textarea class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-description-{{i}}&quot; formControlName&#x3D;&quot;descripcion&quot;&gt;&lt;/textarea&gt;
+                            &lt;label for&#x3D;&quot;edit-select-{{product.id}}&quot; class&#x3D;&quot;form-label&quot;&gt;Tipo de producto:&lt;/label&gt;
+                            &lt;select class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-select-{{product.id}}&quot; formControlName&#x3D;&quot;tipoProducto&quot;&gt;
+                                &lt;option *ngFor&#x3D;&quot;let opcion of opciones&quot; [value]&#x3D;&quot;opcion.value&quot;&gt;{{ opcion.display }}
+                                &lt;/option&gt;
+                            &lt;/select&gt;
                         &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-description-{{product.id}}&quot; class&#x3D;&quot;form-label&quot;&gt;Descripción:&lt;/label&gt;
+                            &lt;textarea class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-description-{{product.id}}&quot;
+                                formControlName&#x3D;&quot;descripcion&quot;&gt;&lt;/textarea&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-file-{{product.id}}&quot; class&#x3D;&quot;form-label&quot;&gt;Imagen:&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;file&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-file-{{product.id}}&quot; (change)&#x3D;&quot;onFileChange($event, product.id)&quot; accept&#x3D;&quot;image/*&quot;&gt;
+                          &lt;/div&gt;
                         &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary btn-save&quot;&gt;Guardar&lt;/button&gt;
+                        &lt;button class&#x3D;&quot;btn btn-danger&quot; (click)&#x3D;&quot;eliminar($event, product)&quot;&gt;Eliminar&lt;/button&gt;
                     &lt;/form&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
@@ -1043,32 +1828,50 @@ export class EditarProductosComponent implements OnInit{
     &lt;h1 class&#x3D;&quot;titulo-pagina&quot;&gt;Administrar Limpieza&lt;/h1&gt;
     &lt;br&gt;&lt;br&gt;
     &lt;div class&#x3D;&quot;row card-container&quot;&gt;
-        &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot; *ngFor&#x3D;&quot;let product of products; let i &#x3D; index&quot;&gt;
+        &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot; *ngFor&#x3D;&quot;let product of products&quot;&gt;
             &lt;div class&#x3D;&quot;card card-content h-100&quot;&gt;
                 &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
-                    &lt;img [src]&#x3D;&quot;product.image&quot; class&#x3D;&quot;card-img-top fade-in&quot; [alt]&#x3D;&quot;product.name&quot;&gt;
+                    &lt;img [src]&#x3D;&quot;product.urlImg&quot; class&#x3D;&quot;card-img-top fade-in&quot; [alt]&#x3D;&quot;product.nombre&quot;&gt;
                 &lt;/div&gt;
                 &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
                     &lt;h5 class&#x3D;&quot;card-title&quot;&gt;{{ product.nombre }}&lt;/h5&gt;
-                    &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: {{ product.precio | currency }}&lt;/p&gt;
-                    &lt;b&gt;&lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;&lt;/b&gt;
+                    &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: {{ product.precio | currency:&#x27;&#x27;:&#x27;symbol&#x27;:&#x27;1.0-0&#x27; }}&lt;/p&gt;
+                    &lt;b&gt;
+                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;
+                    &lt;/b&gt;
                     &lt;p class&#x3D;&quot;card-text&quot;&gt;{{ product.descripcion }}&lt;/p&gt;
                     &lt;hr style&#x3D;&quot;width: 100%;&quot;&gt;
                     &lt;h6 class&#x3D;&quot;edit-title&quot; style&#x3D;&quot;font-weight: bold;&quot;&gt;Editar Información de producto&lt;/h6&gt;
-                    &lt;form [formGroup]&#x3D;&quot;productForms[i]&quot; (ngSubmit)&#x3D;&quot;onSubmit(productForms[i], product)&quot; class&#x3D;&quot;edit-form&quot;&gt;
+                    &lt;form [formGroup]&#x3D;&quot;productForms[product.id]&quot;
+                        (ngSubmit)&#x3D;&quot;onSubmit(productForms[product.id], product)&quot; class&#x3D;&quot;edit-form&quot;&gt;
                         &lt;div class&#x3D;&quot;mb-3&quot;&gt;
-                            &lt;label for&#x3D;&quot;edit-name-{{i}}&quot; class&#x3D;&quot;form-label&quot;&gt;Nombre:&lt;/label&gt;
-                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-name-{{i}}&quot; formControlName&#x3D;&quot;nombre&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-name-{{product.id}}&quot; class&#x3D;&quot;form-label&quot;&gt;Nombre:&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-name-{{product.id}}&quot;
+                                formControlName&#x3D;&quot;nombre&quot;&gt;
                         &lt;/div&gt;
                         &lt;div class&#x3D;&quot;mb-3&quot;&gt;
-                            &lt;label for&#x3D;&quot;edit-price-{{i}}&quot; class&#x3D;&quot;form-label&quot;&gt;Precio:&lt;/label&gt;
-                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-price-{{i}}&quot; formControlName&#x3D;&quot;precio&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-price-{{product.id}}&quot; class&#x3D;&quot;form-label&quot;&gt;Precio:&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-price-{{product.id}}&quot;
+                                formControlName&#x3D;&quot;precio&quot;&gt;
                         &lt;/div&gt;
                         &lt;div class&#x3D;&quot;mb-3&quot;&gt;
-                            &lt;label for&#x3D;&quot;edit-description-{{i}}&quot; class&#x3D;&quot;form-label&quot;&gt;Descripción:&lt;/label&gt;
-                            &lt;textarea class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-description-{{i}}&quot; formControlName&#x3D;&quot;descripcion&quot;&gt;&lt;/textarea&gt;
+                            &lt;label for&#x3D;&quot;edit-select-{{product.id}}&quot; class&#x3D;&quot;form-label&quot;&gt;Tipo de producto:&lt;/label&gt;
+                            &lt;select class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-select-{{product.id}}&quot; formControlName&#x3D;&quot;tipoProducto&quot;&gt;
+                                &lt;option *ngFor&#x3D;&quot;let opcion of opciones&quot; [value]&#x3D;&quot;opcion.value&quot;&gt;{{ opcion.display }}
+                                &lt;/option&gt;
+                            &lt;/select&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-description-{{product.id}}&quot; class&#x3D;&quot;form-label&quot;&gt;Descripción:&lt;/label&gt;
+                            &lt;textarea class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-description-{{product.id}}&quot;
+                                formControlName&#x3D;&quot;descripcion&quot;&gt;&lt;/textarea&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-file-{{product.id}}&quot; class&#x3D;&quot;form-label&quot;&gt;Imagen:&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;file&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-file-{{product.id}}&quot; (change)&#x3D;&quot;onFileChange($event, product.id)&quot; accept&#x3D;&quot;image/*&quot;&gt;
                         &lt;/div&gt;
                         &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary btn-save&quot;&gt;Guardar&lt;/button&gt;
+                        &lt;button class&#x3D;&quot;btn btn-danger&quot; (click)&#x3D;&quot;eliminar($event, product)&quot;&gt;Eliminar&lt;/button&gt;
                     &lt;/form&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
@@ -1079,32 +1882,50 @@ export class EditarProductosComponent implements OnInit{
     &lt;h1 class&#x3D;&quot;titulo-pagina&quot;&gt;Administrar Papeles&lt;/h1&gt;
     &lt;br&gt;&lt;br&gt;
     &lt;div class&#x3D;&quot;row card-container&quot;&gt;
-        &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot; *ngFor&#x3D;&quot;let product of products; let i &#x3D; index&quot;&gt;
+        &lt;div class&#x3D;&quot;col-12 col-md-6 mb-4&quot; *ngFor&#x3D;&quot;let product of products&quot;&gt;
             &lt;div class&#x3D;&quot;card card-content h-100&quot;&gt;
                 &lt;div class&#x3D;&quot;card-img-container&quot;&gt;
-                    &lt;img [src]&#x3D;&quot;product.image&quot; class&#x3D;&quot;card-img-top fade-in&quot; [alt]&#x3D;&quot;product.name&quot;&gt;
+                    &lt;img [src]&#x3D;&quot;product.urlImg&quot; class&#x3D;&quot;card-img-top fade-in&quot; [alt]&#x3D;&quot;product.nombre&quot;&gt;
                 &lt;/div&gt;
                 &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center text-center&quot;&gt;
                     &lt;h5 class&#x3D;&quot;card-title&quot;&gt;{{ product.nombre }}&lt;/h5&gt;
-                    &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: {{ product.precio | currency }}&lt;/p&gt;
-                    &lt;b&gt;&lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;&lt;/b&gt;
+                    &lt;p class&#x3D;&quot;card-text precio&quot;&gt;Precio: {{ product.precio | currency:&#x27;&#x27;:&#x27;symbol&#x27;:&#x27;1.0-0&#x27; }}&lt;/p&gt;
+                    &lt;b&gt;
+                        &lt;p class&#x3D;&quot;card-text&quot;&gt;Información del producto&lt;/p&gt;
+                    &lt;/b&gt;
                     &lt;p class&#x3D;&quot;card-text&quot;&gt;{{ product.descripcion }}&lt;/p&gt;
                     &lt;hr style&#x3D;&quot;width: 100%;&quot;&gt;
                     &lt;h6 class&#x3D;&quot;edit-title&quot; style&#x3D;&quot;font-weight: bold;&quot;&gt;Editar Información de producto&lt;/h6&gt;
-                    &lt;form [formGroup]&#x3D;&quot;productForms[i]&quot; (ngSubmit)&#x3D;&quot;onSubmit(productForms[i], product)&quot; class&#x3D;&quot;edit-form&quot;&gt;
+                    &lt;form [formGroup]&#x3D;&quot;productForms[product.id]&quot;
+                        (ngSubmit)&#x3D;&quot;onSubmit(productForms[product.id], product)&quot; class&#x3D;&quot;edit-form&quot;&gt;
                         &lt;div class&#x3D;&quot;mb-3&quot;&gt;
-                            &lt;label for&#x3D;&quot;edit-name-{{i}}&quot; class&#x3D;&quot;form-label&quot;&gt;Nombre:&lt;/label&gt;
-                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-name-{{i}}&quot; formControlName&#x3D;&quot;nombre&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-name-{{product.id}}&quot; class&#x3D;&quot;form-label&quot;&gt;Nombre:&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-name-{{product.id}}&quot;
+                                formControlName&#x3D;&quot;nombre&quot;&gt;
                         &lt;/div&gt;
                         &lt;div class&#x3D;&quot;mb-3&quot;&gt;
-                            &lt;label for&#x3D;&quot;edit-price-{{i}}&quot; class&#x3D;&quot;form-label&quot;&gt;Precio:&lt;/label&gt;
-                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-price-{{i}}&quot; formControlName&#x3D;&quot;precio&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-price-{{product.id}}&quot; class&#x3D;&quot;form-label&quot;&gt;Precio:&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-price-{{product.id}}&quot;
+                                formControlName&#x3D;&quot;precio&quot;&gt;
                         &lt;/div&gt;
                         &lt;div class&#x3D;&quot;mb-3&quot;&gt;
-                            &lt;label for&#x3D;&quot;edit-description-{{i}}&quot; class&#x3D;&quot;form-label&quot;&gt;Descripción:&lt;/label&gt;
-                            &lt;textarea class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-description-{{i}}&quot; formControlName&#x3D;&quot;descripcion&quot;&gt;&lt;/textarea&gt;
+                            &lt;label for&#x3D;&quot;edit-select-{{product.id}}&quot; class&#x3D;&quot;form-label&quot;&gt;Tipo de producto:&lt;/label&gt;
+                            &lt;select class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-select-{{product.id}}&quot; formControlName&#x3D;&quot;tipoProducto&quot;&gt;
+                                &lt;option *ngFor&#x3D;&quot;let opcion of opciones&quot; [value]&#x3D;&quot;opcion.value&quot;&gt;{{ opcion.display }}
+                                &lt;/option&gt;
+                            &lt;/select&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-description-{{product.id}}&quot; class&#x3D;&quot;form-label&quot;&gt;Descripción:&lt;/label&gt;
+                            &lt;textarea class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-description-{{product.id}}&quot;
+                                formControlName&#x3D;&quot;descripcion&quot;&gt;&lt;/textarea&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+                            &lt;label for&#x3D;&quot;edit-file-{{product.id}}&quot; class&#x3D;&quot;form-label&quot;&gt;Imagen:&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;file&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;edit-file-{{product.id}}&quot; (change)&#x3D;&quot;onFileChange($event, product.id)&quot; accept&#x3D;&quot;image/*&quot;&gt;
                         &lt;/div&gt;
                         &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary btn-save&quot;&gt;Guardar&lt;/button&gt;
+                        &lt;button class&#x3D;&quot;btn btn-danger&quot; (click)&#x3D;&quot;eliminar($event, product)&quot;&gt;Eliminar&lt;/button&gt;
                     &lt;/form&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
@@ -1112,9 +1933,52 @@ export class EditarProductosComponent implements OnInit{
     &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;!-- Modal --&gt;
+&lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;productoModal&quot; tabindex&#x3D;&quot;-1&quot; aria-labelledby&#x3D;&quot;productoModalLabel&quot; aria-hidden&#x3D;&quot;true&quot;&gt;
+    &lt;div class&#x3D;&quot;modal-dialog&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+            &lt;div class&#x3D;&quot;modal-header&quot;&gt;
+                &lt;h5 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;usuarioModalLabel&quot;&gt;Crear Prodcuto&lt;/h5&gt;
+                &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn-close&quot; data-bs-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+                &lt;form [formGroup]&#x3D;&quot;crearProdcutoForm&quot; (ngSubmit)&#x3D;&quot;submitForm()&quot;&gt;
+                    &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+                            &lt;label for&#x3D;&quot;nombreProducto&quot; class&#x3D;&quot;form-label&quot;&gt;Nombre:&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;nombreProducto&quot;
+                                formControlName&#x3D;&quot;nombreProducto&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+                            &lt;label for&#x3D;&quot;precioProducto&quot; class&#x3D;&quot;form-label&quot;&gt;Precio:&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;precioProducto&quot;
+                                formControlName&#x3D;&quot;precioProducto&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+                            &lt;label for&#x3D;&quot;tipoProducto&quot; class&#x3D;&quot;form-label&quot;&gt;Tipo de producto:&lt;/label&gt;
+                            &lt;select class&#x3D;&quot;form-control&quot; id&#x3D;&quot;tipoProducto&quot; formControlName&#x3D;&quot;tipoProducto&quot;&gt;
+                                &lt;option *ngFor&#x3D;&quot;let opcion of opciones&quot; [value]&#x3D;&quot;opcion.value&quot;&gt;{{ opcion.display }}
+                                &lt;/option&gt;
+                            &lt;/select&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+                            &lt;label for&#x3D;&quot;descripcionProducto&quot; class&#x3D;&quot;form-label&quot;&gt;Descripción:&lt;/label&gt;
+                            &lt;textarea class&#x3D;&quot;form-control&quot; id&#x3D;&quot;descripcionProducto&quot;
+                                formControlName&#x3D;&quot;descripcionProducto&quot;&gt;&lt;/textarea&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+                            &lt;label for&#x3D;&quot;imagenProducto&quot; class&#x3D;&quot;form-label&quot;&gt;Imagen:&lt;/label&gt;
+                            &lt;input type&#x3D;&quot;file&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;imagenProducto&quot; (change)&#x3D;&quot;onFileChangeCreate($event)&quot; accept&#x3D;&quot;image/*&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary btn-save&quot;&gt;Guardar&lt;/button&gt;
+                    
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 
-&lt;app-footer&gt;&lt;/app-footer&gt;
-</code></pre>
+
+&lt;app-footer&gt;&lt;/app-footer&gt;</code></pre>
     </div>
 
 
@@ -1143,7 +2007,7 @@ export class EditarProductosComponent implements OnInit{
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><app-navbaradmin></app-navbaradmin><div *ngIf="seccion === \'cuidado_capilar\'">    <h1 class="titulo-pagina">Administrar Cuidado Capilar</h1>    <br><br>    <div class="row card-container">        <div class="col-12 col-md-6 mb-4" *ngFor="let product of products; let i = index">            <div class="card card-content h-100">                <div class="card-img-container">                    <img [src]="product.image" class="card-img-top fade-in" [alt]="product.name">                </div>                <div class="card-body d-flex flex-column align-items-center text-center">                    <h5 class="card-title">{{ product.nombre }}</h5>                    <p class="card-text precio">Precio: {{ product.precio | currency }}</p>                    <b><p class="card-text">Información del producto</p></b>                    <p class="card-text">{{ product.descripcion }}</p>                    <hr style="width: 100%;">                    <h6 class="edit-title" style="font-weight: bold;">Editar Información de producto</h6>                    <form [formGroup]="productForms[i]" (ngSubmit)="onSubmit(productForms[i], product)" class="edit-form">                        <div class="mb-3">                            <label for="edit-name-{{i}}" class="form-label">Nombre:</label>                            <input type="text" class="form-control" id="edit-name-{{i}}" formControlName="nombre">                        </div>                        <div class="mb-3">                            <label for="edit-price-{{i}}" class="form-label">Precio:</label>                            <input type="text" class="form-control" id="edit-price-{{i}}" formControlName="precio">                        </div>                        <div class="mb-3">                            <label for="edit-description-{{i}}" class="form-label">Descripción:</label>                            <textarea class="form-control" id="edit-description-{{i}}" formControlName="descripcion"></textarea>                        </div>                        <button type="submit" class="btn btn-primary btn-save">Guardar</button>                    </form>                </div>            </div>        </div>    </div></div><div *ngIf="seccion === \'cuidado_ropa\'">    <h1 class="titulo-pagina">Administrar Cuidado de Ropa</h1>    <br><br>    <div class="row card-container">        <div class="col-12 col-md-6 mb-4" *ngFor="let product of products; let i = index">            <div class="card card-content h-100">                <div class="card-img-container">                    <img [src]="product.image" class="card-img-top fade-in" [alt]="product.name">                </div>                <div class="card-body d-flex flex-column align-items-center text-center">                    <h5 class="card-title">{{ product.nombre }}</h5>                    <p class="card-text precio">Precio: {{ product.precio | currency }}</p>                    <b><p class="card-text">Información del producto</p></b>                    <p class="card-text">{{ product.descripcion }}</p>                    <hr style="width: 100%;">                    <h6 class="edit-title" style="font-weight: bold;">Editar Información de producto</h6>                    <form [formGroup]="productForms[i]" (ngSubmit)="onSubmit(productForms[i], product)" class="edit-form">                        <div class="mb-3">                            <label for="edit-name-{{i}}" class="form-label">Nombre:</label>                            <input type="text" class="form-control" id="edit-name-{{i}}" formControlName="nombre">                        </div>                        <div class="mb-3">                            <label for="edit-price-{{i}}" class="form-label">Precio:</label>                            <input type="text" class="form-control" id="edit-price-{{i}}" formControlName="precio">                        </div>                        <div class="mb-3">                            <label for="edit-description-{{i}}" class="form-label">Descripción:</label>                            <textarea class="form-control" id="edit-description-{{i}}" formControlName="descripcion"></textarea>                        </div>                        <button type="submit" class="btn btn-primary btn-save">Guardar</button>                    </form>                </div>            </div>        </div>    </div></div><div *ngIf="seccion === \'limpieza\'">    <h1 class="titulo-pagina">Administrar Limpieza</h1>    <br><br>    <div class="row card-container">        <div class="col-12 col-md-6 mb-4" *ngFor="let product of products; let i = index">            <div class="card card-content h-100">                <div class="card-img-container">                    <img [src]="product.image" class="card-img-top fade-in" [alt]="product.name">                </div>                <div class="card-body d-flex flex-column align-items-center text-center">                    <h5 class="card-title">{{ product.nombre }}</h5>                    <p class="card-text precio">Precio: {{ product.precio | currency }}</p>                    <b><p class="card-text">Información del producto</p></b>                    <p class="card-text">{{ product.descripcion }}</p>                    <hr style="width: 100%;">                    <h6 class="edit-title" style="font-weight: bold;">Editar Información de producto</h6>                    <form [formGroup]="productForms[i]" (ngSubmit)="onSubmit(productForms[i], product)" class="edit-form">                        <div class="mb-3">                            <label for="edit-name-{{i}}" class="form-label">Nombre:</label>                            <input type="text" class="form-control" id="edit-name-{{i}}" formControlName="nombre">                        </div>                        <div class="mb-3">                            <label for="edit-price-{{i}}" class="form-label">Precio:</label>                            <input type="text" class="form-control" id="edit-price-{{i}}" formControlName="precio">                        </div>                        <div class="mb-3">                            <label for="edit-description-{{i}}" class="form-label">Descripción:</label>                            <textarea class="form-control" id="edit-description-{{i}}" formControlName="descripcion"></textarea>                        </div>                        <button type="submit" class="btn btn-primary btn-save">Guardar</button>                    </form>                </div>            </div>        </div>    </div></div><div *ngIf="seccion === \'papel\'">    <h1 class="titulo-pagina">Administrar Papeles</h1>    <br><br>    <div class="row card-container">        <div class="col-12 col-md-6 mb-4" *ngFor="let product of products; let i = index">            <div class="card card-content h-100">                <div class="card-img-container">                    <img [src]="product.image" class="card-img-top fade-in" [alt]="product.name">                </div>                <div class="card-body d-flex flex-column align-items-center text-center">                    <h5 class="card-title">{{ product.nombre }}</h5>                    <p class="card-text precio">Precio: {{ product.precio | currency }}</p>                    <b><p class="card-text">Información del producto</p></b>                    <p class="card-text">{{ product.descripcion }}</p>                    <hr style="width: 100%;">                    <h6 class="edit-title" style="font-weight: bold;">Editar Información de producto</h6>                    <form [formGroup]="productForms[i]" (ngSubmit)="onSubmit(productForms[i], product)" class="edit-form">                        <div class="mb-3">                            <label for="edit-name-{{i}}" class="form-label">Nombre:</label>                            <input type="text" class="form-control" id="edit-name-{{i}}" formControlName="nombre">                        </div>                        <div class="mb-3">                            <label for="edit-price-{{i}}" class="form-label">Precio:</label>                            <input type="text" class="form-control" id="edit-price-{{i}}" formControlName="precio">                        </div>                        <div class="mb-3">                            <label for="edit-description-{{i}}" class="form-label">Descripción:</label>                            <textarea class="form-control" id="edit-description-{{i}}" formControlName="descripcion"></textarea>                        </div>                        <button type="submit" class="btn btn-primary btn-save">Guardar</button>                    </form>                </div>            </div>        </div>    </div></div><app-footer></app-footer></div>'
+        var COMPONENT_TEMPLATE = '<div><app-navbaradmin></app-navbaradmin><div *ngIf="seccion === \'cuidado_capilar\'">    <h1 class="titulo-pagina">Administrar Cuidado Capilar <button type="submit" class="btn btn-primary btn-save" (click)="abrirModal()">Agregar Producto</button></h1>     <br>    <br>    <div class="row card-container">        <div class="col-12 col-md-6 mb-4" *ngFor="let product of products">            <div class="card card-content h-100">                <div class="card-img-container">                    <img [src]="product.urlImg" class="card-img-top fade-in" [alt]="product.nombre">                </div>                <div class="card-body d-flex flex-column align-items-center text-center">                    <h5 class="card-title">{{ product.nombre }}</h5>                    <p class="card-text precio">Precio: {{ product.precio | currency:\'\':\'symbol\':\'1.0-0\' }}</p>                    <b>                        <p class="card-text">Información del producto</p>                    </b>                    <p class="card-text">{{ product.descripcion }}</p>                    <hr style="width: 100%;">                    <h6 class="edit-title" style="font-weight: bold;">Editar Información de producto</h6>                    <form [formGroup]="productForms[product.id]"                        (ngSubmit)="onSubmit(productForms[product.id], product)" class="edit-form">                        <div class="mb-3">                            <label for="edit-name-{{product.id}}" class="form-label">Nombre:</label>                            <input type="text" class="form-control" id="edit-name-{{product.id}}"                                formControlName="nombre">                        </div>                        <div class="mb-3">                            <label for="edit-price-{{product.id}}" class="form-label">Precio:</label>                            <input type="text" class="form-control" id="edit-price-{{product.id}}"                                formControlName="precio">                        </div>                        <div class="mb-3">                            <label for="edit-select-{{product.id}}" class="form-label">Tipo de producto:</label>                            <select class="form-control" id="edit-select-{{product.id}}" formControlName="tipoProducto">                                <option *ngFor="let opcion of opciones" [value]="opcion.value">{{ opcion.display }}                                </option>                            </select>                        </div>                        <div class="mb-3">                            <label for="edit-description-{{product.id}}" class="form-label">Descripción:</label>                            <textarea class="form-control" id="edit-description-{{product.id}}"                                formControlName="descripcion"></textarea>                        </div>                        <div class="mb-3">                            <label for="edit-file-{{product.id}}" class="form-label">Imagen:</label>                            <input type="file" class="form-control" id="edit-file-{{product.id}}" (change)="onFileChange($event, product.id)" accept="image/*">                          </div>                        <button type="submit" class="btn btn-primary btn-save">Guardar</button>                        <button class="btn btn-danger" (click)="eliminar($event, product)">Eliminar</button>                    </form>                </div>            </div>        </div>    </div></div><div *ngIf="seccion === \'cuidado_ropa\'">    <h1 class="titulo-pagina">Administrar Cuidado de Ropa</h1>    <br><br>    <div class="row card-container">        <div class="col-12 col-md-6 mb-4" *ngFor="let product of products">            <div class="card card-content h-100">                <div class="card-img-container">                    <img [src]="product.urlImg" class="card-img-top fade-in" [alt]="product.nombre">                </div>                <div class="card-body d-flex flex-column align-items-center text-center">                    <h5 class="card-title">{{ product.nombre }}</h5>                    <p class="card-text precio">Precio: {{ product.precio | currency:\'\':\'symbol\':\'1.0-0\' }}</p>                    <b>                        <p class="card-text">Información del producto</p>                    </b>                    <p class="card-text">{{ product.descripcion }}</p>                    <hr style="width: 100%;">                    <h6 class="edit-title" style="font-weight: bold;">Editar Información de producto</h6>                    <form [formGroup]="productForms[product.id]"                        (ngSubmit)="onSubmit(productForms[product.id], product)" class="edit-form">                        <div class="mb-3">                            <label for="edit-name-{{product.id}}" class="form-label">Nombre:</label>                            <input type="text" class="form-control" id="edit-name-{{product.id}}"                                formControlName="nombre">                        </div>                        <div class="mb-3">                            <label for="edit-price-{{product.id}}" class="form-label">Precio:</label>                            <input type="text" class="form-control" id="edit-price-{{product.id}}"                                formControlName="precio">                        </div>                        <div class="mb-3">                            <label for="edit-select-{{product.id}}" class="form-label">Tipo de producto:</label>                            <select class="form-control" id="edit-select-{{product.id}}" formControlName="tipoProducto">                                <option *ngFor="let opcion of opciones" [value]="opcion.value">{{ opcion.display }}                                </option>                            </select>                        </div>                        <div class="mb-3">                            <label for="edit-description-{{product.id}}" class="form-label">Descripción:</label>                            <textarea class="form-control" id="edit-description-{{product.id}}"                                formControlName="descripcion"></textarea>                        </div>                        <div class="mb-3">                            <label for="edit-file-{{product.id}}" class="form-label">Imagen:</label>                            <input type="file" class="form-control" id="edit-file-{{product.id}}" (change)="onFileChange($event, product.id)" accept="image/*">                          </div>                        <button type="submit" class="btn btn-primary btn-save">Guardar</button>                        <button class="btn btn-danger" (click)="eliminar($event, product)">Eliminar</button>                    </form>                </div>            </div>        </div>    </div></div><div *ngIf="seccion === \'limpieza\'">    <h1 class="titulo-pagina">Administrar Limpieza</h1>    <br><br>    <div class="row card-container">        <div class="col-12 col-md-6 mb-4" *ngFor="let product of products">            <div class="card card-content h-100">                <div class="card-img-container">                    <img [src]="product.urlImg" class="card-img-top fade-in" [alt]="product.nombre">                </div>                <div class="card-body d-flex flex-column align-items-center text-center">                    <h5 class="card-title">{{ product.nombre }}</h5>                    <p class="card-text precio">Precio: {{ product.precio | currency:\'\':\'symbol\':\'1.0-0\' }}</p>                    <b>                        <p class="card-text">Información del producto</p>                    </b>                    <p class="card-text">{{ product.descripcion }}</p>                    <hr style="width: 100%;">                    <h6 class="edit-title" style="font-weight: bold;">Editar Información de producto</h6>                    <form [formGroup]="productForms[product.id]"                        (ngSubmit)="onSubmit(productForms[product.id], product)" class="edit-form">                        <div class="mb-3">                            <label for="edit-name-{{product.id}}" class="form-label">Nombre:</label>                            <input type="text" class="form-control" id="edit-name-{{product.id}}"                                formControlName="nombre">                        </div>                        <div class="mb-3">                            <label for="edit-price-{{product.id}}" class="form-label">Precio:</label>                            <input type="text" class="form-control" id="edit-price-{{product.id}}"                                formControlName="precio">                        </div>                        <div class="mb-3">                            <label for="edit-select-{{product.id}}" class="form-label">Tipo de producto:</label>                            <select class="form-control" id="edit-select-{{product.id}}" formControlName="tipoProducto">                                <option *ngFor="let opcion of opciones" [value]="opcion.value">{{ opcion.display }}                                </option>                            </select>                        </div>                        <div class="mb-3">                            <label for="edit-description-{{product.id}}" class="form-label">Descripción:</label>                            <textarea class="form-control" id="edit-description-{{product.id}}"                                formControlName="descripcion"></textarea>                        </div>                        <div class="mb-3">                            <label for="edit-file-{{product.id}}" class="form-label">Imagen:</label>                            <input type="file" class="form-control" id="edit-file-{{product.id}}" (change)="onFileChange($event, product.id)" accept="image/*">                        </div>                        <button type="submit" class="btn btn-primary btn-save">Guardar</button>                        <button class="btn btn-danger" (click)="eliminar($event, product)">Eliminar</button>                    </form>                </div>            </div>        </div>    </div></div><div *ngIf="seccion === \'papel\'">    <h1 class="titulo-pagina">Administrar Papeles</h1>    <br><br>    <div class="row card-container">        <div class="col-12 col-md-6 mb-4" *ngFor="let product of products">            <div class="card card-content h-100">                <div class="card-img-container">                    <img [src]="product.urlImg" class="card-img-top fade-in" [alt]="product.nombre">                </div>                <div class="card-body d-flex flex-column align-items-center text-center">                    <h5 class="card-title">{{ product.nombre }}</h5>                    <p class="card-text precio">Precio: {{ product.precio | currency:\'\':\'symbol\':\'1.0-0\' }}</p>                    <b>                        <p class="card-text">Información del producto</p>                    </b>                    <p class="card-text">{{ product.descripcion }}</p>                    <hr style="width: 100%;">                    <h6 class="edit-title" style="font-weight: bold;">Editar Información de producto</h6>                    <form [formGroup]="productForms[product.id]"                        (ngSubmit)="onSubmit(productForms[product.id], product)" class="edit-form">                        <div class="mb-3">                            <label for="edit-name-{{product.id}}" class="form-label">Nombre:</label>                            <input type="text" class="form-control" id="edit-name-{{product.id}}"                                formControlName="nombre">                        </div>                        <div class="mb-3">                            <label for="edit-price-{{product.id}}" class="form-label">Precio:</label>                            <input type="text" class="form-control" id="edit-price-{{product.id}}"                                formControlName="precio">                        </div>                        <div class="mb-3">                            <label for="edit-select-{{product.id}}" class="form-label">Tipo de producto:</label>                            <select class="form-control" id="edit-select-{{product.id}}" formControlName="tipoProducto">                                <option *ngFor="let opcion of opciones" [value]="opcion.value">{{ opcion.display }}                                </option>                            </select>                        </div>                        <div class="mb-3">                            <label for="edit-description-{{product.id}}" class="form-label">Descripción:</label>                            <textarea class="form-control" id="edit-description-{{product.id}}"                                formControlName="descripcion"></textarea>                        </div>                        <div class="mb-3">                            <label for="edit-file-{{product.id}}" class="form-label">Imagen:</label>                            <input type="file" class="form-control" id="edit-file-{{product.id}}" (change)="onFileChange($event, product.id)" accept="image/*">                        </div>                        <button type="submit" class="btn btn-primary btn-save">Guardar</button>                        <button class="btn btn-danger" (click)="eliminar($event, product)">Eliminar</button>                    </form>                </div>            </div>        </div>    </div></div><!-- Modal --><div class="modal fade" id="productoModal" tabindex="-1" aria-labelledby="productoModalLabel" aria-hidden="true">    <div class="modal-dialog">        <div class="modal-content">            <div class="modal-header">                <h5 class="modal-title" id="usuarioModalLabel">Crear Prodcuto</h5>                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>            </div>            <div class="modal-body">                <form [formGroup]="crearProdcutoForm" (ngSubmit)="submitForm()">                    <div class="mb-3">                            <label for="nombreProducto" class="form-label">Nombre:</label>                            <input type="text" class="form-control" id="nombreProducto"                                formControlName="nombreProducto">                        </div>                        <div class="mb-3">                            <label for="precioProducto" class="form-label">Precio:</label>                            <input type="text" class="form-control" id="precioProducto"                                formControlName="precioProducto">                        </div>                        <div class="mb-3">                            <label for="tipoProducto" class="form-label">Tipo de producto:</label>                            <select class="form-control" id="tipoProducto" formControlName="tipoProducto">                                <option *ngFor="let opcion of opciones" [value]="opcion.value">{{ opcion.display }}                                </option>                            </select>                        </div>                        <div class="mb-3">                            <label for="descripcionProducto" class="form-label">Descripción:</label>                            <textarea class="form-control" id="descripcionProducto"                                formControlName="descripcionProducto"></textarea>                        </div>                        <div class="mb-3">                            <label for="imagenProducto" class="form-label">Imagen:</label>                            <input type="file" class="form-control" id="imagenProducto" (change)="onFileChangeCreate($event)" accept="image/*">                        </div>                        <button type="submit" class="btn btn-primary btn-save">Guardar</button>                                    </form>            </div>        </div>    </div></div><app-footer></app-footer></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'EditarPerfilComponent', 'selector': 'app-editar-perfil'},{'name': 'EditarProductosComponent', 'selector': 'app-editar-productos'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'InicioAdminComponent', 'selector': 'app-inicio-admin'},{'name': 'InicioComponent', 'selector': 'app-inicio'},{'name': 'ListaUsuariosComponent', 'selector': 'app-lista-usuarios'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbaradminComponent', 'selector': 'app-navbaradmin'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'ProductosComponent', 'selector': 'app-productos'},{'name': 'RecuperarContrasenaComponent', 'selector': 'app-recuperar-contrasena'},{'name': 'RegistroComponent', 'selector': 'app-registro'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'EditarProductosComponent'};

@@ -22,8 +22,8 @@ export class UsuarioService {
   /**
    * URL base del endpoint de usuarios.
    */
-  //private baseUrl = 'http://localhost:8080/usuarios';
-  private baseUrl = 'http://52.200.236.194:8080/usuarios';
+  private baseUrl = 'http://localhost:8080/usuarios';
+  //private baseUrl = 'http://52.200.236.194:8080/usuarios';
 
   /**
    * Constructor del servicio que inyecta el HttpClient.

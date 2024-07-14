@@ -118,6 +118,9 @@
                             <a href="#bootstrap" title="src/main.server.ts" ><b>bootstrap</b>&nbsp;&nbsp;&nbsp;(src/.../main.server.ts)</a>
                         </li>
                         <li>
+                            <a href="#bootstrap" title="src/app/components/admin/editar-productos/editar-productos.component.ts" ><b>bootstrap</b>&nbsp;&nbsp;&nbsp;(src/.../editar-productos.component.ts)</a>
+                        </li>
+                        <li>
                             <a href="#bootstrap" title="src/app/components/admin/lista-usuarios/lista-usuarios.component.ts" ><b>bootstrap</b>&nbsp;&nbsp;&nbsp;(src/.../lista-usuarios.component.ts)</a>
                         </li>
                         <li>
@@ -155,7 +158,21 @@
                 <tr>
                     <td class="col-md-4">
                         <i>Default value : </i><code>{
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration()]
+  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(),
+      provideFirebaseApp (()&#x3D;&gt;
+        initializeApp({
+          apiKey: &quot;AIzaSyBPoMNLlOSzZPLcj4vSDVN5vC9bu1SxDGU&quot;,
+          authDomain: &quot;sumativa3-e62f1.firebaseapp.com&quot;,
+          projectId: &quot;sumativa3-e62f1&quot;,
+          storageBucket: &quot;sumativa3-e62f1.appspot.com&quot;,
+          messagingSenderId: &quot;648196024739&quot;,
+          appId: &quot;1:648196024739:web:ca2b80afb4c9f7d275d216&quot;,
+          measurementId: &quot;G-8XCL8GX3VE&quot;
+        })
+      ),
+      provideStorage (() &#x3D;&gt; getStorage())
+    
+  ]
 }</code>
                     </td>
                 </tr>
@@ -192,6 +209,36 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>bootstrap</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/components/admin/editar-productos/editar-productos.component.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="bootstrap"></a>
+                    <span class="name">
+                        <span ><b>bootstrap</b></span>
+                        <a href="#bootstrap"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Se declara la variable de bootstrap para el modal</p>
 </div>
                 </td>
             </tr>

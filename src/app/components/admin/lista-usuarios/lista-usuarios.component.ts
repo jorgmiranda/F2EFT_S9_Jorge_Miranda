@@ -23,16 +23,29 @@ declare var bootstrap: any;
  * Componente encargado de administrar el mantenedor de Usuarios
  */
 export class ListaUsuariosComponent {
-
+  /**
+   * Instancia de lista de usuarios
+   */
   usuarios: any[] = [];
-  //Atributos del modal
+  /**
+   * Titutlo del modal
+   */
   modalTitle: string = '';
+  /**
+   * Instancia de modal para crear usuarios
+   */
   modalInstance: any;
-  //fomulario
+  /**
+   * Instancia del formulario de creación/edición
+   */
   mantenedorForm!: FormGroup;
-  //id de edición
+  /**
+   * Id de usuario utilizado para la edición
+   */
   editingId: number | null = null;
-  //Roles
+  /**
+   * Posible roles del usuario a crear
+   */
   rolesOpciones = ['Usuario', 'Administrador']
 
   /**
@@ -194,7 +207,7 @@ export class ListaUsuariosComponent {
           console.log('Usuario Editado Exitosamente', edit);
           this.obtenerTodosLosUsuarios();  
         }, error => {
-          console.error('Ocurrio un error al agregar un usuario:', error);
+          console.error('Ocurrio un error al editar un usuario:', error);
         });
       } else {
         // Lógica para agregar nueva persona

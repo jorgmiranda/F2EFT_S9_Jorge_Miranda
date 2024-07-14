@@ -91,7 +91,7 @@
 
 <ol class="breadcrumb">
   <li class="breadcrumb-item">Injectables</li>
-  <li class="breadcrumb-item" >UsuarioService</li>
+  <li class="breadcrumb-item" >ProductoService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -115,7 +115,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/services/usuario.service.ts</code>
+            <code>src/app/services/prodcuto.service.ts</code>
         </p>
 
 
@@ -123,7 +123,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Servicio para gestionar operaciones CRUD de usuarios.</p>
+                <p>Servicio para gestionar operaciones CRUD de Productos</p>
 
             </p>
 
@@ -161,19 +161,22 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#actualizarUsuario" >actualizarUsuario</a>
+                                <a href="#actualizarProducto" >actualizarProducto</a>
                             </li>
                             <li>
-                                <a href="#agregarUsuario" >agregarUsuario</a>
+                                <a href="#agregarProducto" >agregarProducto</a>
                             </li>
                             <li>
-                                <a href="#eliminarUsuario" >eliminarUsuario</a>
+                                <a href="#eliminarProducto" >eliminarProducto</a>
                             </li>
                             <li>
-                                <a href="#obtenerTodosLosUsuarios" >obtenerTodosLosUsuarios</a>
+                                <a href="#obtenerProductoPorID" >obtenerProductoPorID</a>
                             </li>
                             <li>
-                                <a href="#obtenerUsuarioPorId" >obtenerUsuarioPorId</a>
+                                <a href="#obtenerProductosPorTipo" >obtenerProductosPorTipo</a>
+                            </li>
+                            <li>
+                                <a href="#obtenerTodosLosProductos" >obtenerTodosLosProductos</a>
                             </li>
                         </ul>
                     </td>
@@ -198,7 +201,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/services/usuario.service.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/services/prodcuto.service.ts:25</a></div>
                             </td>
                         </tr>
 
@@ -252,31 +255,31 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="actualizarUsuario"></a>
+                    <a name="actualizarProducto"></a>
                     <span class="name">
-                        <span ><b>actualizarUsuario</b></span>
-                        <a href="#actualizarUsuario"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>actualizarProducto</b></span>
+                        <a href="#actualizarProducto"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>actualizarUsuario(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, usuario: <a href="../interfaces/Usuario.html" target="_self">Usuario</a>)</code>
+<code>actualizarProducto(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, producto: <a href="../interfaces/Producto.html" target="_self">Producto</a>)</code>
                 </td>
             </tr>
 
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="66"
-                                    class="link-to-prism">src/app/services/usuario.service.ts:66</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="70"
+                                    class="link-to-prism">src/app/services/prodcuto.service.ts:70</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                        <div class="io-description"><p>Actualiza un usuario existente.</p>
+                        <div class="io-description"><p>Actualiza un producto existente</p>
 </div>
 
                             <div class="io-description">
@@ -304,14 +307,16 @@
 
 
                                             <td>
-                                                    <p>ID del usuario a actualizar.</p>
+                                                    <ul>
+<li>Id del producto a actualizar</li>
+</ul>
 
                                             </td>
                                         </tr>
                                         <tr>
-                                                <td>usuario</td>
+                                                <td>producto</td>
                                             <td>
-                                                            <code><a href="../interfaces/Usuario.html" target="_self" >Usuario</a></code>
+                                                            <code><a href="../interfaces/Producto.html" target="_self" >Producto</a></code>
                                             </td>
 
                                             <td>
@@ -320,7 +325,9 @@
 
 
                                             <td>
-                                                    <p>Objeto usuario con los nuevos datos.</p>
+                                                    <ul>
+<li>Objeto de producto con los nuevos datos</li>
+</ul>
 
                                             </td>
                                         </tr>
@@ -328,11 +335,13 @@
                                 </table>
                             </div>
                         <div class="io-description">
-                            <b>Returns : </b>        <code><a href="../interfaces/Usuario.html" target="_self" >Observable&lt;Usuario&gt;</a></code>
+                            <b>Returns : </b>        <code><a href="../interfaces/Producto.html" target="_self" >Observable&lt;Producto&gt;</a></code>
 
                         </div>
                             <div class="io-description">
-                                <p>Un Observable con el usuario actualizado.</p>
+                                <ul>
+<li>Un observable con el producto actualizado</li>
+</ul>
 
                             </div>
                 </td>
@@ -343,32 +352,30 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="agregarUsuario"></a>
+                    <a name="agregarProducto"></a>
                     <span class="name">
-                        <span ><b>agregarUsuario</b></span>
-                        <a href="#agregarUsuario"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>agregarProducto</b></span>
+                        <a href="#agregarProducto"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>agregarUsuario(usuario: <a href="../interfaces/Usuario.html" target="_self">Usuario</a>)</code>
+<code>agregarProducto(producto: <a href="../interfaces/Producto.html" target="_self">Producto</a>)</code>
                 </td>
             </tr>
 
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="56"
-                                    class="link-to-prism">src/app/services/usuario.service.ts:56</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="51"
+                                    class="link-to-prism">src/app/services/prodcuto.service.ts:51</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                        <div class="io-description"><p>Agrega un nuevo usuario.</p>
-</div>
 
                             <div class="io-description">
                                 <b>Parameters :</b>
@@ -379,14 +386,13 @@
                                             <td>Name</td>
                                                 <td>Type</td>
                                             <td>Optional</td>
-                                                <td>Description</td>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                                <td>usuario</td>
+                                                <td>producto</td>
                                             <td>
-                                                            <code><a href="../interfaces/Usuario.html" target="_self" >Usuario</a></code>
+                                                            <code><a href="../interfaces/Producto.html" target="_self" >Producto</a></code>
                                             </td>
 
                                             <td>
@@ -394,21 +400,16 @@
                                             </td>
 
 
-                                            <td>
-                                                    <p>Objeto usuario a agregar.</p>
-
-                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
                         <div class="io-description">
-                            <b>Returns : </b>        <code><a href="../interfaces/Usuario.html" target="_self" >Observable&lt;Usuario&gt;</a></code>
+                            <b>Returns : </b>        <code><a href="../interfaces/Producto.html" target="_self" >Observable&lt;Producto&gt;</a></code>
 
                         </div>
                             <div class="io-description">
-                                <p>Un Observable con el usuario agregado.</p>
-
+                                
                             </div>
                 </td>
             </tr>
@@ -418,32 +419,30 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="eliminarUsuario"></a>
+                    <a name="eliminarProducto"></a>
                     <span class="name">
-                        <span ><b>eliminarUsuario</b></span>
-                        <a href="#eliminarUsuario"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>eliminarProducto</b></span>
+                        <a href="#eliminarProducto"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>eliminarUsuario(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+<code>eliminarProducto(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
                 </td>
             </tr>
 
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="75"
-                                    class="link-to-prism">src/app/services/usuario.service.ts:75</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="74"
+                                    class="link-to-prism">src/app/services/prodcuto.service.ts:74</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                        <div class="io-description"><p>Elimina un usuario por su ID.</p>
-</div>
 
                             <div class="io-description">
                                 <b>Parameters :</b>
@@ -454,7 +453,6 @@
                                             <td>Name</td>
                                                 <td>Type</td>
                                             <td>Optional</td>
-                                                <td>Description</td>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -469,10 +467,6 @@
                                             </td>
 
 
-                                            <td>
-                                                    <p>ID del usuario a eliminar.</p>
-
-                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -482,7 +476,85 @@
 
                         </div>
                             <div class="io-description">
-                                <p>Un Observable vacío que indica la eliminación.</p>
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="obtenerProductoPorID"></a>
+                    <span class="name">
+                        <span ><b>obtenerProductoPorID</b></span>
+                        <a href="#obtenerProductoPorID"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>obtenerProductoPorID(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="47"
+                                    class="link-to-prism">src/app/services/prodcuto.service.ts:47</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Obtiene el producto por su ID</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>id</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>ID del producto a obtener</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../interfaces/Producto.html" target="_self" >Observable&lt;Producto&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                <ul>
+<li>Un Observable con el usuario agregado.</li>
+</ul>
 
                             </div>
                 </td>
@@ -493,16 +565,95 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="obtenerTodosLosUsuarios"></a>
+                    <a name="obtenerProductosPorTipo"></a>
                     <span class="name">
-                        <span ><b>obtenerTodosLosUsuarios</b></span>
-                        <a href="#obtenerTodosLosUsuarios"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>obtenerProductosPorTipo</b></span>
+                        <a href="#obtenerProductosPorTipo"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>obtenerTodosLosUsuarios()</code>
+<code>obtenerProductosPorTipo(tipo: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="60"
+                                    class="link-to-prism">src/app/services/prodcuto.service.ts:60</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Obtiene los productos segun su tipo</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>tipo</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>Tipo de producto a obtener</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../interfaces/Producto.html" target="_self" >Observable&lt;Producto[]&gt;</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                <ul>
+<li>Un observable con los productos obtenidos segun su tipo</li>
+</ul>
+
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="obtenerTodosLosProductos"></a>
+                    <span class="name">
+                        <span ><b>obtenerTodosLosProductos</b></span>
+                        <a href="#obtenerTodosLosProductos"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>obtenerTodosLosProductos()</code>
                 </td>
             </tr>
 
@@ -510,7 +661,7 @@
                     <tr>
                         <td class="col-md-4">
                             <div class="io-line">Defined in <a href="" data-line="38"
-                                    class="link-to-prism">src/app/services/usuario.service.ts:38</a></div>
+                                    class="link-to-prism">src/app/services/prodcuto.service.ts:38</a></div>
                         </td>
                     </tr>
 
@@ -521,86 +672,11 @@
 </div>
 
                         <div class="io-description">
-                            <b>Returns : </b>        <code><a href="../interfaces/Usuario.html" target="_self" >Observable&lt;Usuario[]&gt;</a></code>
+                            <b>Returns : </b>        <code><a href="../interfaces/Producto.html" target="_self" >Observable&lt;Producto[]&gt;</a></code>
 
                         </div>
                             <div class="io-description">
-                                <p>Un Observable con la lista de usuarios.</p>
-
-                            </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="obtenerUsuarioPorId"></a>
-                    <span class="name">
-                        <span ><b>obtenerUsuarioPorId</b></span>
-                        <a href="#obtenerUsuarioPorId"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>obtenerUsuarioPorId(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
-                </td>
-            </tr>
-
-
-                    <tr>
-                        <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="47"
-                                    class="link-to-prism">src/app/services/usuario.service.ts:47</a></div>
-                        </td>
-                    </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                        <div class="io-description"><p>Obtiene un usuario por su ID.</p>
-</div>
-
-                            <div class="io-description">
-                                <b>Parameters :</b>
-                                
-                                <table class="params">
-                                    <thead>
-                                        <tr>
-                                            <td>Name</td>
-                                                <td>Type</td>
-                                            <td>Optional</td>
-                                                <td>Description</td>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                                <td>id</td>
-                                            <td>
-                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-                                            </td>
-
-                                            <td>
-                                                    No
-                                            </td>
-
-
-                                            <td>
-                                                    <p>ID del usuario a obtener.</p>
-
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        <div class="io-description">
-                            <b>Returns : </b>        <code><a href="../interfaces/Usuario.html" target="_self" >Observable&lt;Usuario&gt;</a></code>
-
-                        </div>
-                            <div class="io-description">
-                                <p>Un Observable con el usuario correspondiente al ID.</p>
+                                <p>Un Observable con la lista de productos</p>
 
                             </div>
                 </td>
@@ -633,18 +709,18 @@
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>&#x27;http://localhost:8080/usuarios&#x27;</code>
+                        <i>Default value : </i><code>&#x27;http://localhost:8080/productos&#x27;</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/services/usuario.service.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/services/prodcuto.service.ts:25</a></div>
                         </td>
                     </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>URL base del endpoint de usuarios.</p>
+                    <div class="io-description"><p>URL base del endpoint de productos.</p>
 </div>
                 </td>
             </tr>
@@ -679,7 +755,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/services/usuario.service.ts:16</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/services/prodcuto.service.ts:16</a></div>
                         </td>
                     </tr>
 
@@ -698,18 +774,18 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
-import { HttpClient, HttpHeaders } from &#x27;@angular/common/http&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { HttpHeaders, HttpClient } from &#x27;@angular/common/http&#x27;;
+import { Injectable } from &#x27;@angular/core&#x27;;
 import { Observable } from &#x27;rxjs&#x27;;
-import { Usuario } from &#x27;../model/usuario&#x27;;
+import { Producto } from &#x27;../model/producto&#x27;;
 
 /**
- * Servicio para gestionar operaciones CRUD de usuarios.
+ * Servicio para gestionar operaciones CRUD de Productos
  */
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
-export class UsuarioService {
+export class ProductoService {
   /**
    * Opciones de cabecera HTTP para las solicitudes.
    */
@@ -720,93 +796,60 @@ export class UsuarioService {
   }
 
   /**
-   * URL base del endpoint de usuarios.
+   * URL base del endpoint de productos.
    */
-  private baseUrl &#x3D; &#x27;http://localhost:8080/usuarios&#x27;;
-  //private baseUrl &#x3D; &#x27;http://52.200.236.194:8080/usuarios&#x27;;
+  private baseUrl &#x3D; &#x27;http://localhost:8080/productos&#x27;;
+  //private baseUrl &#x3D; &#x27;http://52.200.236.194:8080/productos&#x27;;
 
   /**
    * Constructor del servicio que inyecta el HttpClient.
    * @param http HttpClient para realizar solicitudes HTTP.
    */
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-   /**
+  /**
    * Obtiene la lista de todos los usuarios.
-   * @returns Un Observable con la lista de usuarios.
+   * @returns Un Observable con la lista de productos
    */
-  obtenerTodosLosUsuarios():Observable&lt;Usuario[]&gt;{
-    return this.http.get&lt;Usuario[]&gt;(this.baseUrl);
+  obtenerTodosLosProductos(): Observable&lt;Producto[]&gt; {
+    return this.http.get&lt;Producto[]&gt;(this.baseUrl);
   }
 
   /**
-   * Obtiene un usuario por su ID.
-   * @param id ID del usuario a obtener.
-   * @returns Un Observable con el usuario correspondiente al ID.
+   * Obtiene el producto por su ID
+   * @param id - ID del producto a obtener
+   * @returns - Un Observable con el usuario agregado.
    */
-  obtenerUsuarioPorId(id:number): Observable&lt;Usuario&gt; {
-    return this.http.get&lt;Usuario&gt;(&#x60;${this.baseUrl}/${id}&#x60;);
+  obtenerProductoPorID(id: number): Observable&lt;Producto&gt; {
+    return this.http.get&lt;Producto&gt;(&#x60;${this.baseUrl}/${id}&#x60;);
+  }
+
+  agregarProducto(producto : Producto): Observable&lt;Producto&gt;{
+    return this.http.post&lt;Producto&gt;(this.baseUrl, producto, this.httpOptions);
   }
 
   /**
-   * Agrega un nuevo usuario.
-   * @param usuario Objeto usuario a agregar.
-   * @returns Un Observable con el usuario agregado.
+   * Obtiene los productos segun su tipo
+   * @param tipo - Tipo de producto a obtener
+   * @returns - Un observable con los productos obtenidos segun su tipo
    */
-  agregarUsuario(usuario: Usuario): Observable&lt;Usuario&gt; {
-    return this.http.post&lt;Usuario&gt;(this.baseUrl, usuario, this.httpOptions);
+  obtenerProductosPorTipo(tipo: String): Observable&lt;Producto[]&gt; {
+    return this.http.get&lt;Producto[]&gt;(&#x60;${this.baseUrl}/tipo/${tipo}&#x60;);
   }
 
   /**
-   * Actualiza un usuario existente.
-   * @param id ID del usuario a actualizar.
-   * @param usuario Objeto usuario con los nuevos datos.
-   * @returns Un Observable con el usuario actualizado.
+   * Actualiza un producto existente
+   * @param id - Id del producto a actualizar
+   * @param producto - Objeto de producto con los nuevos datos
+   * @returns - Un observable con el producto actualizado
    */
-  actualizarUsuario(id:number, usuario:Usuario) : Observable&lt;Usuario&gt;{
-    return this.http.put&lt;Usuario&gt;(&#x60;${this.baseUrl}/${id}&#x60;, usuario, this.httpOptions);
+  actualizarProducto(id: number, producto: Producto): Observable&lt;Producto&gt; {
+    return this.http.put&lt;Producto&gt;(&#x60;${this.baseUrl}/${id}&#x60;, producto, this.httpOptions);
   }
 
-  /**
-   * Elimina un usuario por su ID.
-   * @param id ID del usuario a eliminar.
-   * @returns Un Observable vacío que indica la eliminación.
-   */
-  eliminarUsuario(id: number): Observable&lt;void&gt; {
+  eliminarProducto(id:number) : Observable&lt;void&gt;{
     return this.http.delete&lt;void&gt;(&#x60;${this.baseUrl}/${id}&#x60;);
   }
-
-  // httpOptions &#x3D; {
-  //   headers: new HttpHeaders({
-  //     &quot;Content-Type&quot;: &quot;application/json&quot;,
-  //     &quot;Access-Control-Allow-Origin&quot;: &quot;*&quot;,
-  //     &quot;Authorization&quot;: &quot;Bearer f2acfee9-2180-495a-ba3a-d008e657384a&quot;
-  //   })
-  // }
-
-  // private jsonURL &#x3D; &quot;https://firebasestorage.googleapis.com/v0/b/sumativa3-e62f1.appspot.com/o/usuarios.json?alt&#x3D;media&amp;token&#x3D;f2acfee9-2180-495a-ba3a-d008e657384a&quot;;
-
-  // private listaUsuarios:any;
-
-  // constructor(private http:HttpClient) { }
-
-  // getUserJsonData() : Observable&lt;any&gt;{
-  //   return this.http.get(this.jsonURL)
-  // }
-
-  // crearUsuarios(listaUsuarios:any){
-  //   console.log(listaUsuarios);
-  //   this.http.post(this.jsonURL, listaUsuarios, this.httpOptions).subscribe(
-  //     response &#x3D;&gt; {
-  //       console.log(&#x27;Archivo JSON sobreescrito con exito&#x27;, response);
-  //     },
-  //     error &#x3D;&gt; {
-  //       console.error(&quot;Error al sobreescribir el archivo JSON&quot;, error);
-  //     })
-  // }
-
-
-
 }
 </code></pre>
     </div>
@@ -851,7 +894,7 @@ export class UsuarioService {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
-            var COMPODOC_CURRENT_PAGE_URL = 'UsuarioService.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'ProductoService.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

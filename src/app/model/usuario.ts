@@ -4,6 +4,10 @@
  */
 
 export interface Usuario {
+    /**
+     * Numero identificador del usuario
+     * @example 1
+     */
     id: number;
     /**
      * Nombre completo del usuario
