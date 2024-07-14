@@ -56,7 +56,7 @@
     </div>
 </div>
 <div *ngIf="seccion === 'cuidado_ropa'">
-    <h1 class="titulo-pagina">Administrar Cuidado de Ropa</h1>
+    <h1 class="titulo-pagina">Administrar Cuidado de Ropa <button type="submit" class="btn btn-primary btn-save" (click)="abrirModal()">Agregar Producto</button></h1>
     <br><br>
     <div class="row card-container">
         <div class="col-12 col-md-6 mb-4" *ngFor="let product of products">
@@ -110,7 +110,7 @@
     </div>
 </div>
 <div *ngIf="seccion === 'limpieza'">
-    <h1 class="titulo-pagina">Administrar Limpieza</h1>
+    <h1 class="titulo-pagina">Administrar Limpieza <button type="submit" class="btn btn-primary btn-save" (click)="abrirModal()">Agregar Producto</button></h1>
     <br><br>
     <div class="row card-container">
         <div class="col-12 col-md-6 mb-4" *ngFor="let product of products">
@@ -164,7 +164,7 @@
     </div>
 </div>
 <div *ngIf="seccion === 'papel'">
-    <h1 class="titulo-pagina">Administrar Papeles</h1>
+    <h1 class="titulo-pagina">Administrar Papeles <button type="submit" class="btn btn-primary btn-save" (click)="abrirModal()">Agregar Producto</button></h1>
     <br><br>
     <div class="row card-container">
         <div class="col-12 col-md-6 mb-4" *ngFor="let product of products">
